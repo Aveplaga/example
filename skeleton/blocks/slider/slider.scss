@@ -1,0 +1,72 @@
+@import "~swiper/swiper-bundle.css";
+
+.swiper {
+    margin: 0 auto;
+    margin-top: 108px;
+
+    .section-title {
+        margin: 0 auto;
+        font-size: 24px;
+        margin-bottom: 24px;
+        line-height: 120%;
+    }
+}
+
+.swiper-wrapper{
+    display: flex;
+    gap: 24px;
+}
+
+.stock-badge {
+    position: absolute;
+    z-index: 1;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(134, 212, 72, 1);
+    padding: 3px 7px 2px 7px;
+    border-radius: 0 8px 0 0;
+    white-space: nowrap;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 118px;
+    width: 79px;
+}
+
+.swiper-slide {
+    margin: 0 auto;
+    width: 200px;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+
+    .general {
+        border-radius: 8px 8px 0 0;
+        position: relative;
+        width: 200px;
+        height: 138px;
+        margin-bottom: 11px;
+    }
+
+    .slide-title{
+       padding: 0 7px 0 8px;
+    }
+}
+
+.content-footer{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px 12px;
+
+    .cta-link{
+        padding: 13px 26px;
+        background-color: rgba(254, 200, 11, 1);
+        border-radius: 4px;
+        color: rgba(0, 0, 0, 1);
+        text-align: center;
+    }
+
+    img{
+        width: 32px;
+        height: 32px;
+    }
+}

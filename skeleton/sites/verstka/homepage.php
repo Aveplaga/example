@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ERROR);
+
 use ZLabs\Frontend\MustacheSingleton;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/../../vendor/autoload.php';
@@ -30,6 +32,340 @@ $pageConfig = [
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
-Контент
+
+<?php
+
+$cards = [
+    'cards' => [
+
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+        [
+            'stock' => 'В наличии',
+            'images' => './local/assets/images/icon_normal_fav.png',
+            'image' => './local/assets/images/Group.png',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'price' => 'от 352 000',
+            'link' => 'Подробнее'
+        ],
+    ]
+]
+
+?>
+
+<?php
+
+$navigations = [
+
+    'navigation' => [
+
+        'link' => 'Показать еще',
+        'arrow-left' => '‹',
+        'back' => 'Назад',
+        'one' => '1',
+        'dot-left' => '...',
+        'five' => '5',
+        'six' => '6',
+        'seven' => '7',
+        'dot-right' => '...',
+        'fifteen' => '15',
+        'farther' => 'Дальше',
+        'arrow-right' => '›',
+    ]
+]
+
+?>
+
+<?php
+$slider = [
+
+    'generalTitle' => 'Похожие товары',
+
+    'slides' => [
+
+        [
+            'image' => './local/assets/images/one.png',
+            'stock' => 'В наличии',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'link' => 'Подробнее',
+            'images' => './local/assets/images/icon_normal_fav.png'
+        ],
+        [
+            'image' => './local/assets/images/one.png',
+            'stock' => 'В наличии',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'link' => 'Подробнее',
+            'images' => './local/assets/images/icon_normal_fav.png'
+        ],
+        [
+            'image' => './local/assets/images/one.png',
+            'stock' => 'В наличии',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'link' => 'Подробнее',
+            'images' => './local/assets/images/icon_normal_fav.png'
+        ],
+        [
+            'image' => './local/assets/images/one.png',
+            'stock' => 'В наличии',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'link' => 'Подробнее',
+            'images' => './local/assets/images/icon_normal_fav.png'
+        ],
+        [
+            'image' => './local/assets/images/one.png',
+            'stock' => 'В наличии',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'link' => 'Подробнее',
+            'images' => './local/assets/images/icon_normal_fav.png'
+        ],
+        [
+            'image' => './local/assets/images/one.png',
+            'stock' => 'В наличии',
+            'title' => 'HYUNDAI HD 78 c промтоварным фургоном....',
+            'link' => 'Подробнее',
+            'images' => './local/assets/images/icon_normal_fav.png'
+        ],
+
+    ]
+];
+
+?>
+
+<div class="wrapper">
+    <?= $mustache->render('cards', $cards); ?>
+    <?= $mustache->render('navigation', $navigations); ?>
+    <?= $mustache->render('slider', $slider); ?>
+</div>
+
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/footer.php');

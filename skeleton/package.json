@@ -38,6 +38,7 @@
     "loading-attribute-polyfill": "^2.1.1",
     "lodash": "^4.17.21",
     "mustache": "^4.2.0",
+    "swiper": "^11.2.8",
     "whatwg-fetch": "^3.6.19"
   },
   "repository": "http://gitea.fvds.ru:3200/z-labs/skeleton",

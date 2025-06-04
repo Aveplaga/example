@@ -26,27 +26,27 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "ssh://libgitea/z-labs/bx-app.git"
+      "url": "ssh://gitea@gitea.fvds.ru:2222/z-labs/bx-app.git"
     },
     {
       "type": "vcs",
-      "url": "ssh://libgitea/z-labs/deferred-functions.git"
+      "url": "ssh://gitea@gitea.fvds.ru:2222/z-labs/deferred-functions.git"
     },
     {
       "type": "vcs",
-      "url": "ssh://libgitea/z-labs/image-resizer.git"
+      "url": "ssh://gitea@gitea.fvds.ru:2222/z-labs/image-resizer.git"
     },
     {
       "type": "vcs",
-      "url": "ssh://libgitea/z-labs/tools-modules.git"
+      "url": "ssh://gitea@gitea.fvds.ru:2222/z-labs/tools-modules.git"
     },
     {
       "type": "vcs",
-      "url": "ssh://libgitea/z-labs/feedback-form.git"
+      "url": "ssh://gitea@gitea.fvds.ru:2222/z-labs/feedback-form.git"
     },
     {
       "type": "vcs",
-      "url": "ssh://libgitea/z-labs/vue-filter.git"
+      "url": "ssh://gitea@gitea.fvds.ru:2222/z-labs/vue-filter.git"
     }
   ],
   "config": {

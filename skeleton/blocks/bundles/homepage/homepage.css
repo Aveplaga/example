@@ -1,0 +1,276 @@
+@charset "UTF-8";
+/* Fonts */
+/* Colors */
+/* Breakpoints
+ * Точки адаптивного перехода разрешений
+ * */
+/* Wrappers
+ * Значения ширины контента контейнера
+ * */
+/* Container offsets
+ * Значения отступов контейнера по бокам
+ * */
+/* Transition
+ * Значения времени переходов
+ * */
+/* Header  height
+ * Значения высоты шапки
+ * */
+/* Header  height
+ * Значения высоты фиксированной шапки
+ * */
+/* Mixins */
+/* Миксин для embed-responsive, блоков с сохранением пропорций  */
+/* Миксин для медиа-запросов
+ * Значения точек берутся из коллекции $breakpoints
+ * */
+@import "~swiper/swiper-bundle.css";
+.swiper {
+  margin: 0 auto;
+  margin-top: 108px;
+}
+.swiper .section-title {
+  margin: 0 auto;
+  font-size: 24px;
+  margin-bottom: 24px;
+  line-height: 120%;
+}
+
+.swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+
+.stock-badge {
+  position: absolute;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  background-color: rgb(134, 212, 72);
+  padding: 3px 7px 2px 7px;
+  border-radius: 0 8px 0 0;
+  white-space: nowrap;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 118px;
+  width: 79px;
+}
+
+.swiper-slide {
+  margin: 0 auto;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.swiper-slide .general {
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  width: 200px;
+  height: 138px;
+  margin-bottom: 11px;
+}
+.swiper-slide .slide-title {
+  padding: 0 7px 0 8px;
+}
+
+.content-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  padding: 0 8px 12px;
+}
+.content-footer .cta-link {
+  padding: 13px 26px;
+  background-color: rgb(254, 200, 11);
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.content-footer img {
+  width: 32px;
+  height: 32px;
+}
+
+.cards-list {
+  font-family: "Fira Sans", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 15px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px 15px;
+  margin: 0 17px;
+}
+.cards-list .card {
+  padding: 3px 2px 19px 2px;
+}
+.cards-list .card-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cards-list .card-up .card-in__stock {
+  color: rgb(255, 255, 255);
+  background-color: rgb(134, 212, 72);
+  padding: 3px 7px 2px 7px;
+  border-radius: 0 8px 0 0;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.cards-list .card-up img {
+  width: 24px;
+  height: 24px;
+}
+.cards-list .card-image img {
+  max-width: 308px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.cards-list .card-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 130%;
+  color: rgb(0, 0, 0);
+}
+.cards-list .card-price {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-bottom: 8px;
+}
+.cards-list .card-link {
+  text-align: center;
+  background-color: rgb(254, 200, 11);
+  padding: 11px 24px;
+  border-radius: 4px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .cards-list {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cards-list .card-title,
+  .cards-list .card-price,
+  .cards-list .card-link {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1280px) {
+  .cards-list {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .cards-list .card-title,
+  .cards-list .card-price,
+  .cards-list .card-link {
+    font-size: 28px;
+  }
+}
+
+.navigations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 382px;
+  width: 100%;
+}
+.navigations .button-navigation {
+  background-color: rgb(254, 200, 11);
+  padding: 11px 27px;
+  text-align: center;
+  border-radius: 4px;
+}
+.navigations .navigation-scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+}
+.navigations .navigation-scroll .left-arrow {
+  color: rgb(0, 0, 0);
+  font-size: 42px;
+}
+.navigations .navigation-scroll .left-arrow .arrow-label {
+  display: none;
+}
+.navigations .navigation-scroll .navigation-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+  color: rgb(161, 161, 161);
+}
+.navigations .navigation-scroll .navigation-numbers .five {
+  color: rgb(0, 0, 0);
+  background-color: rgb(254, 200, 11);
+  padding: 6px 10px 6px 12px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigations .navigation-scroll .right-arrow {
+  color: rgb(0, 0, 0);
+  font-size: 42px;
+}
+.navigations .navigation-scroll .right-arrow .arrow-label {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .navigations .left-arrow,
+  .navigations .right-arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+  }
+  .navigations .left-arrow .arrow-label,
+  .navigations .right-arrow .arrow-label {
+    display: inline-block !important;
+    font-size: 16px;
+  }
+}

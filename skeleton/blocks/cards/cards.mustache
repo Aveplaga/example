@@ -1,0 +1,16 @@
+ <div class="cards-list">
+        {{#cards}}
+        <div class="card">
+            <div class="card-up">
+                <div class="card-in__stock">{{stock}}</div>
+                <img src="{{images}}" alt="{{titles}}">
+            </div>
+            <div class="card-image">
+                <img src="{{image}}" alt="{{titles}}">
+            </div>
+            <div class="card-title">{{title}}</div>
+            <div class="card-price">{{price}}</div>
+            <div class="card-link">{{link}}</div>
+        </div>
+        {{/cards}}
+    </div>
