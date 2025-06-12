@@ -2,106 +2,162 @@ $dark-color: rgba(0, 0, 0, 1);
 $bg-link: rgba(254, 200, 11, 1);
 
 $breakpoints: (
-   "mobile-small-min": 0px,
-   "mobile-mid-min": 320px,
-   "mobile-large-min": 480px,
-   "mobile-max": 767px,
-   "tablet-min": 768px,
-   "tablet-max": 1279px,
-   "desktop-min": 1280px
+    "mobile-small-min": 0px,
+    "mobile-mid-min": 320px,
+    "mobile-large-min": 480px,
+    "mobile-max": 767px,
+    "tablet-min": 768px,
+    "tablet-max": 1279px,
+    "desktop-min": 1280px
 );
 
 @mixin respond-between($min, $max) {
-   @media (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints, $max)) {
-      @content;
-   }
+    @media (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints, $max)) {
+        @content;
+    }
 }
 
 @mixin respond-from($min) {
-   @media (min-width: map-get($breakpoints, $min)) {
-      @content;
-   }
+    @media (min-width: map-get($breakpoints, $min)) {
+        @content;
+    }
+}
+
+.container {
+    max-width: 1440px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+
+    @include respond-between("tablet-min", "tablet-max") {
+        padding: 0 30px;
+    }
+
+    @include respond-from("desktop-min") {
+        padding: 0 40px;
+    }
 }
 
 .cards-list {
-   font-family: 'Fira Sans', sans-serif;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   justify-content: center;
-   gap: 20px 15px;
-   margin: 0 17px;
+    font-family: 'Fira Sans', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px 15px;
+    margin: 0 17px;
 
-   .card {
-      padding: 3px 2px 19px 2px;
-   }
+    .card {
+        padding: 3px 2px 19px 2px;
+        position: relative; 
+    }
 
-   .card-up {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .card-up {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%; 
+        padding: 0 2px; 
 
-      .card-in__stock {
-         color: rgba(255, 255, 255, 1);
-         background-color: rgba(134, 212, 72, 1);
-         padding: 3px 7px 2px 7px;
-         border-radius: 0 8px 0 0;
-         white-space: nowrap;
-         font-size: 12px;
-      }
-   }
+        .card-in__stock {
+            color: rgba(255, 255, 255, 1);
+            background-color: rgba(134, 212, 72, 1);
+            padding: 3px 7px 2px 7px;
+            border-radius: 0 8px 0 0;
+            white-space: nowrap;
+            font-size: 12px;
 
-   .card-up img {
-      width: 24px;
-      height: 24px;
-   }
+            &:empty {
+                background-color: transparent; 
+                padding: 0; 
+            }
+        }
 
-   .card-image img {
-      max-width: 308px;
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-bottom: 8px;
-   }
+        .card-icon-btn {
+            background: none; 
+            border: none; 
+            padding: 0;
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
 
-   .card-title {
-      text-align: center;
-      font-size: 16px;
-      font-weight: 400;
-      margin-bottom: 10px;
-      line-height: 130%;
-      color: $dark-color;
-   }
+            img {
+                width: 24px;
+                height: 24px;
+            }
 
-   .card-price {
-      text-align: center;
-      color: $dark-color;
-      margin-bottom: 8px;
-   }
+            &:hover {
+                opacity: 0.8; 
+            }
 
-   .card-link {
-      text-align: center;
-      background-color: $bg-link;
-      padding: 11px 24px;
-      border-radius: 4px;
-   }
+            &:active {
+                opacity: 0.6; 
+            }
+        }
+    }
 
-   @include respond-between("tablet-min", "tablet-max") {
-      grid-template-columns: repeat(3, 1fr);
+    .card-image img {
+        max-width: 308px;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
 
-      .card-title,
-      .card-price,
-      .card-link {
-         font-size: 24px;
-      }
-   }
+    .card-title {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        line-height: 130%;
+        color: $dark-color;
+    }
 
-   @include respond-from("desktop-min") {
-      grid-template-columns: repeat(5, 1fr);
+    .card-price {
+        text-align: center;
+        color: $dark-color;
+        margin-bottom: 8px;
+    }
 
-      .card-title,
-      .card-price,
-      .card-link {
-         font-size: 28px;
-      }
-   }
+    .card-link {
+        text-align: center;
+        background-color: $bg-link;
+        padding: 11px 24px;
+        border-radius: 4px;
+        color: $dark-color; 
+        font-size: 16px; 
+        font-family: 'Fira Sans', sans-serif; 
+        display: block; 
+        text-decoration: none; 
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    @include respond-between("tablet-min", "tablet-max") {
+        grid-template-columns: repeat(3, 1fr);
+
+        .card-title,
+        .card-price,
+        .card-link {
+            font-size: 24px;
+        }
+    }
+
+    @include respond-from("desktop-min") {
+        grid-template-columns: repeat(5, 1fr);
+
+        .card-title,
+        .card-price,
+        .card-link {
+            font-size: 28px;
+        }
+    }
 }

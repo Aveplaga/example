@@ -1,5 +1,45 @@
 @import "~swiper/swiper-bundle.css";
 
+// Переменные и миксины из вашего предыдущего кода
+$dark-color: rgba(0, 0, 0, 1);
+$bg-link: rgba(254, 200, 11, 1);
+
+$breakpoints: (
+    "mobile-small-min": 0px,
+    "mobile-mid-min": 320px,
+    "mobile-large-min": 480px,
+    "mobile-max": 767px,
+    "tablet-min": 768px,
+    "tablet-max": 1279px,
+    "desktop-min": 1280px
+);
+
+@mixin respond-between($min, $max) {
+    @media (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints, $max)) {
+        @content;
+    }
+}
+
+@mixin respond-from($min) {
+    @media (min-width: map-get($breakpoints, $min)) {
+        @content;
+    }
+}
+
+.container {
+    max-width: 1440px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+
+    @include respond-between("tablet-min", "tablet-max") {
+        padding: 0 30px;
+    }
+
+    @include respond-from("desktop-min") {
+        padding: 0 40px;
+    }
+}
+
 .swiper {
     margin: 0 auto;
     margin-top: 108px;
@@ -47,7 +87,7 @@
     }
 
     .slide-title{
-       padding: 0 7px 0 8px;
+        padding: 0 7px 0 8px;
     }
 }
 
@@ -63,10 +103,37 @@
         border-radius: 4px;
         color: rgba(0, 0, 0, 1);
         text-align: center;
+        text-decoration: none; 
+        font-size: 16px; 
+        white-space: nowrap; 
+        
+        &:hover {
+            opacity: 0.9;
+        }
+        &:active {
+            opacity: 0.8;
+        }
     }
 
-    img{
-        width: 32px;
-        height: 32px;
+    .icon-button { 
+        background: none; 
+        border: none; 
+        padding: 0; 
+        cursor: pointer;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        
+        img {
+            width: 32px; 
+            height: 32px; 
+        }
+
+        &:hover {
+            opacity: 0.8; 
+        }
+        &:active {
+            opacity: 0.6; 
+        }
     }
 }

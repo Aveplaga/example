@@ -1,24 +1,25 @@
 <div class="navigations">
-{{#navigation}}
-    <div class="button-navigation">{{link}}</div>
-    <div class="navigation-scroll">
-        <div class="left-arrow">
-            {{arrow-left}}
-            <span class="arrow-label">{{back}}</span>
+    {{#navigation}}
+        <a class="button-navigation">{{show_more_button.text}}</a>
+
+        <div class="navigation-scroll">
+            <a class="arrow-nav left-arrow {{#arrow_left.is_disabled}}disabled{{/arrow_left.is_disabled}}">
+                <span class="icon">{{{arrow_left.icon}}}</span>
+                <span class="arrow-label">{{arrow_left.label}}</span>
+            </a>
+
+            <div class="navigation-numbers">
+                {{#pages}}
+                    <a class="page-item {{#is_dots}}page-dots{{/is_dots}} {{#is_current}}active{{/is_current}}">
+                        {{text}}
+                    </a>
+                {{/pages}}
+            </div>
+
+            <a class="arrow-nav right-arrow {{#arrow_right.is_disabled}}disabled{{/arrow_right.is_disabled}}">
+                <span class="arrow-label">{{arrow_right.label}}</span>
+                <span class="icon">{{{arrow_right.icon}}}</span>
+            </a>
         </div>
-        <div class="navigation-numbers">
-            <div class="one">{{one}}</div>
-            <div class="dot">{{dot-left}}</div>
-            <div class="five">{{five}}</div>
-            <div class="six">{{six}}</div>
-            <div class="seven">{{seven}}</div>
-            <div class="dot">{{dot-right}}</div>
-            <div class="fifteen">{{fifteen}}</div>
-        </div>
-        <div class="right-arrow">
-        <span class="arrow-label">{{farther}}</span>
-            {{arrow-right}}
-        </div>
-    </div>
-{{/navigation}}
+    {{/navigation}}
 </div>

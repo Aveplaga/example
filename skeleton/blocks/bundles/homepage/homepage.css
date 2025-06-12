@@ -25,6 +25,22 @@
  * Значения точек берутся из коллекции $breakpoints
  * */
 @import "~swiper/swiper-bundle.css";
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
 .swiper {
   margin: 0 auto;
   margin-top: 108px;
@@ -96,10 +112,56 @@
   border-radius: 4px;
   color: rgb(0, 0, 0);
   text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
 }
-.content-footer img {
+.content-footer .cta-link:hover {
+  opacity: 0.9;
+}
+.content-footer .cta-link:active {
+  opacity: 0.8;
+}
+.content-footer .icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.content-footer .icon-button img {
   width: 32px;
   height: 32px;
+}
+.content-footer .icon-button:hover {
+  opacity: 0.8;
+}
+.content-footer .icon-button:active {
+  opacity: 0.6;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 40px;
+  }
 }
 
 .cards-list {
@@ -116,6 +178,7 @@
 }
 .cards-list .card {
   padding: 3px 2px 19px 2px;
+  position: relative;
 }
 .cards-list .card-up {
   display: -webkit-box;
@@ -127,6 +190,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 2px;
 }
 .cards-list .card-up .card-in__stock {
   color: rgb(255, 255, 255);
@@ -136,9 +204,34 @@
   white-space: nowrap;
   font-size: 12px;
 }
-.cards-list .card-up img {
+.cards-list .card-up .card-in__stock:empty {
+  background-color: transparent;
+  padding: 0;
+}
+.cards-list .card-up .card-icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cards-list .card-up .card-icon-btn img {
   width: 24px;
   height: 24px;
+}
+.cards-list .card-up .card-icon-btn:hover {
+  opacity: 0.8;
+}
+.cards-list .card-up .card-icon-btn:active {
+  opacity: 0.6;
 }
 .cards-list .card-image img {
   max-width: 308px;
@@ -165,6 +258,17 @@
   background-color: rgb(254, 200, 11);
   padding: 11px 24px;
   border-radius: 4px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-family: "Fira Sans", sans-serif;
+  display: block;
+  text-decoration: none;
+}
+.cards-list .card-link:hover {
+  opacity: 0.9;
+}
+.cards-list .card-link:active {
+  opacity: 0.8;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .cards-list {
@@ -204,12 +308,24 @@
   margin-top: 80px;
   max-width: 382px;
   width: 100%;
+  font-family: "Fira Sans", sans-serif;
 }
 .navigations .button-navigation {
   background-color: rgb(254, 200, 11);
   padding: 11px 27px;
   text-align: center;
   border-radius: 4px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.navigations .button-navigation:hover {
+  opacity: 0.9;
+}
+.navigations .button-navigation:empty {
+  display: none;
 }
 .navigations .navigation-scroll {
   display: -webkit-box;
@@ -225,11 +341,31 @@
           justify-content: center;
   font-size: 18px;
 }
-.navigations .navigation-scroll .left-arrow {
+.navigations .navigation-scroll .arrow-nav {
   color: rgb(0, 0, 0);
   font-size: 42px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
-.navigations .navigation-scroll .left-arrow .arrow-label {
+.navigations .navigation-scroll .arrow-nav.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+.navigations .navigation-scroll .arrow-nav:empty {
+  display: none;
+}
+.navigations .navigation-scroll .arrow-nav .icon {
+  font-size: 42px;
+  line-height: 1;
+}
+.navigations .navigation-scroll .arrow-nav .arrow-label {
   display: none;
 }
 .navigations .navigation-scroll .navigation-numbers {
@@ -242,24 +378,50 @@
   gap: 14px;
   color: rgb(161, 161, 161);
 }
-.navigations .navigation-scroll .navigation-numbers .five {
-  color: rgb(0, 0, 0);
-  background-color: rgb(254, 200, 11);
-  padding: 6px 10px 6px 12px;
+.navigations .navigation-scroll .navigation-numbers .page-item {
+  color: rgb(161, 161, 161);
+  text-decoration: none;
+  padding: 6px 10px;
   border-radius: 50%;
   text-align: center;
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 32px;
+  height: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.navigations .navigation-scroll .right-arrow {
+.navigations .navigation-scroll .navigation-numbers .page-item.active {
   color: rgb(0, 0, 0);
-  font-size: 42px;
+  background-color: rgb(254, 200, 11);
 }
-.navigations .navigation-scroll .right-arrow .arrow-label {
+.navigations .navigation-scroll .navigation-numbers .page-item:hover:not(.active) {
+  background-color: rgba(254, 200, 11, 0.3);
+}
+.navigations .navigation-scroll .navigation-numbers .page-item:empty {
   display: none;
 }
+.navigations .navigation-scroll .navigation-numbers .page-dots {
+  background-color: transparent;
+  border-radius: 0;
+  min-width: unset;
+  padding: 0;
+  height: auto;
+  cursor: default;
+}
+.navigations .navigation-scroll .navigation-numbers .page-dots:hover {
+  background-color: transparent;
+}
 @media (min-width: 768px) and (max-width: 1280px) {
-  .navigations .left-arrow,
-  .navigations .right-arrow {
+  .navigations .arrow-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -268,8 +430,7 @@
             align-items: center;
     gap: 15px;
   }
-  .navigations .left-arrow .arrow-label,
-  .navigations .right-arrow .arrow-label {
+  .navigations .arrow-nav .arrow-label {
     display: inline-block !important;
     font-size: 16px;
   }

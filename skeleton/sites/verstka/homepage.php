@@ -286,23 +286,69 @@ $cards = [
 <?php
 
 $navigations = [
-
     'navigation' => [
+        'show_more_button' => [
+            'text' => 'Показать еще',
+        ],
 
-        'link' => 'Показать еще',
-        'arrow-left' => '‹',
-        'back' => 'Назад',
-        'one' => '1',
-        'dot-left' => '...',
-        'five' => '5',
-        'six' => '6',
-        'seven' => '7',
-        'dot-right' => '...',
-        'fifteen' => '15',
-        'farther' => 'Дальше',
-        'arrow-right' => '›',
+        'arrow_left' => [
+            'icon' => '‹', 
+            'label' => 'Назад',
+            'is_disabled' => false, 
+        ],
+
+        'pages' => [
+            [
+                'text' => '1',
+                'is_current' => false, 
+                'is_dots' => false,
+            ],
+            [
+                'text' => '...',
+                'url' => '#',
+                'is_current' => false,
+                'is_dots' => true,
+            ],
+            [
+                'text' => '5',
+                'url' => '#page5',
+                'is_current' => true,
+                'is_dots' => false,
+            ],
+            [
+                'text' => '6',
+                'url' => '#page6',
+                'is_current' => false,
+                'is_dots' => false,
+            ],
+            [
+                'text' => '7',
+                'url' => '#page7',
+                'is_current' => false,
+                'is_dots' => false,
+            ],
+            [
+                'text' => '...',
+                'url' => '#',
+                'is_current' => false,
+                'is_dots' => true,
+            ],
+            [
+                'text' => '15',
+                'url' => '#page15',
+                'is_current' => false,
+                'is_dots' => false,
+            ],
+        ],
+
+        'arrow_right' => [
+            'icon' => '›', 
+            'label' => 'Дальше',
+            'url' => '#', 
+            'is_disabled' => false, 
+        ],
     ]
-]
+];
 
 ?>
 

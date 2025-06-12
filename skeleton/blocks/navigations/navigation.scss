@@ -20,23 +20,36 @@ $breakpoints: (
    }
 }
 
-.navigations{
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   margin: 0 auto;
-   margin-top: 80px;
-   max-width: 382px;
-   width: 100%;
+.navigations {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 80px;
+    max-width: 382px;
+    width: 100%;
+    font-family: 'Fira Sans', sans-serif;
 
-   .button-navigation{
+    .button-navigation { 
         background-color: rgba(254, 200, 11, 1);
         padding: 11px 27px;
         text-align: center;
         border-radius: 4px;
-   }
+        text-decoration: none;
+        color: rgba(0, 0, 0, 1);
+        display: block;
+        box-sizing: border-box;
 
-   .navigation-scroll{
+        &:hover {
+            opacity: 0.9;
+        }
+
+        &:empty {
+            display: none; 
+        }
+    }
+
+    .navigation-scroll {
         display: flex;
         gap: 16px;
         margin-top: 32px;
@@ -44,53 +57,93 @@ $breakpoints: (
         justify-content: center;
         font-size: 18px;
 
-        .left-arrow{
+        .arrow-nav { 
             color: rgba(0, 0, 0, 1);
-            font-size: 42px;
+            font-size: 42px; 
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            
+            &.disabled { 
+                opacity: 0.5;
+                pointer-events: none;
+                cursor: default;
+            }
 
-            .arrow-label{
-               display: none;
+            &:empty {
+                display: none; 
+            }
+
+            .icon {
+                font-size: 42px;
+                line-height: 1;
+            }
+
+            .arrow-label {
+                display: none; 
             }
         }
 
-        .navigation-numbers{
+        .navigation-numbers {
             display: flex;
             align-items: center;
             gap: 14px;
             color: rgba(161, 161, 161, 1);
 
-            .five{
-                color: rgba(0, 0, 0, 1);
-                background-color: rgba(254, 200, 11, 1);
-                padding: 6px 10px 6px 12px;
+            .page-item { 
+                color: rgba(161, 161, 161, 1);
+                text-decoration: none;
+                padding: 6px 10px;
                 border-radius: 50%;
                 text-align: center;
                 font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 32px;
+                height: 32px;
+                box-sizing: border-box;
+
+                &.active { 
+                    color: rgba(0, 0, 0, 1);
+                    background-color: rgba(254, 200, 11, 1);
+                }
+
+                &:hover:not(.active) {
+                    background-color: rgba(254, 200, 11, 0.3);
+                }
+
+                &:empty {
+                    display: none;
+                }
+            }
+
+            .page-dots { 
+                background-color: transparent;
+                border-radius: 0;
+                min-width: unset;
+                padding: 0;
+                height: auto;
+                cursor: default;
+
+                &:hover {
+                    background-color: transparent;
+                }
             }
         }
+    }
 
-         .right-arrow{
-            color: rgba(0, 0, 0, 1);
-            font-size: 42px;
+    @include respond-between("tablet-min", "desktop-min") {
+        .arrow-nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
 
-            .arrow-label{
-               display: none;
+            .arrow-label {
+                display: inline-block !important;
+                font-size: 16px;
             }
         }
-   }
-
-   @include respond-between("tablet-min", "desktop-min") {
-      .left-arrow,
-      .right-arrow{
-         display: flex;
-         align-items: center;
-         gap: 15px;
-
-         .arrow-label{
-            display: inline-block !important;
-            font-size: 16px;
-         }
-      }
-   }
-   
+    }
 }
