@@ -413,5 +413,8 @@ $slider = [
     <?= $mustache->render('slider', $slider); ?>
 </div>
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="/path/to/your/slider.js"></script>
+
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/footer.php');
