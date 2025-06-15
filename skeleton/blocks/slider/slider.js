@@ -21,11 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         },
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
         speed: 1000,
         effect: 'slide',
     });
