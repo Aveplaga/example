@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* Fonts */
+/* Colors */
+/* Breakpoints
+ * Точки адаптивного перехода разрешений
+ * */
+/* Wrappers
+ * Значения ширины контента контейнера
+ * */
+/* Container offsets
+ * Значения отступов контейнера по бокам
+ * */
+/* Transition
+ * Значения времени переходов
+ * */
+/* Header  height
+ * Значения высоты шапки
+ * */
+/* Header  height
+ * Значения высоты фиксированной шапки
+ * */
+/* Mixins */
+/* Миксин для embed-responsive, блоков с сохранением пропорций  */
+/* Миксин для медиа-запросов
+ * Значения точек берутся из коллекции $breakpoints
+ * */
+.custom-fancybox .fancybox__content {
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+input,
+textarea {
+  font-family: "Montserrat", Arial, sans-serif;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.link-as-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+.page-inner {
+  min-height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.mobile-hide {
+  display: none;
+}
+.mobile-show {
+  display: inline;
+}
+
+@media only screen and (max-width: 767px) {
+  .tablet-only {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .tablet-hide {
+    display: none;
+  }
+  .tablet-show {
+    display: inline;
+  }
+  .tablet-only {
+    display: block;
+  }
+  .tablet-block {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .desktop-only {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .tablet-only {
+    display: none;
+  }
+  .desktop-hide {
+    display: none;
+  }
+  .desktop-show {
+    display: inline;
+  }
+}
+.animate {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.animate:not(.loaded) {
+  opacity: 0;
+}
+
+.button {
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+  max-width: 410px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
