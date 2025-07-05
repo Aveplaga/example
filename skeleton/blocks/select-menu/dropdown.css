@@ -1,0 +1,57 @@
+.disclosure {
+  margin: 50px;
+}
+.disclosure .disclosure-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 88px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: rgba(27, 27, 27, 0.4);
+  cursor: pointer;
+}
+.disclosure .disclosure-button .disclosure-title {
+  margin-right: 8px;
+  font-weight: 600;
+}
+.disclosure .disclosure-button .disclosure-meaning {
+  color: rgba(27, 27, 27, 0.9);
+  font-weight: 600;
+}
+.disclosure .disclosure-button .disclosure-arrow {
+  color: rgba(27, 27, 27, 0.9);
+}
+.disclosure .disclosure-inner {
+  padding: 15px;
+}
+.disclosure .disclosure-inner .disclosure-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  font-weight: 600;
+  color: rgba(27, 27, 27, 0.4);
+}
+.disclosure .disclosure-inner .disclosure-content .disclosure-link {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.disclosure .disclosure-inner .disclosure-content .disclosure-link:hover {
+  color: rgba(27, 27, 27, 0.9);
+}
+.disclosure .disclosure-inner.is-open .disclosure-inner {
+  display: block;
+}
+.disclosure .disclosure-inner.is-open .disclosure-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}

@@ -1,0 +1,21 @@
+<div class="disclosure">
+    <button class="disclosure-button">
+        <div class="disclosure-text">
+            <span class="disclosure-title">{{title}}</span>
+            <span class="disclosure-meaning">{{meaning}}</span>
+        </div>
+        <span class="disclosure-arrow">
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.946667 8.41102e-08L4 3.09042L7.06 1.12094e-08L8 0.951417L4 5L4.88183e-07 0.951417L0.946667 8.41102e-08Z" fill="#1B1B1B" fill-opacity="0.9" />
+            </svg>
+        </span>
+    </button>
+
+    <div class="disclosure-inner">
+        <div class="disclosure-content">
+            {{#links}}
+                <a href="{{href}}" class="disclosure-link">{{text}}</a>
+            {{/links}}
+        </div>
+    </div>
+</div>

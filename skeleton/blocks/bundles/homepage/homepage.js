@@ -1,8 +1,8 @@
 import './homepage.sass'
-import '../../slider/slider';
-import '../../slider/slider.mustache'
-import '../../navigations/navigation.mustache'
-import '../../cards/cards.mustache'
+import '../../select-menu/disclosure.mustache'
+import '../../faq/faq.mustache'
+import '../../collapsible/collapsible.mustache'
+
 
 document.addEventListener('DOMContentLoaded', () => {
 

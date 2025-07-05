@@ -1,0 +1,16 @@
+<div class="faq">
+    <h2 class="faq-title">{{title}}</h2>
+    <div class="faq-list">
+        {{#questions}}
+        <div class="faq-item">
+            <div class="faq-header">
+                <span class="faq-question">{{question}}</span>
+                <button class="faq-button"><span>&plus;</span></button>
+            </div>
+            <div class="faq-content">
+                <p>{{answer}}</p>
+            </div>
+        </div>
+        {{/questions}}
+    </div>
+</div>

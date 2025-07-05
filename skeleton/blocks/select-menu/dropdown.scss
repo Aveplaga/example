@@ -1,0 +1,75 @@
+$color-gray: rgba(27, 27, 27, 0.4);
+$color-red: rgba(228, 45, 60, 1);
+$color-black: rgba(27, 27, 27, 0.9);
+
+.disclosure {
+    margin: 50px;
+
+    &.is-open {
+        .disclosure-inner {
+            display: block;
+        }
+
+        .disclosure-arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    .disclosure-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 88px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 8px;
+        padding: 10px 15px;
+        color: $color-gray;
+        cursor: pointer;
+
+        .disclosure-title {
+            margin-right: 8px;
+            font-weight: 600;
+        }
+
+        .disclosure-meaning {
+            color: $color-black;
+            font-weight: 600;
+        }
+
+        .disclosure-arrow {
+            color: $color-black;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .disclosure-inner {
+        display: none;
+        padding: 15px;
+
+        .disclosure-content {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            font-weight: 600;
+            color: $color-gray;
+
+            .disclosure-link {
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                    color: $color-black;
+                }
+
+                &.active {
+                    color: $color-red;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .disclosure{
+        margin: 25px auto;
+    }
+}

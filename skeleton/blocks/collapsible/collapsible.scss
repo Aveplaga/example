@@ -1,0 +1,59 @@
+$title-color: rgba(27, 27, 27, 1);
+$text-color: rgba(27, 27, 27, 0.9);
+
+.collapsible {
+    margin: 100px 50px;
+    max-width: 1115px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 50px;
+
+    .collapsible-title {
+        color: $title-color;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 3%;
+    }
+
+    .collapsible-text {
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        margin-bottom: 20px;
+        color: $text-color;
+        font-size: 15px;
+        line-height: 25px;
+
+        &.expanded {
+            mask-image: none;
+            -webkit-mask-image: none;
+        }
+    }
+
+    .collapsible-hidden {
+        display: none;
+    }
+
+    .collapsible-button {
+        text-decoration: underline;
+        color: rgba(19, 19, 19, 0.7);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 25px;
+        cursor: pointer;
+
+        .disclosure-arrow {
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        &.active .disclosure-arrow {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .collapsible{
+        margin: 25px auto;
+    }
+}

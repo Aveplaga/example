@@ -3,6 +3,7 @@ import 'fonts/stylesheet.css'
 
 import './common.sass'
 
+
 window.loadingAttributePolyfill = loadingAttributePolyfill
 window._ = {
   merge: require('lodash/merge'),
