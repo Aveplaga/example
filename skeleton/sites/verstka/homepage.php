@@ -111,7 +111,9 @@ $collapsible = [
     <?= $mustache->render('collapsible', $collapsible); ?>
 </div>
 
-<script src="/local/assets/local/bundle-interactive-componets/bundle-interactive-componets.31d6cfe0d16ae931b73c.js"></script>
+<script src="/local/assets/dev/bundle-interactive-components/bundle-interactive-components.js"></script>
+
+
 
 
 <?php
