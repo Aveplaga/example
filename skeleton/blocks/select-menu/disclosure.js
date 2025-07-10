@@ -1,22 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const disclosure = document.querySelector('.disclosure');
-  if (!disclosure) return;
+import { Dropdown } from '../dropdown/Dropdown'
 
-  const button = disclosure.querySelector('.disclosure-button');
-  const meaning = disclosure.querySelector('.disclosure-meaning');
-  const links = disclosure.querySelectorAll('.disclosure-link');
+const sortDropdown = new Dropdown({
+	selectors: {
+		dropdown: '.dropdown',
+		current: '.dropdown-current',
+		currentText: '.dropdown-current__value',
+		value: '.dropdown__value'
+	},
+	defaultCurrentText: '',
+	oneOpen: true,
+	multiple: false,
 
-  button.addEventListener('click', () => {
-    disclosure.classList.toggle('is-open');
-  });
-
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      meaning.textContent = link.textContent;
-      links.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      disclosure.classList.remove('is-open');
-    });
-  });
-});
+})

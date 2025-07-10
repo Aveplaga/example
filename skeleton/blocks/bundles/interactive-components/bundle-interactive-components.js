@@ -1,3 +1,5 @@
-import '../../collapsible/collapsible.js';
-import '../../select-menu/disclosure.js';
-import '../../faq/faq.js';
+import initFaqAccordion from '../../faq/faq.js'
+import '../../collapsible/collapsible.js'
+import '../../select-menu/disclosure.js'
+
+initFaqAccordion()

@@ -1,72 +1,76 @@
 $title-color: rgba(27, 27, 27, 1);
 $text-color: rgba(27, 27, 27, 0.9);
 
-.collapsible {
+.expander {
     margin: 100px 50px;
     max-width: 1115px;
     background-color: rgba(255, 255, 255, 1);
     padding: 50px;
 
-    .collapsible-title {
-        color: $title-color;
+    .expander__title {
+        color: rgba(27, 27, 27, 1);
         margin-bottom: 20px;
         font-size: 20px;
         font-weight: 500;
         letter-spacing: 3%;
     }
 
-    .collapsible-text {
+    .expander-hidden {
         max-height: 180px;
         overflow: hidden;
         transition: max-height 0.4s ease;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
         -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        position: relative;
 
-        &.expanded {
-            max-height: 1000px;
+        &.expander_expand {
+            max-height: none; 
+            overflow: visible; 
             mask-image: none;
             -webkit-mask-image: none;
         }
 
-        &.expanded::after {
-            opacity: 0;
-        }
-
-        &.unset {
+        &.expander_unset {
             max-height: none;
             overflow: visible;
-
-            &::after {
-                display: none;
-            }
+            mask-image: none;
+            -webkit-mask-image: none;
         }
     }
 
-    .collapsible-button {
+    .expander__text {
+        color: rgba(27, 27, 27, 0.9);
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .expander__toggle {
         text-decoration: underline;
         color: rgba(19, 19, 19, 0.7);
         font-weight: 500;
         font-size: 14px;
         line-height: 25px;
         cursor: pointer;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
 
-        .disclosure-arrow {
-            display: inline-block;
-            transition: transform 0.3s;
-        }
-
-        &.active .disclosure-arrow {
+        &.active .expander__arrow {
             transform: rotate(180deg);
         }
     }
-}
 
-@media (max-width: 768px) {
-    .collapsible {
+    .expander__arrow {
+        display: inline-block;
+        transition: transform 0.3s;
+    }
+
+    @media (max-width: 768px) {
         margin: 25px auto;
 
-        .collapsible-text {
+        .expander-hidden {
             max-height: 320px;
         }
     }

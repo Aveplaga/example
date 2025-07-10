@@ -436,17 +436,26 @@
   }
 }
 
-.disclosure {
+.dropdown {
   margin: 50px;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
 }
-.disclosure.is-open .disclosure-inner {
-  display: block;
+.dropdown.dropdown_expand .dropdown-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.disclosure.is-open .disclosure-arrow {
+.dropdown.dropdown_expand .dropdown-arrow {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.disclosure .disclosure-button {
+.dropdown.dropdown_disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.dropdown .dropdown-current {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,73 +465,70 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 88px;
-  background-color: rgb(255, 255, 255);
+  width: 100%;
+  background-color: #fff;
   border-radius: 8px;
   padding: 10px 15px;
-  color: rgba(27, 27, 27, 0.4);
+  color: rgba(27, 27, 27, 0.9);
   cursor: pointer;
-}
-.disclosure .disclosure-button .disclosure-title {
-  margin-right: 8px;
   font-weight: 600;
 }
-.disclosure .disclosure-button .disclosure-meaning {
-  color: rgba(27, 27, 27, 0.9);
-  font-weight: 600;
+.dropdown .dropdown-current .dropdown-current__text {
+  color: rgba(27, 27, 27, 0.4);
 }
-.disclosure .disclosure-button .disclosure-arrow {
-  color: rgba(27, 27, 27, 0.9);
+.dropdown .dropdown-current .dropdown-arrow {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.disclosure .disclosure-inner {
+.dropdown .dropdown-list {
   display: none;
-  padding: 15px;
-}
-.disclosure .disclosure-inner .disclosure-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 14px;
+  padding: 15px;
+  background-color: #fff;
+  margin-top: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.dropdown .dropdown-list .dropdown__value {
   font-weight: 600;
   color: rgba(27, 27, 27, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
-.disclosure .disclosure-inner .disclosure-content .disclosure-link {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-.disclosure .disclosure-inner .disclosure-content .disclosure-link:hover {
+.dropdown .dropdown-list .dropdown__value:hover {
   color: rgba(27, 27, 27, 0.9);
 }
-.disclosure .disclosure-inner .disclosure-content .disclosure-link.active {
+.dropdown .dropdown-list .dropdown__value.dropdown__value_selected {
   color: rgb(228, 45, 60);
 }
 
 @media (max-width: 768px) {
-  .disclosure {
+  .dropdown {
     margin: 25px auto;
   }
 }
-.faq {
+.accordion {
   max-width: 1280px;
   margin: 150px 50px;
   background-color: rgb(255, 255, 255);
   padding: 58px 60px 60px 157px;
 }
-.faq .faq-title {
+.accordion .accordion__main-title {
   text-align: center;
   margin-bottom: 40px;
   font-size: 36px;
   font-weight: 800;
 }
-.faq .faq-list {
+.accordion .accordion-items-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,22 +538,25 @@
           flex-direction: column;
   gap: 20px;
 }
-.faq .faq-list .faq-item {
+.accordion .accordion-item {
   border-bottom: 1px solid rgba(47, 47, 48, 0.1);
 }
-.faq .faq-list .faq-item.active .faq-question {
+.accordion .accordion-item.accordion-hidden_opened .accordion__title {
   color: rgb(244, 62, 27);
 }
-.faq .faq-list .faq-item.active .faq-content {
+.accordion .accordion-item.accordion-hidden_opened .accordion-hidden {
   display: block;
+  margin-bottom: 24px;
 }
-.faq .faq-list .faq-item.active .faq-button span {
-  content: "-";
-  color: rgb(244, 62, 27);
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+.accordion .accordion-item.accordion-hidden_opened .accordion__icon svg {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.faq .faq-list .faq-item .faq-header {
+.accordion .accordion-item .accordion__trigger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -558,8 +567,9 @@
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  gap: 20px;
 }
-.faq .faq-list .faq-item .faq-header .faq-question {
+.accordion .accordion-item .accordion__trigger .accordion__title {
   font-size: 18px;
   font-weight: 500;
   color: rgb(47, 47, 48);
@@ -567,46 +577,49 @@
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.faq .faq-list .faq-item .faq-header .faq-button {
-  position: relative;
+.accordion .accordion-item .accordion__trigger .accordion__icon {
   background-color: rgba(75, 75, 100, 0.08);
-  padding: 15px;
+  padding: 9px;
   border-radius: 6px;
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.faq .faq-list .faq-item .faq-header .faq-button span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.accordion .accordion-item .accordion__trigger .accordion__icon svg {
   color: rgba(47, 47, 48, 0.5);
-  font-size: 20px;
-  font-weight: 500;
-  -webkit-transition: color 0.3s ease, -webkit-transform 0.3s ease;
-  transition: color 0.3s ease, -webkit-transform 0.3s ease;
-  transition: color 0.3s ease, transform 0.3s ease;
-  transition: color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+  width: 17px;
+  height: 17px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.faq .faq-list .faq-item .faq-content {
+.accordion .accordion-item .accordion-hidden {
   display: none;
 }
-.faq .faq-list .faq-item .faq-content p {
+.accordion .accordion-item .accordion-hidden p {
   font-size: 14px;
   padding: 10px 0;
 }
 
 @media (max-width: 768px) {
-  .faq {
+  .accordion {
     margin: 0 auto;
     padding: 30px 20px;
   }
-  .faq .faq-title {
+  .accordion .accordion__main-title {
     font-size: 23px;
     text-align: center;
   }
-  .faq .faq-list .faq-item .faq-header {
+  .accordion .accordion-item .accordion__trigger {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -618,31 +631,32 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .faq .faq-list .faq-item .faq-header .faq-question {
+  .accordion .accordion-item .accordion__trigger .accordion__title {
     font-size: 16px;
     margin-bottom: 16px;
   }
-  .faq .faq-list .faq-item .faq-header .faq-button {
+  .accordion .accordion-item .accordion__trigger .accordion__icon {
     background-color: transparent;
   }
-  .faq .faq-list .faq-item .faq-header .faq-button span {
-    color: rgba(47, 47, 48, 0.5);
+  .accordion .accordion-item .accordion__trigger .accordion__icon svg {
+    width: 17px;
+    height: 17px;
   }
 }
-.collapsible {
+.expander {
   margin: 100px 50px;
   max-width: 1115px;
   background-color: rgb(255, 255, 255);
   padding: 50px;
 }
-.collapsible .collapsible-title {
+.expander .expander__title {
   color: rgb(27, 27, 27);
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3%;
 }
-.collapsible .collapsible-text {
+.expander .expander-hidden {
   max-height: 180px;
   overflow: hidden;
   -webkit-transition: max-height 0.4s ease;
@@ -651,48 +665,58 @@
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
   -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
-  position: relative;
 }
-.collapsible .collapsible-text.expanded {
-  max-height: 1000px;
+.expander .expander-hidden.expander_expand {
+  max-height: none;
+  overflow: visible;
   mask-image: none;
   -webkit-mask-image: none;
 }
-.collapsible .collapsible-text.expanded::after {
-  opacity: 0;
-}
-.collapsible .collapsible-text.unset {
+.expander .expander-hidden.expander_unset {
   max-height: none;
   overflow: visible;
+  mask-image: none;
+  -webkit-mask-image: none;
 }
-.collapsible .collapsible-text.unset::after {
-  display: none;
+.expander .expander__text {
+  color: rgba(27, 27, 27, 0.9);
+  font-size: 16px;
+  line-height: 1.6;
 }
-.collapsible .collapsible-button {
+.expander .expander__toggle {
   text-decoration: underline;
   color: rgba(19, 19, 19, 0.7);
   font-weight: 500;
   font-size: 14px;
   line-height: 25px;
   cursor: pointer;
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 0;
 }
-.collapsible .collapsible-button .disclosure-arrow {
+.expander .expander__toggle.active .expander__arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.expander .expander__arrow {
   display: inline-block;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.collapsible .collapsible-button.active .disclosure-arrow {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
 @media (max-width: 768px) {
-  .collapsible {
+  .expander {
     margin: 25px auto;
   }
-  .collapsible .collapsible-text {
+  .expander .expander-hidden {
     max-height: 320px;
   }
 }

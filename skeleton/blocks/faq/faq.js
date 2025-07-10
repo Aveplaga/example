@@ -1,17 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const faqItems = document.querySelectorAll('.faq-item');
+import { Accordion } from '../accordion/Accordion'
 
-  faqItems.forEach(item => {
-    const header = item.querySelector('.faq-header');
-    if (!header) return;
-
-    header.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      faqItems.forEach(i => i.classList.remove('active'));
-
-      if (!isActive) {
-        item.classList.add('active');
-      }
-    });
-  });
-});
+export default function initFaqAccordion() {
+  new Accordion({
+    selectors: {
+      accordion: '.accordion',
+      item: '.accordion-item',
+      trigger: '.accordion__trigger',
+      hidden: '.accordion-hidden'
+    },
+    oneOpen: true,
+    transitionDuration: 300
+  })
+}

@@ -1,20 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const content = document.querySelector('.expand-content');
-  const button = document.querySelector('.expand-toggle');
-  const maxHeight = 180;
-  const delta = 10;
+import { Expander } from '../expander/Expander'
 
-  if (!content || !button) return;
-
-  if (content.scrollHeight <= maxHeight + delta) {
-    content.classList.add('unset');
-    button.hidden = true;
-    return;
-  }
-
-  button.addEventListener('click', () => {
-    const expanded = content.classList.toggle('expanded');
-    button.classList.toggle('active', expanded);
-    button.firstChild.textContent = expanded ? 'Скрыть ' : 'Читать полностью ';
-  });
-});
+const expanderInstance = new Expander({
+    selectors: {
+        expander: '.expander',
+        toggle: '.expander__toggle',
+        toggleText: '.expander__toggle-text',
+        hidden: '.expander-hidden'
+    },
+    classes: {
+        opened: 'expander_expand', 
+        unset: 'expander_unset'    
+    },
+    text: {
+        expanded: 'Свернуть',
+        collapsed: 'Читать полностью',
+        collapsedValueFromElement: false
+    },
+    _delta: 20,
+    minHeight: 180
+})
