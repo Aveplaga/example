@@ -19,7 +19,7 @@ $pageConfig = [
         'bundle-common',
         'bundle-feedback-form',
         'bundle-homepage',
-        'bundle-interactive-componets',
+        'bundle-interactive-components',
     ]),
     'inlineJs' => collect([]),
     'deferredCss' => collect([]),
@@ -27,7 +27,7 @@ $pageConfig = [
         'bundle-common',
         'bundle-homepage',
         'bundle-feedback-form',
-        'bundle-interactive-componets',
+        'bundle-interactive-components',
     ]),
     'asyncJs' => collect([]),
 ];
