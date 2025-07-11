@@ -11,7 +11,7 @@ export default function initFaqAccordion() {
     classes: { 
         opened: 'tab-hidden_opened' 
     },
-    oneOpen: true,
+    oneOpen: false,
     transitionDuration: 300
   })
 }

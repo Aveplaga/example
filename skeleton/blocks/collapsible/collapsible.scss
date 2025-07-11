@@ -2,13 +2,13 @@ $title-color: rgba(27, 27, 27, 1);
 $text-color: rgba(27, 27, 27, 0.9);
 
 .collapsible {
-    margin: 100px 50px;
+    margin: 150px 50px;
     max-width: 1115px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #fff;
     padding: 50px;
 
     .collapsible__title {
-        color: rgba(27, 27, 27, 1);
+        color: $title-color;
         margin-bottom: 20px;
         font-size: 20px;
         font-weight: 500;
@@ -18,27 +18,33 @@ $text-color: rgba(27, 27, 27, 0.9);
     .collapsible-hidden {
         max-height: 180px;
         overflow: hidden;
+        position: relative;
         transition: max-height 0.4s ease;
-        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 
-        &.collapsible_expand {
-            max-height: none; 
-            overflow: visible; 
-            mask-image: none;
-            -webkit-mask-image: none;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            opacity: 1;
         }
 
-        &.collapsible_unset {
-            max-height: none;
-            overflow: visible;
-            mask-image: none;
-            -webkit-mask-image: none;
+        &.collapsible_expand::after {
+            opacity: 0;
+        }
+
+        &.collapsible_unset::after {
+            opacity: 0;
         }
     }
 
     .collapsible__text {
-        color: rgba(27, 27, 27, 0.9);
+        color: $text-color;
         font-size: 16px;
         line-height: 1.6;
     }
@@ -60,6 +66,10 @@ $text-color: rgba(27, 27, 27, 0.9);
         &.active .collapsible__arrow {
             transform: rotate(180deg);
         }
+    }
+
+    &.collapsible_unset .collapsible__toggle {
+        display: none;
     }
 
     .collapsible__arrow {

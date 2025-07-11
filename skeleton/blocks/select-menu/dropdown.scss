@@ -9,8 +9,14 @@ $color-black: rgba(27, 27, 27, 0.9);
     max-width: 350px;
 
     &.disclosure_expand {
+        .disclosure-hidden {
+            height: auto;
+        }
+
         .disclosure-list {
-            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
         }
 
         .disclosure-arrow {
@@ -44,8 +50,20 @@ $color-black: rgba(27, 27, 27, 0.9);
         }
     }
 
+    .disclosure-hidden {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s ease;
+    }
+
     .disclosure-list {
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        display: flex;
         flex-direction: column;
         gap: 14px;
         padding: 15px;
@@ -53,6 +71,11 @@ $color-black: rgba(27, 27, 27, 0.9);
         margin-top: 8px;
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        
+        opacity: 0;
+        transform: translateY(-10%);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
 
         .disclosure__value {
             font-weight: 600;
