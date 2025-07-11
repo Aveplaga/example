@@ -1,13 +1,13 @@
 $title-color: rgba(27, 27, 27, 1);
 $text-color: rgba(27, 27, 27, 0.9);
 
-.expander {
+.collapsible {
     margin: 100px 50px;
     max-width: 1115px;
     background-color: rgba(255, 255, 255, 1);
     padding: 50px;
 
-    .expander__title {
+    .collapsible__title {
         color: rgba(27, 27, 27, 1);
         margin-bottom: 20px;
         font-size: 20px;
@@ -15,21 +15,21 @@ $text-color: rgba(27, 27, 27, 0.9);
         letter-spacing: 3%;
     }
 
-    .expander-hidden {
+    .collapsible-hidden {
         max-height: 180px;
         overflow: hidden;
         transition: max-height 0.4s ease;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
         -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 
-        &.expander_expand {
+        &.collapsible_expand {
             max-height: none; 
             overflow: visible; 
             mask-image: none;
             -webkit-mask-image: none;
         }
 
-        &.expander_unset {
+        &.collapsible_unset {
             max-height: none;
             overflow: visible;
             mask-image: none;
@@ -37,13 +37,13 @@ $text-color: rgba(27, 27, 27, 0.9);
         }
     }
 
-    .expander__text {
+    .collapsible__text {
         color: rgba(27, 27, 27, 0.9);
         font-size: 16px;
         line-height: 1.6;
     }
 
-    .expander__toggle {
+    .collapsible__toggle {
         text-decoration: underline;
         color: rgba(19, 19, 19, 0.7);
         font-weight: 500;
@@ -57,12 +57,12 @@ $text-color: rgba(27, 27, 27, 0.9);
         gap: 8px;
         padding: 0;
 
-        &.active .expander__arrow {
+        &.active .collapsible__arrow {
             transform: rotate(180deg);
         }
     }
 
-    .expander__arrow {
+    .collapsible__arrow {
         display: inline-block;
         transition: transform 0.3s;
     }
@@ -70,7 +70,7 @@ $text-color: rgba(27, 27, 27, 0.9);
     @media (max-width: 768px) {
         margin: 25px auto;
 
-        .expander-hidden {
+        .collapsible-hidden {
             max-height: 320px;
         }
     }

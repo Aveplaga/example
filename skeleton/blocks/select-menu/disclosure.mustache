@@ -1,19 +1,19 @@
-<div class="dropdown">
-    <button class="dropdown-current" type="button">
-        <span class="dropdown-current__text">{{currentText}}</span>
-        <span class="dropdown-current__value"></span>
-        <span class="dropdown-arrow">
+<div class="disclosure">
+    <button class="disclosure-current" type="button">
+        <span class="disclosure-current__text">{{currentText}}</span>
+        <span class="disclosure-current__value"></span>
+        <span class="disclosure-arrow">
             <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.946667 0L4 3.09042L7.06 0L8 0.951417L4 5L0 0.951417L0.946667 0Z" fill="#1B1B1B" fill-opacity="0.9" />
             </svg>
         </span>
     </button>
 
-    <div class="dropdown-list">
-        <ul class="dropdown-list__items">
+    <div class="disclosure-list">
+        <ul class="disclosure-list__items">
             {{#links}}
-                <li class="dropdown-list__item">
-                    <a href="{{href}}" class="dropdown__value" data-value="{{text}}">{{text}}</a>
+                <li class="disclosure-list__item">
+                    <a href="{{href}}" class="disclosure__value" data-value="{{text}}">{{text}}</a>
                 </li>
             {{/links}}
         </ul>

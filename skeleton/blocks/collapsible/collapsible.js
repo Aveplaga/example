@@ -2,14 +2,14 @@ import { Expander } from '../expander/Expander'
 
 const expanderInstance = new Expander({
     selectors: {
-        expander: '.expander',
-        toggle: '.expander__toggle',
-        toggleText: '.expander__toggle-text',
-        hidden: '.expander-hidden'
+        expander: '.collapsible',
+        toggle: '.collapsible__toggle',
+        toggleText: '.collapsible__toggle-text',
+        hidden: '.collapsible-hidden'
     },
     classes: {
-        opened: 'expander_expand', 
-        unset: 'expander_unset'    
+        opened: 'collapsible_expand', 
+        unset: 'collapsible_unset'    
     },
     text: {
         expanded: 'Свернуть',
