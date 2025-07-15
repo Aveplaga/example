@@ -1,0 +1,14 @@
+<div class="task-slider swiper">
+    <div class="task-slider__wrapper swiper-wrapper">
+        {{#slides}}
+            <div class="task-slider__slide swiper-slide">
+                <div class="task-slider__background" style="background-image: url('{{background}}')"></div>
+                <div class="task-slider__content">
+                    <img src="{{logo}}" alt="{{logoAlt}}" class="task-slider__logo">
+                    <div class="task-slider__title">{{title}}</div>
+                    <a href="{{buttonLink}}" class="task-slider__button">{{buttonText}}</a>
+                </div>
+            </div>
+        {{/slides}}
+    </div>
+</div>

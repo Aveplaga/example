@@ -1,0 +1,47 @@
+.task-slider {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(232, 232, 232, 1);
+    margin: 232px auto;
+    width: 1170px;
+}
+
+.task-slider__wrapper {
+    display: flex;
+}
+
+.task-slider__slide {
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+}
+
+.task-slider__content {
+    padding: 76px 0 102px 66px;
+    width: 575px;
+}
+
+.task-slider__logo {
+    width: 209px;
+    height: 66px;
+    margin-bottom: 27px;
+}
+
+.task-slider__title {
+    font-size: 32px;
+    line-height: 100%;
+    font-weight: 700;
+    margin-bottom: 52px;
+    color: rgba(38, 32, 36, 1);
+}
+
+.task-slider__button {
+    border: 1.5px solid rgba(38, 32, 36, 1);
+    color: rgba(38, 32, 36, 1);
+    border-radius: 30px;
+    padding: 18px 35px;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 3%;
+    font-weight: 600;
+}
