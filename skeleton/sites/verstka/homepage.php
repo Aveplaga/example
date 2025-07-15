@@ -17,8 +17,6 @@ $pageConfig = [
     'mainClass' => 'index',
     'inlineCss' => collect([
         'bundle-common',
-        'bundle-feedback-form',
-        'bundle-homepage',
         'bundle-test-task',
     ]),
     'inlineJs' => collect([]),
@@ -26,7 +24,6 @@ $pageConfig = [
     'deferredJs' => collect([
         'bundle-common',
         'bundle-homepage',
-        'bundle-feedback-form',
         'bundle-test-task',
     ]),
     'asyncJs' => collect([]),
@@ -65,11 +62,58 @@ $task = [
 
 ?>
 
+<?php
+$catalog = [
+    'items' => [
+        [
+            'title' => 'Рюкзаки',
+            'image' => './local/assets/images/backpack.png',
+            'imageAlt' => 'Рюкзаки'
+        ],
+        [
+            'title' => 'Гаджеты',
+            'image' => './local/assets/images/gadgets.png',
+            'imageAlt' => 'Гаджеты'
+        ],
+        [
+            'title' => 'Аксессуары',
+            'image' => './local/assets/images/accessories.png',
+            'imageAlt' => 'Аксессуары'
+        ],
+        [
+            'title' => 'Игрушки',
+            'image' => './local/assets/images/toys.png',
+            'imageAlt' => 'Игрушка'
+        ],
+        [
+            'title' => 'Канцелярия',
+            'image' => './local/assets/images/chancellery.png',
+            'imageAlt' => 'Канцелярия'
+        ],
+        [
+            'title' => 'Одежда',
+            'image' => './local/assets/images/clothes.png',
+            'imageAlt' => 'Одежда'
+        ],
+        [
+            'title' => 'Для дома',
+            'image' => '',
+            'imageAlt' => 'Для дома'
+        ],
+        [
+            'title' => 'Новый Год',
+            'image' => './local/assets/images/new_year.png',
+            'imageAlt' => 'Новый год'
+        ],
+
+    ]
+]
+?>
+
 <div class="wrapper">
     <?= $mustache->render('task-slider', $task); ?>
+    <?= $mustache->render('task-catalog', $catalog); ?>
 </div>
-
-<script src="/local/assets/dev/bundle-test-task/bundle-test-task.js"></script>
 
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/footer.php');
