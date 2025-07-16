@@ -4,7 +4,10 @@
             <a href="{{link}}" class="task-catalog__link">
                 <div class="task-catalog__item">
                     <div class="task-catalog__title">{{title}}</div>
-                    <img src="{{image}}" alt="{{imageAlt}}" class="task-catalog__image">
+                    {{#image}}
+                        <img src="{{image}}" alt="{{imageAlt}}" class="task-catalog__image">
+                    {{/image}}
+
                 </div>
             </a>
         {{/items}}

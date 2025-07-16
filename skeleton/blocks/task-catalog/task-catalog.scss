@@ -22,8 +22,14 @@
                 font-size: 20px;
                 font-weight: 600;
                 line-height: 24px;
+                text-align: center;
                 color: rgba(38, 32, 36, 1);
                 transition: all ease-in-out .5s;
+            }
+
+            .task-catalog__image {
+                width: 125px;
+                height: 125px;
             }
 
             &:hover {
@@ -32,6 +38,74 @@
 
                 .task-catalog__title {
                     color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .task-catalog {
+        width: 312px;
+
+        .task-catalog__wrapper {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+
+            .task-catalog__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 10px;
+                width: 146px;
+                height: 138px;
+
+
+                .task-catalog__image {
+                    order: 0;
+                    width: 75px;
+                    height: 75px;
+                }
+
+                .task-catalog__title {
+                    order: 1;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .task-catalog {
+        width: 704px;
+
+        .task-catalog__wrapper {
+            grid-template-columns: repeat(3, 1fr);
+
+            .task-catalog__item {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: left;
+                width: 224px;
+                padding: 10px;
+
+                .task-catalog__image {
+                    order: 0;
+                    width: 62px;
+                    height: 62px;
+                    margin-right: 12px;
+                    flex-shrink: 0;
+                }
+
+                .task-catalog__title {
+                    order: 1;
+                    font-size: 20px;
+                    text-align: left;
                 }
             }
         }

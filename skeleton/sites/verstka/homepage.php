@@ -33,34 +33,34 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
 
 
-<?php
-$task = [
-    'slides' => [
-        [
-            'background' => './local/assets/images/background.png',
-            'logo' => './local/assets/images/logo.png',
-            'logoAlt' => 'Storiz',
-            'title' => 'Надежный поставщик и партнер для вашего бизнеса',
-            'buttonText' => 'Перейти в каталог',
-        ],
-        [
-            'background' => './local/assets/images/background.png',
-            'logo' => './local/assets/images/logo.png',
-            'logoAlt' => 'Storiz',
-            'title' => 'Надежный поставщик и партнер для вашего бизнеса',
-            'buttonText' => 'Перейти в каталог',
-        ],
-        [
-            'background' => './local/assets/images/background.png',
-            'logo' => './local/assets/images/logo.png',
-            'logoAlt' => 'Storiz',
-            'title' => 'Надежный поставщик и партнер для вашего бизнеса',
-            'buttonText' => 'Перейти в каталог',
-        ],
-    ]
-];
+<!-- <?php
+// $task = [
+//     'slides' => [
+//         [
+//             'background' => './local/assets/images/background.png',
+//             'logo' => './local/assets/images/logo.png',
+//             'logoAlt' => 'Storiz',
+//             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
+//             'buttonText' => 'Перейти в каталог',
+//         ],
+//         [
+//             'background' => './local/assets/images/background.png',
+//             'logo' => './local/assets/images/logo.png',
+//             'logoAlt' => 'Storiz',
+//             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
+//             'buttonText' => 'Перейти в каталог',
+//         ],
+//         [
+//             'background' => './local/assets/images/background.png',
+//             'logo' => './local/assets/images/logo.png',
+//             'logoAlt' => 'Storiz',
+//             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
+//             'buttonText' => 'Перейти в каталог',
+//         ],
+//     ]
+// ];
 
-?>
+?> -->
 
 <?php
 $catalog = [
@@ -97,8 +97,6 @@ $catalog = [
         ],
         [
             'title' => 'Для дома',
-            'image' => '',
-            'imageAlt' => 'Для дома'
         ],
         [
             'title' => 'Новый Год',
