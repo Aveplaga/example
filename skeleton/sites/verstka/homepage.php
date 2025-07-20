@@ -34,33 +34,33 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 
 
 <!-- <?php
-// $task = [
-//     'slides' => [
-//         [
-//             'background' => './local/assets/images/background.png',
-//             'logo' => './local/assets/images/logo.png',
-//             'logoAlt' => 'Storiz',
-//             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
-//             'buttonText' => 'Перейти в каталог',
-//         ],
-//         [
-//             'background' => './local/assets/images/background.png',
-//             'logo' => './local/assets/images/logo.png',
-//             'logoAlt' => 'Storiz',
-//             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
-//             'buttonText' => 'Перейти в каталог',
-//         ],
-//         [
-//             'background' => './local/assets/images/background.png',
-//             'logo' => './local/assets/images/logo.png',
-//             'logoAlt' => 'Storiz',
-//             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
-//             'buttonText' => 'Перейти в каталог',
-//         ],
-//     ]
-// ];
+        // $task = [
+        //     'slides' => [
+        //         [
+        //             'background' => './local/assets/images/background.png',
+        //             'logo' => './local/assets/images/logo.png',
+        //             'logoAlt' => 'Storiz',
+        //             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
+        //             'buttonText' => 'Перейти в каталог',
+        //         ],
+        //         [
+        //             'background' => './local/assets/images/background.png',
+        //             'logo' => './local/assets/images/logo.png',
+        //             'logoAlt' => 'Storiz',
+        //             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
+        //             'buttonText' => 'Перейти в каталог',
+        //         ],
+        //         [
+        //             'background' => './local/assets/images/background.png',
+        //             'logo' => './local/assets/images/logo.png',
+        //             'logoAlt' => 'Storiz',
+        //             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
+        //             'buttonText' => 'Перейти в каталог',
+        //         ],
+        //     ]
+        // ];
 
-?> -->
+        ?> -->
 
 <?php
 $catalog = [
@@ -108,9 +108,183 @@ $catalog = [
 ]
 ?>
 
+<?php
+$duo = [
+    'title' => 'Новинки',
+    'subtitle' => 'все новинки',
+
+    'items' => [
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'productInfo' => [
+                [
+                    'textBefore' => 'В наличии',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'в наличии',
+                    'textAfter' => '4050'
+                ],
+                [
+                    'textBefore' => 'Продано за месяц',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'продано',
+                    'textAfter' => '8352'
+                ]
+            ],
+            'itemPrice' => '280 ₽ <span>230</span>'
+        ],
+
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'productInfo' => [
+                [
+                    'textBefore' => 'В наличии',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'в наличии',
+                    'textAfter' => '4050'
+                ],
+                [
+                    'textBefore' => 'Продано за месяц',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'продано',
+                    'textAfter' => '8352'
+                ]
+            ],
+            'itemPrice' => '260 ₽'
+        ],
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'productInfo' => [
+                [
+                    'textBefore' => 'В наличии',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'в наличии',
+                    'textAfter' => '4050'
+                ],
+                [
+                    'textBefore' => 'Продано за месяц',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'продано',
+                    'textAfter' => '8352'
+                ]
+            ],
+            'itemPrice' => '260 ₽'
+        ],
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'productInfo' => [
+                [
+                    'textBefore' => 'В наличии',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'в наличии',
+                    'textAfter' => '4050'
+                ],
+                [
+                    'textBefore' => 'Продано за месяц',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'продано',
+                    'textAfter' => '8352'
+                ]
+            ],
+            'itemPrice' => '260 ₽'
+        ],
+
+    ],
+
+    'hitsTitle' => 'Хиты',
+    'hitsSubtitle' => 'все хиты',
+
+    'items' => [
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'productInfo' => [
+                [
+                    'textBefore' => 'В наличии',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'в наличии',
+                    'textAfter' => '4050'
+                ],
+                [
+                    'textBefore' => 'Продано за месяц',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'продано',
+                    'textAfter' => '8352'
+                ]
+            ],
+            'itemPrice' => '280 ₽ <span>230</span>'
+        ],
+
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'productInfo' => [
+                [
+                    'textBefore' => 'В наличии',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'в наличии',
+                    'textAfter' => '4050'
+                ],
+                [
+                    'textBefore' => 'Продано за месяц',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'продано',
+                    'textAfter' => '8352'
+                ]
+            ],
+            'itemPrice' => '260 ₽'
+        ],
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'productInfo' => [
+                [
+                    'textBefore' => 'В наличии',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'в наличии',
+                    'textAfter' => '4050'
+                ],
+                [
+                    'textBefore' => 'Продано за месяц',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'продано',
+                    'textAfter' => '8352'
+                ]
+            ],
+            'itemPrice' => '260 ₽'
+        ],
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'productInfo' => [
+                [
+                    'textBefore' => 'В наличии',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'в наличии',
+                    'textAfter' => '4050'
+                ],
+                [
+                    'textBefore' => 'Продано за месяц',
+                    'icon' => './local/assets/images/check.png',
+                    'iconAlt' => 'продано',
+                    'textAfter' => '8352'
+                ]
+            ],
+            'itemPrice' => '260 ₽'
+        ],
+
+    ],
+
+]
+?>
+
 <div class="wrapper">
     <?= $mustache->render('task-slider', $task); ?>
     <?= $mustache->render('task-catalog', $catalog); ?>
+    <?= $mustache->render('task-duo', $duo); ?>
 </div>
 
 <?php
