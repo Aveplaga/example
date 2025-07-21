@@ -210,7 +210,8 @@
 }
 .task-duo {
   background-color: rgb(255, 255, 255);
-  margin: 40px 0;
+  margin: 0 auto;
+  padding: 0 0 40px 0;
 }
 .task-duo .task-duo__new {
   width: 1170px;
@@ -363,4 +364,61 @@
 .task-duo .task-list .task-item:hover .task-item__logo {
   display: block;
   cursor: pointer;
+}
+
+.task-news {
+  margin-top: 40px;
+  background-color: rgb(247, 247, 247);
+}
+.task-news .task-news__wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+.task-news .task-news__wrapper .task-news__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 0 28px 0;
+}
+.task-news .task-news__wrapper .task-news__content .task-news__title {
+  font-size: 28px;
+  color: rgb(38, 32, 36);
+  line-height: 24px;
+  font-weight: 700;
+}
+.task-news .task-news__wrapper .task-news__content .task-news__subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(117, 117, 117, 0.8);
+  font-weight: 500;
+}
+.task-news .task-news__wrapper .task-news__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+}
+.task-news .task-news__wrapper .task-news__list .task-news__item {
+  width: 345px;
+  text-align: left;
+}
+.task-news .task-news__wrapper .task-news__list .task-news__item .task-news__image {
+  margin-bottom: 20px;
+}
+.task-news .task-news__wrapper .task-news__list .task-news__item .item-title {
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(38, 32, 36, 0.4);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.task-news .task-news__wrapper .task-news__list .task-news__item .item-subtitle {
+  color: rgb(38, 32, 36);
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 9px;
+  font-weight: 600;
 }

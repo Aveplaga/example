@@ -281,10 +281,36 @@ $duo = [
 ]
 ?>
 
+<?php
+$news = [
+    'title' => 'Новости',
+    'subtitle' => 'все новости',
+
+    'items' => [
+        [
+            'image' => './local/assets/images/news.png',
+            'itemTitle' => '16 ноября 2022',
+            'itemSubtitle' => 'Розничные магазины Storiz',
+        ],
+        [
+            'image' => './local/assets/images/toys_2.png',
+            'itemTitle' => '16 ноября 2022',
+            'itemSubtitle' => 'Скидки до 50% на раздел “Игрушки”',
+        ],
+        [
+            'image' => './local/assets/images/design.png',
+            'itemTitle' => '16 ноября 2022',
+            'itemSubtitle' => 'Дизайн, качество, многообразие – отличительные особенности наших товаров',
+        ]
+    ]
+]
+?>
+
 <div class="wrapper">
     <?= $mustache->render('task-slider', $task); ?>
     <?= $mustache->render('task-catalog', $catalog); ?>
     <?= $mustache->render('task-duo', $duo); ?>
+    <?= $mustache->render('task-news', $news); ?>
 </div>
 
 <?php

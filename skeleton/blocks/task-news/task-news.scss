@@ -1,0 +1,59 @@
+.task-news {
+    margin-top: 40px;
+    background-color: rgba(247, 247, 247, 1);
+
+    .task-news__wrapper {
+        width: 1170px;
+        margin: 0 auto;
+
+        .task-news__content {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 0 28px 0;
+
+            .task-news__title{
+                font-size: 28px;
+                color: rgba(38, 32, 36, 1);
+                line-height: 24px;
+                font-weight: 700;
+            }
+
+            .task-news__subtitle{
+                font-size: 14px;
+                line-height: 18px;
+                color: rgba(117, 117, 117, 0.8);
+                font-weight: 500;
+            }
+        }
+
+        .task-news__list{
+            display: flex;
+            gap: 35px;
+
+            .task-news__item{
+                width: 345px;
+                text-align: left;
+
+                .task-news__image{
+                    margin-bottom: 20px;
+                }
+
+                .item-title{
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: rgba(38, 32, 36, 0.4);
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+
+                .item-subtitle{
+                    color: rgba(38, 32, 36, 1);
+                    font-size: 14px;
+                    line-height: 22px;
+                    margin-bottom: 9px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
