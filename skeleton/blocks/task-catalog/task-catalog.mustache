@@ -1,5 +1,5 @@
-<div class="task-catalog">
-    <div class="task-catalog__wrapper">
+<div class="container">
+    <div class="task-catalog">
         {{#items}}
             <a href="{{link}}" class="task-catalog__link">
                 <div class="task-catalog__item">
@@ -7,7 +7,6 @@
                     {{#image}}
                         <img src="{{image}}" alt="{{imageAlt}}" class="task-catalog__image">
                     {{/image}}
-
                 </div>
             </a>
         {{/items}}

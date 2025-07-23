@@ -33,34 +33,34 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
 
 
-<!-- <?php
-        // $task = [
-        //     'slides' => [
-        //         [
-        //             'background' => './local/assets/images/background.png',
-        //             'logo' => './local/assets/images/logo.png',
-        //             'logoAlt' => 'Storiz',
-        //             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
-        //             'buttonText' => 'Перейти в каталог',
-        //         ],
-        //         [
-        //             'background' => './local/assets/images/background.png',
-        //             'logo' => './local/assets/images/logo.png',
-        //             'logoAlt' => 'Storiz',
-        //             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
-        //             'buttonText' => 'Перейти в каталог',
-        //         ],
-        //         [
-        //             'background' => './local/assets/images/background.png',
-        //             'logo' => './local/assets/images/logo.png',
-        //             'logoAlt' => 'Storiz',
-        //             'title' => 'Надежный поставщик и партнер для вашего бизнеса',
-        //             'buttonText' => 'Перейти в каталог',
-        //         ],
-        //     ]
-        // ];
+<?php
+$task = [
+    'slides' => [
+        [
+            'background' => './local/assets/images/background.png',
+            'logo' => './local/assets/images/logo.png',
+            'logoAlt' => 'Storiz',
+            'title' => 'Надежный поставщик и партнер для вашего бизнеса',
+            'buttonText' => 'Перейти в каталог',
+        ],
+        [
+            'background' => './local/assets/images/background.png',
+            'logo' => './local/assets/images/logo.png',
+            'logoAlt' => 'Storiz',
+            'title' => 'Надежный поставщик и партнер для вашего бизнеса',
+            'buttonText' => 'Перейти в каталог',
+        ],
+        [
+            'background' => './local/assets/images/background.png',
+            'logo' => './local/assets/images/logo.png',
+            'logoAlt' => 'Storiz',
+            'title' => 'Надежный поставщик и партнер для вашего бизнеса',
+            'buttonText' => 'Перейти в каталог',
+        ],
+    ]
+];
 
-        ?> -->
+?>
 
 <?php
 $catalog = [
@@ -307,9 +307,9 @@ $news = [
 ?>
 
 <div class="wrapper">
-    <?= $mustache->render('task-slider', $task); ?>
+    <!-- <?= $mustache->render('task-slider', $task); ?> -->
     <?= $mustache->render('task-catalog', $catalog); ?>
-    <?= $mustache->render('task-duo', $duo); ?>
+    <!-- <?= $mustache->render('task-duo', $duo); ?> -->
     <?= $mustache->render('task-news', $news); ?>
 </div>
 
