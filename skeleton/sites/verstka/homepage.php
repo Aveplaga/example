@@ -306,11 +306,51 @@ $news = [
 ]
 ?>
 
+<?php
+$viewed = [
+    'title' => 'Ранее вы смотрели',
+    'items' => [
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'itemPrice' => '180 ₽ <span>180</span>'
+        ],
+        [
+            'image' => './local/assets/images/suit.png',
+            'itemTitle' => 'Костюм-Кигуруми "Единорог Звездное небо"',
+            'itemPrice' => '890 ₽'
+        ],
+        [
+            'image' => './local/assets/images/set.png',
+            'itemTitle' => 'Подарочный набор "K-POP" Stray Kids №5, 8 предметов',
+            'itemPrice' => '1 190 ₽'
+        ],
+        [
+            'image' => './local/assets/images/suit.png',
+            'itemTitle' => '',
+            'itemPrice' => ''
+        ]
+    ]
+]
+?>
+
+<?php
+$text = [
+    'title' => 'Оптовый интернет- магазин подарков Storiz',
+    'text' => 'Добро пожаловать на сайт оптового интернет-магазина STORIZ – магазина приятных полезностей и полезных приятностей. Наша компания занимается поставками сертифицированной продукции из Китая. Мы одни из немногих, у кого выстроена собственная (без посредников) логистика от производителя.
+               Все заказы реализуем со склада в Москве, проверка качества происходит на складах в стране производителя. В связи с этим наш мультитоварный магазин предлагает низкие цены, постоянное, быстрое обновление ассортимента и исключительно «ходовые» позиции. Работаем с крупным и мелким оптом.',
+
+    'buttonText' => 'Читать полностью'
+]
+?>
+
 <div class="wrapper">
-    <!-- <?= $mustache->render('task-slider', $task); ?> -->
+    <?= $mustache->render('task-slider', $task); ?>
     <?= $mustache->render('task-catalog', $catalog); ?>
-    <!-- <?= $mustache->render('task-duo', $duo); ?> -->
+    <?= $mustache->render('task-duo', $duo); ?>
     <?= $mustache->render('task-news', $news); ?>
+    <?= $mustache->render('task-viewed', $viewed); ?>
+    <?= $mustache->render('task-text', $text); ?>
 </div>
 
 <?php

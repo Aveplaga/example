@@ -1,161 +1,163 @@
 .task-duo {
     background-color: rgba(255, 255, 255, 1);
-    margin: 0 auto;
-    padding: 0 0 40px 0;
+    margin: 40px auto;
+    padding: 40px 0;
 
-    .task-duo__new {
-        width: 1170px;
-        margin: 0 auto;
+    .container {
 
-        .new-content__text {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 0;
+        .task-duo__new {
+            width: 1170px;
 
-            .new-content__title {
-                font-size: 28px;
-                font-weight: 700;
-                line-height: 24px;
-                color: rgba(38, 32, 36, 1);
-            }
-
-            .new-content__subtitle {
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 18px;
-                color: rgba(117, 117, 117, 0.8);
-            }
-        }
-    }
-
-    .task-duo__hits {
-        width: 1170px;
-        margin: 0 auto;
-
-        .hits-content__text {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 0;
-
-            .hits-content__title {
-                font-size: 28px;
-                font-weight: 700;
-                line-height: 24px;
-                color: rgba(38, 32, 36, 1);
-            }
-
-            .hits-content__subtitle {
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 18px;
-                color: rgba(117, 117, 117, 0.8);
-            }
-        }
-    }
-
-    .task-list {
-        display: flex;
-
-        .task-item {
-            width: 292px;
-            text-align: center;
-            border: 1px solid rgba(238, 238, 238, 1);
-            padding: 17px 17px 32px 17px;
-            transition: all .5s ease-in-out;
-
-            .task-item__image-wrapper {
-                position: relative;
-                display: inline-block;
-
-                .task-item__image {
-                    width: 258px;
-                    height: 258px;
-                    margin-bottom: 15px;
-                    display: block;
-                }
-
-                .task-item__logo {
-                    position: absolute;
-                    top: 18px;
-                    left: 212px;
-                    background-color: rgba(255, 255, 255, 1);
-                    border-radius: 20px;
-                    padding: 9px 8px 8px 7px;
-                    width: 36px;
-                    height: 36px;
-                    display: none;
-                    z-index: 1;
-                }
-            }
-
-            .item-title {
-                font-weight: 500;
-                color: rgba(29, 32, 41, 1);
-                padding: 0 38px;
-                font-size: 14px;
-                line-height: 20px;
-                margin-bottom: 20px;
-            }
-
-            .product-info__item {
+            .new-content__text {
                 display: flex;
-                gap: 2px;
+                justify-content: space-between;
                 align-items: center;
-                justify-content: center;
-                padding: 0 66px;
-                white-space: nowrap;
+                margin-bottom: 28px;
 
-                .product-info__label,
-                .product-info__value {
-                    font-size: 12px;
-                    color: rgba(102, 102, 102, 1);
-                    line-height: 15px;
-                    display: inline;
+                .new-content__title {
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    color: rgba(38, 32, 36, 1);
                 }
 
-                .product-info__icon img {
-                    width: 14px;
-                    height: 12px;
+                .new-content__subtitle {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    color: rgba(117, 117, 117, 0.8);
+                }
+            }
+        }
+
+        .task-duo__hits {
+            width: 1170px;
+
+            .hits-content__text {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 40px 0 28px 0;
+
+                .hits-content__title {
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    color: rgba(38, 32, 36, 1);
+                }
+
+                .hits-content__subtitle {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    color: rgba(117, 117, 117, 0.8);
+                }
+            }
+        }
+
+        .task-list {
+            display: flex;
+
+            .task-item {
+                width: 292px;
+                text-align: center;
+                border: 1px solid rgba(238, 238, 238, 1);
+                padding: 17px 17px 32px 17px;
+                transition: all .5s ease-in-out;
+
+                .task-item__image-wrapper {
+                    position: relative;
                     display: inline-block;
-                    margin-right: 6px;
+
+                    .task-item__image {
+                        width: 100%;
+                        max-width: 258px;
+                        height: auto;
+                        margin-bottom: 15px;
+                        display: block;
+                    }
+
+                    .task-item__logo {
+                        position: absolute;
+                        top: 18px;
+                        left: 212px;
+                        background-color: rgba(255, 255, 255, 1);
+                        border-radius: 20px;
+                        padding: 9px 8px 8px 7px;
+                        width: 36px;
+                        height: 36px;
+                        display: none;
+                        z-index: 1;
+                    }
                 }
 
-            }
-
-            .item-price {
-                margin-top: 30px;
-                color: rgba(38, 32, 36, 1);
-                font-size: 22px;
-                font-weight: 700;
-                line-height: 15px;
-
-                span {
-                    color: rgba(38, 32, 36, 0.5);
-                    font-size: 16px;
-                    font-weight: 400;
-                    text-decoration: line-through;
+                .item-title {
+                    font-weight: 500;
+                    color: rgba(29, 32, 41, 1);
+                    padding: 0 38px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-bottom: 20px;
                 }
 
-            }
+                .product-info__item {
+                    display: flex;
+                    gap: 2px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 66px;
+                    white-space: nowrap;
 
-            &:nth-child(1) {
-                border-radius: 18px 0 0 18px;
+                    .product-info__label,
+                    .product-info__value {
+                        font-size: 12px;
+                        color: rgba(102, 102, 102, 1);
+                        line-height: 15px;
+                        display: inline;
+                    }
+
+                    .product-info__icon img {
+                        width: 14px;
+                        height: 12px;
+                        display: inline-block;
+                        margin-right: 6px;
+                    }
+
+                }
 
                 .item-price {
-                    color: rgba(255, 109, 0, 1);
+                    margin-top: 30px;
+                    color: rgba(38, 32, 36, 1);
+                    font-size: 22px;
+                    font-weight: 700;
+                    line-height: 15px;
+
+                    span {
+                        color: rgba(38, 32, 36, 0.5);
+                        font-size: 16px;
+                        font-weight: 400;
+                        text-decoration: line-through;
+                    }
+
                 }
-            }
 
-            &:last-child {
-                border-radius: 0 18px 18px 0;
-            }
+                &:nth-child(1) {
+                    border-radius: 18px 0 0 18px;
 
-            &:hover {
-                .task-item__logo {
-                    display: block;
-                    cursor: pointer;
+                    .item-price {
+                        color: rgba(255, 109, 0, 1);
+                    }
+                }
+
+                &:last-child {
+                    border-radius: 0 18px 18px 0;
+                }
+
+                &:hover {
+                    .task-item__logo {
+                        display: block;
+                        cursor: pointer;
+                    }
                 }
             }
         }

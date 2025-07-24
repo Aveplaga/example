@@ -1,13 +1,11 @@
 .task-news {
-    margin-top: 40px;
-    background-color: rgba(247, 247, 247, 1);
 
     .task-news__content {
         display: flex;
         width: 1170px;
         justify-content: space-between;
         align-items: center;
-        padding: 40px 0 28px 0;
+        margin-bottom: 28px;
 
         .task-news__title {
             font-size: 28px;

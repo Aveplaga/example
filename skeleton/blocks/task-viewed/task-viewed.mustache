@@ -1,0 +1,20 @@
+<div class="task-viewed">
+    <div class="container">
+        <div class="task-viewed__wrapper">
+            <div class="task-viewed__title">{{title}}</div>
+            <div class="viewed-list">
+                {{#items}}
+                    <div class="viewed-item">
+                        {{#image}}
+                            <img src="{{image}}" alt="{{imageAlt}}" class="viewed-item__image">
+                        {{/image}}
+                        <div class="item-content__text">
+                            <div class="item-content__title">{{itemTitle}}</div>
+                            <div class="item-content__price">{{{itemPrice}}}</div>
+                        </div>
+                    </div>
+                {{/items}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 .task-catalog {
+  margin-top: 20px;
   display: -ms-grid;
   display: grid;
   gap: 20px 16px;
@@ -159,6 +160,7 @@
 .task-slider {
   position: relative;
   overflow: hidden;
+  width: 1170px;
   background-color: rgb(232, 232, 232);
 }
 
@@ -207,14 +209,13 @@
 
 .task-duo {
   background-color: rgb(255, 255, 255);
-  margin: 0 auto;
-  padding: 0 0 40px 0;
+  margin: 40px auto;
+  padding: 40px 0;
 }
-.task-duo .task-duo__new {
+.task-duo .container .task-duo__new {
   width: 1170px;
-  margin: 0 auto;
 }
-.task-duo .task-duo__new .new-content__text {
+.task-duo .container .task-duo__new .new-content__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,25 +225,24 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 0;
+  margin-bottom: 28px;
 }
-.task-duo .task-duo__new .new-content__text .new-content__title {
+.task-duo .container .task-duo__new .new-content__text .new-content__title {
   font-size: 28px;
   font-weight: 700;
   line-height: 24px;
   color: rgb(38, 32, 36);
 }
-.task-duo .task-duo__new .new-content__text .new-content__subtitle {
+.task-duo .container .task-duo__new .new-content__text .new-content__subtitle {
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   color: rgba(117, 117, 117, 0.8);
 }
-.task-duo .task-duo__hits {
+.task-duo .container .task-duo__hits {
   width: 1170px;
-  margin: 0 auto;
 }
-.task-duo .task-duo__hits .hits-content__text {
+.task-duo .container .task-duo__hits .hits-content__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,26 +252,26 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 0;
+  padding: 40px 0 28px 0;
 }
-.task-duo .task-duo__hits .hits-content__text .hits-content__title {
+.task-duo .container .task-duo__hits .hits-content__text .hits-content__title {
   font-size: 28px;
   font-weight: 700;
   line-height: 24px;
   color: rgb(38, 32, 36);
 }
-.task-duo .task-duo__hits .hits-content__text .hits-content__subtitle {
+.task-duo .container .task-duo__hits .hits-content__text .hits-content__subtitle {
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   color: rgba(117, 117, 117, 0.8);
 }
-.task-duo .task-list {
+.task-duo .container .task-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.task-duo .task-list .task-item {
+.task-duo .container .task-list .task-item {
   width: 292px;
   text-align: center;
   border: 1px solid rgb(238, 238, 238);
@@ -279,17 +279,18 @@
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.task-duo .task-list .task-item .task-item__image-wrapper {
+.task-duo .container .task-list .task-item .task-item__image-wrapper {
   position: relative;
   display: inline-block;
 }
-.task-duo .task-list .task-item .task-item__image-wrapper .task-item__image {
-  width: 258px;
-  height: 258px;
+.task-duo .container .task-list .task-item .task-item__image-wrapper .task-item__image {
+  width: 100%;
+  max-width: 258px;
+  height: auto;
   margin-bottom: 15px;
   display: block;
 }
-.task-duo .task-list .task-item .task-item__image-wrapper .task-item__logo {
+.task-duo .container .task-list .task-item .task-item__image-wrapper .task-item__logo {
   position: absolute;
   top: 18px;
   left: 212px;
@@ -301,7 +302,7 @@
   display: none;
   z-index: 1;
 }
-.task-duo .task-list .task-item .item-title {
+.task-duo .container .task-list .task-item .item-title {
   font-weight: 500;
   color: rgb(29, 32, 41);
   padding: 0 38px;
@@ -309,7 +310,7 @@
   line-height: 20px;
   margin-bottom: 20px;
 }
-.task-duo .task-list .task-item .product-info__item {
+.task-duo .container .task-list .task-item .product-info__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,50 +324,46 @@
   padding: 0 66px;
   white-space: nowrap;
 }
-.task-duo .task-list .task-item .product-info__item .product-info__label,
-.task-duo .task-list .task-item .product-info__item .product-info__value {
+.task-duo .container .task-list .task-item .product-info__item .product-info__label,
+.task-duo .container .task-list .task-item .product-info__item .product-info__value {
   font-size: 12px;
   color: rgb(102, 102, 102);
   line-height: 15px;
   display: inline;
 }
-.task-duo .task-list .task-item .product-info__item .product-info__icon img {
+.task-duo .container .task-list .task-item .product-info__item .product-info__icon img {
   width: 14px;
   height: 12px;
   display: inline-block;
   margin-right: 6px;
 }
-.task-duo .task-list .task-item .item-price {
+.task-duo .container .task-list .task-item .item-price {
   margin-top: 30px;
   color: rgb(38, 32, 36);
   font-size: 22px;
   font-weight: 700;
   line-height: 15px;
 }
-.task-duo .task-list .task-item .item-price span {
+.task-duo .container .task-list .task-item .item-price span {
   color: rgba(38, 32, 36, 0.5);
   font-size: 16px;
   font-weight: 400;
   text-decoration: line-through;
 }
-.task-duo .task-list .task-item:nth-child(1) {
+.task-duo .container .task-list .task-item:nth-child(1) {
   border-radius: 18px 0 0 18px;
 }
-.task-duo .task-list .task-item:nth-child(1) .item-price {
+.task-duo .container .task-list .task-item:nth-child(1) .item-price {
   color: rgb(255, 109, 0);
 }
-.task-duo .task-list .task-item:last-child {
+.task-duo .container .task-list .task-item:last-child {
   border-radius: 0 18px 18px 0;
 }
-.task-duo .task-list .task-item:hover .task-item__logo {
+.task-duo .container .task-list .task-item:hover .task-item__logo {
   display: block;
   cursor: pointer;
 }
 
-.task-news {
-  margin-top: 40px;
-  background-color: rgb(247, 247, 247);
-}
 .task-news .task-news__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -378,7 +375,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 0 28px 0;
+  margin-bottom: 28px;
 }
 .task-news .task-news__content .task-news__title {
   font-size: 28px;
@@ -480,4 +477,144 @@
   .container .task-news__list .task-news__item .task-news__image {
     width: 100%;
   }
+}
+.container .task-text {
+  margin: 50px 0;
+  width: 1170px;
+}
+.container .task-text .task-title {
+  font-size: 22px;
+  line-height: 34px;
+  color: rgb(38, 32, 36);
+  margin-bottom: 20px;
+}
+.container .task-text .task-content {
+  max-height: 117px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
+}
+.container .task-text .task-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 247, 247, 0)), to(rgb(247, 247, 247)));
+  background: linear-gradient(to bottom, rgba(247, 247, 247, 0), rgb(247, 247, 247));
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  opacity: 1;
+}
+.container .task-text .task-content.task-content_expand, .container .task-text .task-content.task-content_unset {
+  max-height: 1000px;
+}
+.container .task-text .task-content.task-content_expand::after, .container .task-text .task-content.task-content_unset::after {
+  opacity: 0;
+}
+.container .task-text .task-content .content-title {
+  font-size: 15px;
+  line-height: 25px;
+  color: rgb(85, 85, 85);
+  margin-bottom: 10px;
+}
+.container .task-text .task-toggle {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .task-text .task-toggle .task__toggle-text {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  margin-right: 5px;
+  color: rgba(38, 32, 36, 0.8);
+}
+.container .task-text .task-toggle .task__arrow {
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.container .task-text .task-toggle.task-content-expand .task__arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.task-viewed {
+  margin: 7px 0;
+  border-top: 1px solid rgba(38, 32, 36, 0.1);
+  border-bottom: 1px solid rgba(38, 32, 36, 0.1);
+}
+.task-viewed .task-viewed__wrapper {
+  padding: 30px 0;
+}
+.task-viewed .task-viewed__wrapper .task-viewed__title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: rgb(38, 32, 36);
+  margin-bottom: 20px;
+}
+.task-viewed .task-viewed__wrapper .viewed-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+.task-viewed .task-viewed__wrapper .viewed-list .viewed-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 324px;
+  border-radius: 18px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 13px 20px 17px;
+  gap: 24px;
+}
+.task-viewed .task-viewed__wrapper .viewed-list .viewed-item .viewed-item__image {
+  width: 112px;
+  height: 112px;
+}
+.task-viewed .task-viewed__wrapper .viewed-list .viewed-item .item-content__text {
+  width: 158px;
+}
+.task-viewed .task-viewed__wrapper .viewed-list .viewed-item .item-content__text .item-content__title {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  color: rgb(38, 32, 36);
+  margin-bottom: 12px;
+}
+.task-viewed .task-viewed__wrapper .viewed-list .viewed-item .item-content__text .item-content__price {
+  font-size: 22px;
+  line-height: 15px;
+  font-weight: 700;
+  color: rgb(38, 32, 36);
+  margin-right: 12px;
+}
+.task-viewed .task-viewed__wrapper .viewed-list .viewed-item .item-content__text .item-content__price span {
+  font-size: 16px;
+  line-height: 15px;
+  color: rgba(38, 32, 36, 0.5);
+}
+.task-viewed .task-viewed__wrapper .viewed-list .viewed-item:nth-child(1) .item-content__price {
+  color: rgb(255, 109, 0);
 }
