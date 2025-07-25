@@ -60,7 +60,7 @@ module.exports = {
               api: 'modern',
               sourceMap: true,
               sassOptions: {
-                syntax: 'indented'
+                //syntax: 'indented'
               }
             },
           },
