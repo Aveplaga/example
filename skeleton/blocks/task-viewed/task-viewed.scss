@@ -6,20 +6,50 @@
     .task-viewed__wrapper {
         padding: 30px 0;
 
-        .task-viewed__title {
-            font-size: 20px;
-            line-height: 24px;
-            font-weight: 700;
-            color: rgba(38, 32, 36, 1);
-            margin-bottom: 20px;
+
+        .task-viewed__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .task-viewed__title {
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 700;
+                color: rgba(38, 32, 36, 1);
+            }
+
+            .task-viewed__arrows {
+                display: none;
+                align-items: center;
+                gap: 16px;
+
+                .task-viewed__arrow {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 26px;
+                    height: 26px;
+                    background-color: rgba(38, 32, 36, 0.05);
+                    border-radius: 30px;
+                    cursor: pointer;
+
+                    svg {
+                        width: 6px;
+                        height: 10px;
+                    }
+                }
+            }
         }
 
         .viewed-list {
+            margin-top: 20px;
             display: flex;
             align-items: center;
             gap: 16px;
 
             .viewed-item {
+                border: 1px solid rgba(238, 238, 238, 1);
                 display: flex;
                 align-items: center;
                 width: 324px;
@@ -52,6 +82,7 @@
                         margin-right: 12px;
 
                         span {
+                            text-decoration: line-through;
                             font-size: 16px;
                             line-height: 15px;
                             color: rgba(38, 32, 36, 0.5);
@@ -65,6 +96,61 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .task-viewed {
+        border: none;
+        overflow: hidden;
+        width: 100%;
+        max-width: 768px;
+
+        .container {
+
+            .task-viewed__content {
+                width: 100%;
+                display: flex;
+
+                .task-viewed__arrows {
+                    display: flex;
+
+                    .task-viewed__arrow--next {
+                        background-color: rgba(38, 32, 36, 0.1);
+                    }
+                }
+            }
+
+            .viewed-list {
+                .viewed-item {
+                    width: 224px;
+                    padding: 12px;
+
+                    .viewed-item__image {
+                        width: 61px;
+                        height: 61px;
+                    }
+
+                    .item-content__text {
+                        width: 121px;
+
+                        .item-content__title {
+                            font-size: 11px;
+                            line-height: 14px;
+                        }
+
+                        .item-content__price {
+                            font-size: 18px;
+
+                            span {
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

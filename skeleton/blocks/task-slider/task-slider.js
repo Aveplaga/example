@@ -1,19 +1,35 @@
-import { Swiper } from 'swiper';
+import Swiper from 'swiper';
 import 'swiper/css';
 
-document.addEventListener('DOMContentLoaded', function () {
-    const sliderEl = document.querySelector('.task-slider.swiper');
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.querySelector('.task-slider.swiper');
+  if (!el) return;
 
-    if (sliderEl) {
-        new Swiper(sliderEl, {
-            loop: true,
-            effect: 'slide',
-            speed: 1000,
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
-            slidesPerView: 1,
-        });
-    }
+  const bullets = document.querySelectorAll('.manual-bullet');
+
+  const swiper = new Swiper(el, {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false, 
+    },
+    slidesPerView: 1,
+  });
+
+  swiper.on('slideChange', () => {
+    bullets.forEach((bullet, index) => {
+      bullet.classList.toggle('active', index === swiper.realIndex);
+    });
+  });
+
+  bullets.forEach((bullet, index) => {
+    bullet.addEventListener('click', () => {
+      swiper.slideToLoop(index);
+    });
+  });
+
+  bullets.forEach((bullet, index) => {
+    bullet.classList.toggle('active', index === swiper.realIndex);
+  });
 });

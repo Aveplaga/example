@@ -16,14 +16,12 @@ $pageConfig = [
     'isMainPage' => true,
     'mainClass' => 'index',
     'inlineCss' => collect([
-        'bundle-common',
         'bundle-test-task',
     ]),
     'inlineJs' => collect([]),
     'deferredCss' => collect([]),
     'deferredJs' => collect([
         'bundle-common',
-        'bundle-homepage',
         'bundle-test-task',
     ]),
     'asyncJs' => collect([]),
@@ -31,7 +29,6 @@ $pageConfig = [
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
-
 
 <?php
 $task = [
@@ -345,12 +342,12 @@ $text = [
 ?>
 
 <div class="wrapper">
-    <?= $mustache->render('task-slider', $task); ?>
-    <?= $mustache->render('task-catalog', $catalog); ?>
+    <!-- <?= $mustache->render('task-slider', $task); ?> -->
+    <!-- <?= $mustache->render('task-catalog', $catalog); ?> -->
     <?= $mustache->render('task-duo', $duo); ?>
-    <?= $mustache->render('task-news', $news); ?>
-    <?= $mustache->render('task-viewed', $viewed); ?>
-    <?= $mustache->render('task-text', $text); ?>
+    <!-- <?= $mustache->render('task-news', $news); ?>  -->
+    <!-- <?= $mustache->render('task-viewed', $viewed); ?> -->
+    <!-- <?= $mustache->render('task-text', $text); ?> -->
 </div>
 
 <?php
