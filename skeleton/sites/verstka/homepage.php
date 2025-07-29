@@ -110,7 +110,7 @@ $duo = [
     'title' => 'Новинки',
     'subtitle' => 'все новинки',
 
-    'items' => [
+    'newItems' => [
         [
             'image' => './local/assets/images/image.png',
             'itemTitle' => '"Шагающая" пружинка слинки - средняя',
@@ -194,7 +194,7 @@ $duo = [
     'hitsTitle' => 'Хиты',
     'hitsSubtitle' => 'все хиты',
 
-    'items' => [
+    'hitItems' => [
         [
             'image' => './local/assets/images/image.png',
             'itemTitle' => '"Шагающая" пружинка слинки - средняя',
