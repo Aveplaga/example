@@ -119,13 +119,13 @@ $duo = [
                     'textBefore' => 'В наличии',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'в наличии',
-                    'textAfter' => '4050'
+                    'textAfter' => '<span>4050</span>'
                 ],
                 [
                     'textBefore' => 'Продано за месяц',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'продано',
-                    'textAfter' => '8352'
+                    'textAfter' => '<span>8352</span>'
                 ]
             ],
             'itemPrice' => '280 ₽ <span>230</span>'
@@ -139,13 +139,13 @@ $duo = [
                     'textBefore' => 'В наличии',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'в наличии',
-                    'textAfter' => '4050'
+                    'textAfter' => '<span>4050</span>'
                 ],
                 [
                     'textBefore' => 'Продано за месяц',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'продано',
-                    'textAfter' => '8352'
+                    'textAfter' => '<span>8352</span>'
                 ]
             ],
             'itemPrice' => '260 ₽'
@@ -158,13 +158,13 @@ $duo = [
                     'textBefore' => 'В наличии',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'в наличии',
-                    'textAfter' => '4050'
+                    'textAfter' => '<span>4050</span>'
                 ],
                 [
                     'textBefore' => 'Продано за месяц',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'продано',
-                    'textAfter' => '8352'
+                    'textAfter' => '<span>8352</span>'
                 ]
             ],
             'itemPrice' => '260 ₽'
@@ -177,13 +177,13 @@ $duo = [
                     'textBefore' => 'В наличии',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'в наличии',
-                    'textAfter' => '4050'
+                    'textAfter' => '<span>4050</span>'
                 ],
                 [
                     'textBefore' => 'Продано за месяц',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'продано',
-                    'textAfter' => '8352'
+                    'textAfter' => '<span>8352</span>'
                 ]
             ],
             'itemPrice' => '260 ₽'
@@ -203,13 +203,13 @@ $duo = [
                     'textBefore' => 'В наличии',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'в наличии',
-                    'textAfter' => '4050'
+                    'textAfter' => '<span>4050</span>'
                 ],
                 [
                     'textBefore' => 'Продано за месяц',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'продано',
-                    'textAfter' => '8352'
+                    'textAfter' => '<span>8352</span>'
                 ]
             ],
             'itemPrice' => '280 ₽ <span>230</span>'
@@ -223,13 +223,13 @@ $duo = [
                     'textBefore' => 'В наличии',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'в наличии',
-                    'textAfter' => '4050'
+                    'textAfter' => '<span>4050</span>'
                 ],
                 [
                     'textBefore' => 'Продано за месяц',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'продано',
-                    'textAfter' => '8352'
+                    'textAfter' => '<span>8352</span>'
                 ]
             ],
             'itemPrice' => '260 ₽'
@@ -242,13 +242,13 @@ $duo = [
                     'textBefore' => 'В наличии',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'в наличии',
-                    'textAfter' => '4050'
+                    'textAfter' => '<span>4050</span>'
                 ],
                 [
                     'textBefore' => 'Продано за месяц',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'продано',
-                    'textAfter' => '8352'
+                    'textAfter' => '<span>8352</span>'
                 ]
             ],
             'itemPrice' => '260 ₽'
@@ -261,13 +261,13 @@ $duo = [
                     'textBefore' => 'В наличии',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'в наличии',
-                    'textAfter' => '4050'
+                    'textAfter' => '<span>4050</span>'
                 ],
                 [
                     'textBefore' => 'Продано за месяц',
                     'icon' => './local/assets/images/check.png',
                     'iconAlt' => 'продано',
-                    'textAfter' => '8352'
+                    'textAfter' => '<span>8352</span>'
                 ]
             ],
             'itemPrice' => '260 ₽'
@@ -324,9 +324,29 @@ $viewed = [
         ],
         [
             'image' => './local/assets/images/suit.png',
-            'itemTitle' => '',
-            'itemPrice' => ''
-        ]
+            'itemTitle' => 'Костюм-Кигуруми "Единорог Звездное небо"',
+            'itemPrice' => '890 ₽'
+        ],
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'itemPrice' => '180 ₽ <span>180</span>'
+        ],
+        [
+            'image' => './local/assets/images/suit.png',
+            'itemTitle' => 'Костюм-Кигуруми "Единорог Звездное небо"',
+            'itemPrice' => '890 ₽'
+        ],
+        [
+            'image' => './local/assets/images/suit.png',
+            'itemTitle' => 'Костюм-Кигуруми "Единорог Звездное небо"',
+            'itemPrice' => '890 ₽'
+        ],
+        [
+            'image' => './local/assets/images/image.png',
+            'itemTitle' => '"Шагающая" пружинка слинки - средняя',
+            'itemPrice' => '180 ₽ <span>180</span>'
+        ],
     ]
 ]
 ?>
@@ -342,13 +362,14 @@ $text = [
 ?>
 
 <div class="wrapper">
-    <!-- <?= $mustache->render('task-slider', $task); ?> -->
-    <!-- <?= $mustache->render('task-catalog', $catalog); ?> -->
+    <?= $mustache->render('task-slider', $task); ?>
+    <?= $mustache->render('task-catalog', $catalog); ?>
     <?= $mustache->render('task-duo', $duo); ?>
-    <!-- <?= $mustache->render('task-news', $news); ?>  -->
-    <!-- <?= $mustache->render('task-viewed', $viewed); ?> -->
-    <!-- <?= $mustache->render('task-text', $text); ?> -->
+    <?= $mustache->render('task-news', $news); ?>
+    <?= $mustache->render('task-viewed', $viewed); ?>
+    <?= $mustache->render('task-text', $text); ?>
 </div>
+
 
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/footer.php');

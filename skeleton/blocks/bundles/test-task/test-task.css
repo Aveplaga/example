@@ -47,9 +47,6 @@
 @media (max-width: 480px) {
   .container {
     width: 312px;
-    height: 612px;
-    margin: 0 auto;
-    padding: 0;
   }
   .container .task-catalog {
     display: -ms-grid;
@@ -154,7 +151,9 @@
   }
 }
 .container {
-  width: 1170px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 .container .task-slider {
   position: relative;
@@ -325,7 +324,6 @@
   padding: 40px 0 0 0;
 }
 .task-duo .container .task-duo__new .new-content__text {
-  max-width: 1170px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,7 +349,6 @@
   color: rgba(117, 117, 117, 0.8);
 }
 .task-duo .container .task-duo__hits .hits-content__text {
-  max-width: 1170px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,7 +379,20 @@
   display: flex;
   text-align: center;
 }
-.task-duo .container .task-list .task-item {
+.task-duo .container .task-list .swiper-wrapper {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+.task-duo .container .task-list .swiper-wrapper .swiper-slide {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  width: auto !important;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item {
   position: relative;
   padding: 17px 17px 32px 17px;
   border: 1px solid rgb(238, 238, 238);
@@ -390,16 +400,16 @@
   max-width: 292px;
   width: 100%;
 }
-.task-duo .container .task-list .task-item .task-item__image {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .task-item__image {
   max-width: 256px;
   width: 100%;
   height: auto;
 }
-.task-duo .container .task-list .task-item .task-item__logo {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .task-item__logo {
   display: none;
   position: absolute;
   padding: 9px 8px 7px 8px;
-  left: 202px;
+  left: 222px;
   top: 27px;
   border-radius: 20px;
   width: 36px;
@@ -407,18 +417,18 @@
   background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
-.task-duo .container .task-list .task-item .task-item__logo svg {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .task-item__logo svg {
   -webkit-transition: fill 0.3s ease, fill-opacity 0.3s ease;
   transition: fill 0.3s ease, fill-opacity 0.3s ease;
   fill: rgba(38, 32, 36, 0.4);
 }
-.task-duo .container .task-list .task-item .task-item__logo.active {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .task-item__logo.active {
   display: block;
 }
-.task-duo .container .task-list .task-item .task-item__logo.active svg {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .task-item__logo.active svg {
   fill: rgb(255, 109, 0);
 }
-.task-duo .container .task-list .task-item .item-title {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .item-title {
   padding: 15px 17px 10px 17px;
   font-size: 14px;
   line-height: 20px;
@@ -426,7 +436,7 @@
   color: rgb(29, 32, 41);
   margin-bottom: 20px;
 }
-.task-duo .container .task-list .task-item .product-info__item {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,44 +447,118 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.task-duo .container .task-list .task-item .product-info__item .product-info__icon img {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item .product-info__icon img {
   margin-right: 6px;
   width: 14px;
   height: 12px;
 }
-.task-duo .container .task-list .task-item .product-info__item .product-info__label,
-.task-duo .container .task-list .task-item .product-info__item .product-info__value {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item .product-info__label,
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item .product-info__value {
   font-size: 12px;
   line-height: 15px;
   color: rgb(102, 102, 102);
 }
-.task-duo .container .task-list .task-item .item-price {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .item-price {
   margin-top: 30px;
   font-size: 22px;
   line-height: 15px;
   font-weight: 700;
   color: rgb(38, 32, 36);
 }
-.task-duo .container .task-list .task-item .item-price span {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .item-price span {
   font-size: 16px;
   line-height: 15px;
   font-weight: 400;
   color: rgba(38, 32, 36, 0.5);
   text-decoration: line-through;
 }
-.task-duo .container .task-list .task-item:nth-child(1) {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide:nth-child(1) .task-item {
   border-radius: 18px 0 0 18px;
 }
-.task-duo .container .task-list .task-item:nth-child(1) .item-price {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide:nth-child(1) .task-item .item-price {
   color: rgb(255, 109, 0);
 }
-.task-duo .container .task-list .task-item:last-child {
+.task-duo .container .task-list .swiper-wrapper .swiper-slide:last-child .task-item {
   border-radius: 0 18px 18px 0;
 }
-.task-duo .container .task-list .task-item:hover .task-item__logo {
-  display: block;
-}
 
+@media (max-width: 480px) {
+  .task-duo .container .task-duo__new .new-content__text .new-content__title {
+    font-size: 24px;
+  }
+  .task-duo .container .task-duo__new .new-content__text .new-content__subtitle {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .task-duo .container .task-duo__hits .hits-content__text .hits-content__title {
+    font-size: 24px;
+  }
+  .task-duo .container .task-duo__hits .hits-content__text .hits-content__subtitle {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .task-duo .container .task-list .swiper-wrapper {
+    gap: 20px;
+  }
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    border: none;
+    padding: 0;
+    text-align: left;
+  }
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .task-item__image {
+    width: 146px;
+    margin-bottom: 10px;
+  }
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .item-title {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 0;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 12px;
+    width: 146px;
+  }
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item .product-info__icon {
+    display: none;
+  }
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item .product-info__label,
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item .product-info__value {
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 5px;
+  }
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item .product-info__label span,
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .product-info__item .product-info__value span {
+    color: rgb(77, 192, 55);
+  }
+  .task-duo .container .task-list .swiper-wrapper .swiper-slide .task-item .item-price {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 20px;
+  }
+}
 .task-news .task-news__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -531,8 +615,6 @@
 @media (max-width: 480px) {
   .container {
     width: 312px;
-    height: 612px;
-    margin: 0 auto;
     padding: 0;
   }
   .container .task-news__content {
@@ -666,9 +748,6 @@
 @media (max-width: 480px) {
   .container {
     max-width: 480px;
-    height: 612px;
-    margin: 0 auto;
-    padding: 0;
   }
   .container .task-text {
     border-top: 1px solid rgba(38, 32, 36, 0.1);

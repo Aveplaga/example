@@ -5,21 +5,30 @@
                 <div class="new-content__title">{{title}}</div>
                 <div class="new-content__subtitle">{{subtitle}}</div>
             </div>
-            <div class="task-list">
-                {{#newItems}}
-                    {{> task-cards }}
-                {{/newItems}}
+            <div class="swiper task-list">
+                <div class="swiper-wrapper">
+                    {{#newItems}}
+                        <div class="swiper-slide">
+                            {{> task-cards }}
+                        </div>
+                    {{/newItems}}
+                </div>
             </div>
         </div>
+
         <div class="task-duo__hits">
             <div class="hits-content__text">
                 <div class="hits-content__title">{{hitsTitle}}</div>
                 <div class="hits-content__subtitle">{{hitsSubtitle}}</div>
             </div>
-            <div class="task-list">
-                {{#hitItems}}
-                    {{> task-cards }}
-                {{/hitItems}}
+            <div class="swiper task-list">
+                <div class="swiper-wrapper">
+                    {{#hitItems}}
+                        <div class="swiper-slide">
+                            {{> task-cards }}
+                        </div>
+                    {{/hitItems}}
+                </div>
             </div>
         </div>
     </div>
