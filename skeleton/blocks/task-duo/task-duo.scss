@@ -25,6 +25,11 @@
                     line-height: 18px;
                     font-weight: 500;
                     color: rgba(117, 117, 117, 0.8);
+                    transition: .2s ease-in;
+
+                    &:hover {
+                        color: rgba(51, 51, 51, 1);
+                    }
                 }
             }
         }
@@ -49,6 +54,11 @@
                     line-height: 18px;
                     font-weight: 500;
                     color: rgba(117, 117, 117, 0.8);
+                    transition: .2s ease-in;
+
+                    &:hover {
+                        color: rgba(51, 51, 51, 1);
+                    }
                 }
             }
         }
@@ -156,110 +166,113 @@
                         }
                     }
 
-                        &:nth-child(1) {
-                            .task-item {
-                                border-radius: 18px 0 0 18px;
+                    &:nth-child(1) {
+                        .task-item {
+                            border-radius: 18px 0 0 18px;
 
-                                .item-price {
-                                    color: rgba(255, 109, 0, 1);
-                                }
+                            .item-price {
+                                color: rgba(255, 109, 0, 1);
                             }
                         }
+                    }
 
-                        &:last-child {
-                            .task-item {
-                                border-radius: 0 18px 18px 0;
-                            }
+                    &:last-child {
+                        .task-item {
+                            border-radius: 0 18px 18px 0;
                         }
                     }
                 }
             }
         }
     }
+}
 
-    @media (max-width: 480px) {
-        .task-duo {
-            .container {
-                .task-duo__new {
-                    .new-content__text {
-                        .new-content__title {
-                            font-size: 24px;
-                        }
+@media (max-width: 480px) {
+    .task-duo {
+        .container {
+            .task-duo__new {
+                .new-content__text {
+                    .new-content__title {
+                        font-size: 24px;
+                    }
 
-                        .new-content__subtitle {
-                            font-size: 12px;
-                            font-weight: 600;
-                        }
+                    .new-content__subtitle {
+                        font-size: 12px;
+                        font-weight: 600;
                     }
                 }
+            }
 
-                .task-duo__hits {
-                    .hits-content__text {
-                        .hits-content__title {
-                            font-size: 24px;
-                        }
+            .task-duo__hits {
+                .hits-content__text {
+                    .hits-content__title {
+                        font-size: 24px;
+                    }
 
-                        .hits-content__subtitle {
-                            font-size: 12px;
-                            font-weight: 600;
-                        }
+                    .hits-content__subtitle {
+                        font-size: 12px;
+                        font-weight: 600;
                     }
                 }
+            }
 
-                .task-list {
-                    .swiper-wrapper {
-                        gap: 20px;
+            .task-list {
+                width: auto;
+                overflow-x: auto;
+                margin-bottom: 50px;
 
-                        .swiper-slide {
+                .swiper-wrapper {
+                    gap: 20px;
 
-                            .task-item {
-                                display: flex;
-                                flex-direction: column;
-                                order: 0;
-                                border: none;
+                    .swiper-slide {
+
+                        .task-item {
+                            display: flex;
+                            flex-direction: column;
+                            order: 0;
+                            border: none;
+                            padding: 0;
+                            text-align: left;
+
+                            .task-item__image {
+                                width: 146px;
+                                margin-bottom: 10px;
+                            }
+
+                            .item-title {
+                                order: 2;
                                 padding: 0;
-                                text-align: left;
+                                font-size: 12px;
+                                line-height: 14px;
+                                font-weight: 600;
+                                margin: 0;
+                                margin-top: 12px;
+                                width: 146px;
+                            }
 
-                                .task-item__image {
-                                    width: 146px;
-                                    margin-bottom: 10px;
+                            .product-info__item {
+                                order: 1;
+                                justify-content: flex-start;
+
+                                .product-info__icon {
+                                    display: none;
                                 }
 
-                                .item-title {
-                                    order: 2;
-                                    padding: 0;
-                                    font-size: 12px;
-                                    line-height: 14px;
+                                .product-info__label,
+                                .product-info__value {
+                                    font-size: 11px;
                                     font-weight: 600;
-                                    margin: 0;
-                                    margin-top: 12px;
-                                    width: 146px;
-                                }
+                                    margin-right: 5px;
 
-                                .product-info__item {
-                                    order: 1;
-                                    justify-content: flex-start;
-
-                                    .product-info__icon {
-                                        display: none;
-                                    }
-
-                                    .product-info__label,
-                                    .product-info__value {
-                                        font-size: 11px;
-                                        font-weight: 600;
-                                        margin-right: 5px;
-
-                                        span {
-                                            color: rgba(77, 192, 55, 1);
-                                        }
+                                    span {
+                                        color: rgba(77, 192, 55, 1);
                                     }
                                 }
+                            }
 
-                                .item-price {
-                                    order: 3;
-                                    margin-top: 20px;
-                                }
+                            .item-price {
+                                order: 3;
+                                margin-top: 20px;
                             }
                         }
                     }
@@ -267,3 +280,4 @@
             }
         }
     }
+}

@@ -13,14 +13,8 @@ export default function taskDuo() {
   sliders.forEach(slider => {
     new Swiper(slider, {
       slidesPerView: 'auto',
-      spaceBetween: 5,
       loop: true,
       speed: 1250,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      
     });
   });
 }
