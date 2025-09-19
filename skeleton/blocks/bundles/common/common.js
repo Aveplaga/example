@@ -2,6 +2,7 @@ import loadingAttributePolyfill from 'loading-attribute-polyfill/dist/loading-at
 import 'fonts/stylesheet.css'
 
 import './common.sass'
+import '../../header/header.js'
 
 
 window.loadingAttributePolyfill = loadingAttributePolyfill

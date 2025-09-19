@@ -1,0 +1,19 @@
+<div class="section">
+    <div class="inner">
+        <div class="section-slider swiper">
+            <div class="section-wrapper swiper-wrapper">
+                {{#slides}}
+                    <div class="section-slide swiper-slide">
+                        <div class="section-background" style="background-image: url('{{background}}')"></div>
+                        <div class="section-content">
+                            <div class="content-title desktop">{{title}}</div>
+                            <div class="content-title mobile">{{hidden}}</div>
+                            <div class="content-description">{{description}}</div>
+                            <a class="content-button" href="{{link}}" class="">{{text}}</a>
+                        </div>
+                    </div>
+                {{/slides}}
+            </div>
+        </div>
+    </div>
+</div>
