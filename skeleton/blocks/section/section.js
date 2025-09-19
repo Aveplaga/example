@@ -1,17 +1,20 @@
 import Swiper from 'swiper';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const slide = document.querySelector('.section-slider.swiper');
-  if (!slide) return;
+  const slider = document.querySelector('.section-slider.swiper');
+  if (!slider) return;
 
-  const swiper = new Swiper(slide, {
+  new Swiper(slider, {
+    modules: [Autoplay, Pagination],
     loop: true,
-    speed: 1250,
+    speed: 2000,
+    slidesPerView: 1,
     autoplay: {
-      delay: 100,
+      delay: 2000,
       disableOnInteraction: false,
     },
-    slidesPerView: 1,
   });
 });

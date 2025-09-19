@@ -54,10 +54,17 @@
 
 .card-image {
     height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     background-color: #e8e8e8;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  
 }
 
 .card-icon {
@@ -87,6 +94,11 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     letter-spacing: 1px;
+}
+
+.card-discount{
+    margin-left: 5px;
+    text-decoration: line-through;
 }
 
 .card-estimation {
@@ -138,6 +150,7 @@
     .card {
         width: 325px;
     }
+    
 }
 
 @media (max-width: 768px) {

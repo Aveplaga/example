@@ -1,5 +1,5 @@
 <div class="inner">
-    <div class="products-content">
+    <div id="products" class="products-content">
         <div class="products-menu">
             <ul class="menu-list">
                 {{#links}}
@@ -13,7 +13,9 @@
         <div class="products-cards">
             {{#cards}}
                 <div class="card">
-                    <div class="card-image" style="background-image: url('{{image}}')"></div>
+                    <div class="card-image">
+                        <img src="{{image}}" alt="{{title}}">
+                    </div>
                     <span class="card-icon">
                         <svg width="24" height="24" viewBox="0 0 20 20" fill="#a3a3a3ff"
                             xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +26,10 @@
                     <div class="card-content">
                         <div class="card-title">{{title}}</div>
                         <div class="card-estimation">
-                            <div class="card-price">{{price}}</div>
+                            <div class="card-price">
+                            {{price}}
+                            <span class="card-discount">{{discount}}</span>
+                            </div>
                             <a href="{{url}}" class="card-purchase">{{purchase}}</a>
                         </div>
                     </div>

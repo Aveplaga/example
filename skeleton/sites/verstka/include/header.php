@@ -60,10 +60,10 @@ $mustache = new Mustache_Engine([
                             <a href="#" class="header-link">home</a>
                         </li>
                         <li class="header item">
-                            <a href="#" class="header-link">shop</a>
+                            <a href="#products" class="header-link">shop</a>
                         </li>
                         <li class="header item">
-                            <a href="#" class="header-link">contact</a>
+                            <a href="#contact" class="header-link">contact</a>
                         </li>
                         <li class="header-item header-cart">
                             <a href="" class="header-link">

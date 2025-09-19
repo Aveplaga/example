@@ -12,7 +12,7 @@ use ZLabs\Frontend\MustacheSingleton;
 ?>
 </main>
 <footer class="footer">
-    <div class="footer-list">
+    <div id="contact" class="footer-list">
         <div class="inner">
             <div class="footer-content">
                 <div class="about">
