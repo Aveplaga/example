@@ -34,145 +34,159 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 <?php
 $section = [
     'slides' => [
-        [
-            'background' => './local/assets/images/awesome.png',
-            'title' => 'awesome bell lamp',
-            'hidden' => 'Bell Lamp',
+        [   'background' => './local/assets/images/Bell-Lamp.png',
+            'titleDesktop' => 'Bell Lamp',
             'description' => 'A modern lamp with a sleek bell-shaped design, crafted from premium materials. 
                               It adds warmth and style to any room, making it a perfect fit for contemporary interiors.',
-            'text' => 'shop now',
+            'link' => '#products',
+            'titleLink' => 'Shop Now',
         ],
         [
-            'background' => './local/assets/images/nordic.png',
-            'title' => 'nordic a pendant lamp',
-            'hidden' => 'nordic lamp',
-            'description' => 'The Nordic A Pendant Lamp features a minimalist Scandinavian design with clean lines and high-quality materials. Its elegant shape and soft lighting make it a versatile choice for modern interiors, adding both style and comfort to any room.',
-            'text' => 'shop now',
+            'background' => './local/assets/images/laser.png',
+            'titleDesktop' => 'Laser Model',
+            'description' => 'A sleek 3D laser-cut model with precise details and modern design. Made from high-quality materials, perfect for any contemporary space.',
+            'link' => '#products',
+            'titleLink' => 'Shop Now',
         ],
     ]
 ]
 ?>
 
 <?php
+$info = [
+    'title' => 'simple & minimalist',
+    'subText' => 'Modern and minimalist design crafted from high-quality materials. Stylish, versatile, and functional, it adds subtle elegance and warmth to any space. Perfect for contemporary interiors, it blends seamlessly with your home or workspace while enhancing everyday comfort.',
+]
+?>
+
+
+
+<?php
 $products = [
     'links' => [
-        ['link' => 'all'],
-        ['link' => 'chair'],
-        ['link' => 'table'],
-        ['link' => 'home decor'],
-        ['link' => 'lighting'],
+        ['link' => 'All'],
+        ['link' => 'Chair'],
+        ['link' => 'Table'],
+        ['link' => 'Home decor'],
+        ['link' => 'Lighting'],
     ],
 
     'cards' => [
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/eiffel.png',
-            'title' => 'dsr eiffel chair',
+            'title' => 'Dsr Eiffel Chair',
             'discount' => '€115.00',
             'price' => '€137.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/lights.png',
-            'title' => 'pendant lights',
+            'title' => 'Pendant Lights',
             'price' => '€245.00',
-            'purchase' => 'Purchase',
+            'category' => 'lighting',
         ],
         [
             'image' => './local/assets/images/laser.png',
-            'title' => '3d laser cut model ',
+            'title' => '3D Laser Cut Model ',
             'discount' => '€125.00',
             'price' => '€185.00',
-            'purchase' => 'Purchase',
+            'category' => 'home decor',
         ],
         [
             'image' => './local/assets/images/ton.png',
-            'title' => 'ton chair',
+            'title' => 'Ton Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
-            'image' => './local/assets/images/dsr.png',
-            'title' => 'dsr eiffel chair',
-            'discount' => '€115.00',
-            'price' => '€137.00',
-            'purchase' => 'Purchase',
+            'image' => './local/assets/images/Bell-Lamp.png',
+            'title' => 'Bell Lamp',
+            'price' => '€124.00',
+            'category' => 'lighting',
         ],
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/pendant.png',
-            'title' => 'Leukon pendant lamp',
+            'title' => 'Leukon Pendant lamp',
             'discount' => '€125.00',
             'price' => '€185.00',
-            'purchase' => 'Purchase',
+            'category' => 'lamp',
         ],
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
+        ],
+       [
+            'image' => './local/assets/images/chair.png',
+            'title' => 'Le Parc Minotti Chair',
+            'price' => '€169.00',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
         [
             'image' => './local/assets/images/chair.png',
-            'title' => 'le parc minotti chair',
+            'title' => 'Le Parc Minotti Chair',
             'price' => '€169.00',
-            'purchase' => 'Purchase',
+            'category' => 'chair',
         ],
     ],
 
-    'button' => 'load more',
+    'button' => 'Load More',
 ]
 ?>
 
 
 <div class="wrapper">
     <?= $mustache->render('section', $section); ?>
+    <?= $mustache->render('info', $info); ?>
     <?= $mustache->render('products', $products); ?>
 </div>
 

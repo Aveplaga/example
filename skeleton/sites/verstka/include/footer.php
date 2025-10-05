@@ -15,23 +15,27 @@ use ZLabs\Frontend\MustacheSingleton;
     <div id="contact" class="footer-list">
         <div class="inner">
             <div class="footer-content">
+
                 <div class="about">
-                    <h4>About the store</h4>
+                    <h4 class="about-title">About the store</h4>
                     <p class="about-description">We offer high-quality furniture and home decor products for every style. Our collection combines modern design with timeless elegance. Subscribe to our newsletter to stay updated on the latest trends and exclusive offers.</p>
                 </div>
 
-                <nav class="profile">
-                    <h4>Profile</h4>
-                    <ul>
-                        <li><a class="profile-link" href="#">My account</a></li>
-                        <li><a class="profile-link" href="#">Help</a></li>
-                        <li><a class="profile-link" href="#">Support</a></li>
+                <div class="navigation">
+                    <h4 class="navigation-title">Navigation</h4>
+                    <ul class="navigation-list">
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="#home">Home</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="#products">Shop</a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
 
                 <div class="signUp">
-                    <h4>Sign Up for our awesome news</h4>
-                    <form>
+                    <h4 class="signUp-title">Sign Up for our awesome news</h4>
+                    <form class="footer-form">
                         <input type="email" placeholder="Email Address">
                         <button type="submit">Subscribe</button>
                     </form>

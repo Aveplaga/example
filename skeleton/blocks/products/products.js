@@ -22,10 +22,24 @@ export default () => {
     })
 }
 
-const icon = document.querySelectorAll('.card-icon');
-icon.forEach(icon =>{
-    icon.addEventListener('click' , click => {
-        click.stopPropagation();
-        icon.classList.toggle('active');
+
+// пишем фильтрацию товаров
+const links = document.querySelectorAll('.products-link');
+const cards = document.querySelectorAll('.card');
+
+links.forEach(link => {
+    link.addEventListener('click', click => {
+        click.preventDefault(); // отменяем стандартное поведение у ссылки 
+        const category = link.textContent.toLowerCase(); // тут приводим к нижнему тексту , так как у меня он вверхний
+
+        cards.forEach(card => { // пишем условие при котором будет работать сслыки и искать товары по категории
+            if (category === 'all' || card.dataset.category === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
     });
 });
+
+

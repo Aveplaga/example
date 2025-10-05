@@ -42,53 +42,56 @@ $mustache = new Mustache_Engine([
     <div class="fixed-panel">
     </div>
     <div class="page-inner">
-        <header class="header">
+
+        <header id="home" class="header">
             <div class="header-inner">
-                <a href="#" class="header-logo">Outside</a>
+                <div class="header-left">
+                    <a href="#" class="logo">Future</a>
 
-                <button class="burger">
-                    <svg width="32" height="32" viewBox="0 0 24 24">
-                        <line class="line top" x1="3" y1="6" x2="21" y2="6" stroke="#000" stroke-width="2" stroke-linecap="round" />
-                        <line class="line middle" x1="3" y1="12" x2="21" y2="12" stroke="#000" stroke-width="2" stroke-linecap="round" />
-                        <line class="line bottom" x1="3" y1="18" x2="21" y2="18" stroke="#000" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                </button>
+                    <nav class="menu">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#products" class="menu-link">Shop</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#contact" class="menu-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
-                <nav class="header-menu">
-                    <ul class="header-list">
-                        <li class="header item">
-                            <a href="#" class="header-link">home</a>
-                        </li>
-                        <li class="header item">
-                            <a href="#products" class="header-link">shop</a>
-                        </li>
-                        <li class="header item">
-                            <a href="#contact" class="header-link">contact</a>
-                        </li>
-                    </ul>
-                    <ul class="header-list header-cart">
-                        <li class="header-item header-cart">
-                            <a href="" class="header-link">
-                                <svg width="16" height="16" viewBox="0 0 20 20" fill="#3c3c3c;"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M10.0102 4.64303L9.10439 3.7372C7.31449 1.9473 4.41248 1.9473 2.62258 3.7372C0.832676 5.52711 0.832676 8.42911 2.62258 10.219L9.98827 17.5847L9.98977 17.5832L10.0117 17.6052L17.3774 10.2395C19.1673 8.44956 19.1673 5.54755 17.3774 3.75765C15.5875 1.96775 12.6855 1.96775 10.8956 3.75765L10.0102 4.64303ZM9.98977 15.2262L14.1033 11.1127L15.3123 9.94513L15.3135 9.94633L16.1989 9.06095C17.3379 7.92192 17.3379 6.07519 16.1989 4.93616C15.0599 3.79713 13.2131 3.79713 12.0741 4.93616L10.0111 6.99916L10.0051 6.99312L10.0042 6.99402L7.92588 4.91571C6.78685 3.77668 4.94012 3.77668 3.80109 4.91571C2.66206 6.05474 2.66206 7.90147 3.80109 9.0405L5.91728 11.1567L5.91878 11.1552L9.98977 15.2262Z" />
-                                </svg>
-                                <span class="cart-count">0</span>
-                            </a>
-                        </li>
-                        <li class="header-item header-profile">
-                            <a href="#profile" class="header-link">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#3c3c3c" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 
-                                            2.239-5 5 2.239 5 5 5zm0 2c-3.866 0-7 
-                                            3.134-7 7h2c0-2.761 2.239-5 5-5s5 2.239 
-                                            5 5h2c0-3.866-3.134-7-7-7z" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="header-right">
+                    <nav class="header-items">
+                        <ul class="header-list">
+                            <li class="header-item">
+                                <a href="#" class="header-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#949795FF">
+                                        <path d="M480-480q-60 0-102-42t-42-102q0-60 42-102t102-42q60 0 102 42t42 102q0 60-42 102t-102 42ZM192-192v-96q0-23 12.5-43.5T239-366q55-32 116.29-49 61.29-17 124.5-17t124.71 17Q666-398 721-366q22 13 34.5 34t12.5 44v96H192Zm72-72h432v-24q0-5.18-3.03-9.41-3.02-4.24-7.97-6.59-46-28-98-42t-107-14q-55 0-107 14t-98 42q-5 4-8 7.72-3 3.73-3 8.28v24Zm216.21-288Q510-552 531-573.21t21-51Q552-654 530.79-675t-51-21Q450-696 429-674.79t-21 51Q408-594 429.21-573t51 21Zm-.21-72Zm0 360Z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="header-item">
+                                <a href="#" class="header-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#949795FF">
+                                        <path d="M263.72-96Q234-96 213-117.15T192-168v-456q0-29.7 21.15-50.85Q234.3-696 264-696h72v-16q0-60 40.5-106T480-864q60 0 102 42t42 102v24h72q29.7 0 50.85 21.15Q768-653.7 768-624v456q0 29.7-21.16 50.85Q725.68-96 695.96-96H263.72Zm.28-72h432v-456h-72v60q0 15.3-10.29 25.65Q603.42-528 588.21-528t-25.71-10.35Q552-548.7 552-564v-60H408v60q0 15.3-10.29 25.65Q387.42-528 372.21-528t-25.71-10.35Q336-548.7 336-564v-60h-72v456Zm144-528h144v-24q0-29.7-21.21-50.85-21.21-21.15-51-21.15T429-770.85Q408-749.7 408-720v24ZM264-168v-456 456Z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="header-burger">
+                        <svg class="open" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#949795FF">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg>
+                        <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#949795FF">
+                            <path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </header>
+
         <main class="main <?= $pageConfig['mainClass'] ?>">
