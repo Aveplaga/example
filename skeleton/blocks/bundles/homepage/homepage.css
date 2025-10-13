@@ -24,10 +24,3 @@
 /* Миксин для медиа-запросов
  * Значения точек берутся из коллекции $breakpoints
  * */
-.section {
-  background-color: #e8e8e8;
-}
-
-.content-title {
-  font-size: 50px;
-}

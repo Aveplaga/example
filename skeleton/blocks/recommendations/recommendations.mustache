@@ -1,0 +1,36 @@
+<div class="inner">
+    <div class="recommendations">
+        <div class="recommendations__title">{{title}}</div>
+
+        <div class="recommendations__wrapper">
+            {{#cards}}
+                <div class="recommendations__item">
+                    <div class="item__image" style="background-image: url('{{image}}');"></div>
+
+                    <div class="item__content">
+                        <div class="item__title">{{itemTitle}}</div>
+                        <div class="item__stars">
+                            <div class="item__stars-wrapper">
+                                {{#stars}}
+                                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.6507 0.255127L12.2699 5.89504L18.4432 6.64322L13.8887 10.8771L15.0847 16.9794L9.6507 13.9561L4.21666 16.9794L5.41273 10.8771L0.858241 6.64322L7.03149 5.89504L9.6507 0.255127Z" fill="#FFC633" />
+                                    </svg>
+                                {{/stars}}
+                            </div>
+                            <div class="item__estimation">
+                                {{{estimation}}}
+                            </div>
+                        </div>
+                        <div class="item__price">
+                            <div class="price__title">{{{price}}}</div>
+                            {{#sale}}
+                                <div class="price__sale">{{sale}}</div>
+                            {{/sale}}
+                        </div>
+                    </div>
+                </div>
+            {{/cards}}
+        </div>
+
+    </div>
+</div>

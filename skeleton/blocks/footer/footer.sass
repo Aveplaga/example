@@ -1,70 +1,114 @@
 .footer
-  margin-top: 75px
-  background-color: #EBF1EE
-  color: #949795FF
+  position: relative
+  background-color: rgba(240, 240, 240, 1)
+  z-index: 0
 
-.footer-content
+.footer__content
   display: flex
+  align-items: flex-start 
+  flex-wrap: wrap
   justify-content: space-between
-  gap: 25px
+  padding: 140px 0 88px 0
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  padding-bottom: 50px
 
-.about
-  max-width: 300px
+.footer__socials
+  max-width: 248px
 
-.about-title, 
-.navigation-title, 
-.signUp-title
-  font-weight: 400
+.footer__logo
+  font-size: 35px
+  font-weight: 700
+  text-transform: uppercase
+  line-height: 100%
+  margin-bottom: 25px
+
+.footer__subtext
   font-size: 14px
-  color: #000000
+  line-height: 22px
+  color: rgba(0, 0, 0, 0.6)
+  margin-bottom: 35px
 
-
-.about-description
-  font-size: 12px
-  font-weight: 500
-  line-height: 1.5
-
-.navigation-list  
+.social__list
   display: flex
-  flex-direction: column
-  gap: 5px
+  gap: 12px
 
-.navigation-link
-  font-size: 12px
-  transition: color .5s ease-in-out
+.social__item
+  display: flex
+  justify-content: center
+  width: 28px
+  height: 28px
+  border-radius: 50%
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  background-color: rgba(255, 255, 255, 1)
+  padding: 4px 5px 6px 8px
+  transition: all 0.5s ease
+
+
+  &:nth-child(2)
+    background-color: rgba(0, 0, 0, 1)
+    border-color: rgba(0, 0, 0, 1)
 
   &:hover
-    color: #000000
+    background-color: rgba(0, 0, 0, 1)
+    border-color: rgba(0, 0, 0, 1)
 
+    svg path
+      fill: rgba(255, 255, 255, 1)
 
-.footer-form
+.footer__title
+  margin-bottom: 26px
+  line-height: 18px
+  font-weight: 500
+  letter-spacing: 3px
+  text-transform: uppercase
+
+.footer__list
   display: flex
+  flex-direction: column
+  gap: 15px
+
+.footer__link
+  color: rgba(0, 0, 0, 0.6)
+  line-height: 19px
+
+.footer__top
+  margin-top: 24px
+  display: flex
+  align-items: center 
   justify-content: space-between
+
+.footer__text
+  font-size: 14px
+  color: rgba(0, 0, 0, 0.6)
+
+.footer__cards
+  display: flex
   align-items: center
-  border-bottom: 1px solid #949795FF
-  padding-bottom: 10px
+  gap: 12px 
 
-  input
-    font-size: 12px
-    border: none
-    background: transparent
-    outline: none
+.footer__card
+  padding: 6px
+  background-color: rgba(255, 255, 255, 1)
+  border-radius: 6px
 
-  button
-    font-size: 12px
-    background: transparent
-    border: none
-    cursor: pointer
-    transition: color .3s ease
+@media(max-width: 767px)
+  .footer__content
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 24px 
 
-    &:hover
-      color: #000
+  .footer__socials
+    grid-column: 1 / -1
 
-@media (max-width: 768px)
+  .footer__title ,
+  .footer__link
+    font-size: 14px
+    
+  .footer__title
+    margin-bottom: 16px
 
-  .footer-content
+  .footer__top
     flex-direction: column
-    gap: 50px
-
-
- 
+    justify-content: center
+    gap: 16px
+    

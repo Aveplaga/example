@@ -1,7 +1,11 @@
 import './homepage.sass'
-import '../../section/section.mustache'
-import '../../products/products.mustache'
-import '../../info/info.mustache'
+import '../../product/product.mustache'
+import '../../rating/rating.mustache'
+import '../../recommendations/recommendations.mustache'
+import '../../newsletter/newsletter.mustache'
+
+import '../../rating/rating.js'
+import '../../product/product.js'
 
 
 

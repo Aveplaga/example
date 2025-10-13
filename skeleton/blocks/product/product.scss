@@ -1,0 +1,361 @@
+$container-width: 1240px;
+$line-height-base: 1;
+
+.inner {
+    max-width: $container-width;
+    margin: 24px auto;
+}
+
+.navigation {
+    display: flex;
+    gap: 12px;
+}
+
+.navigation__link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: rgba(0, 0, 0, 0.6);
+    transition: color .5s ease-in-out;
+
+    &:hover {
+        color: rgba(0, 0, 0, 1);
+    }
+
+    &:last-child {
+        color: rgba(0, 0, 0, 1);
+
+        svg {
+            display: none;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+    margin-top: 36px;
+}
+
+.content__gallery-wrapper {
+    display: flex;
+    gap: 14px;
+}
+
+.content__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.content__image-small {
+    width: 152px;
+    height: 167px;
+    border-radius: 20px;
+    display: block;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+
+    &:hover {
+        border-color: rgba(0, 0, 0, 1);
+    }
+}
+
+.content__image-main {
+    width: 444px;
+    height: 530px;
+    border-radius: 20px;
+    display: block;
+}
+
+.content__title {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: $line-height-base;
+    max-width: 600px;
+    margin-bottom: 14px;
+
+}
+
+.content__rating {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    max-width: 193px;
+    margin-bottom: 14px;
+}
+
+.content__stars {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    max-width: 139px;
+}
+
+.content__star {
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.content__price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.content__price-current {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: $line-height-base;
+
+    span {
+        color: rgba(0, 0, 0, 0.3);
+        text-decoration: line-through;
+    }
+}
+
+.content__price-old {
+    color: rgba(255, 51, 51, 1);
+    background-color: rgba(255, 51, 51, 0.1);
+    line-height: $line-height-base;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 62px;
+    width: 72px;
+    height: 32px;
+}
+
+.content__description {
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 22px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 24px;
+}
+
+.content__color {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 24px;
+    margin-top: 24px;
+}
+
+.content__color-title {
+    line-height: $line-height-base;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 16px;
+}
+
+.content__color-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.content__color-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+
+    .content__color-check {
+        display: none;
+    }
+
+    &--active .content__color-check {
+        display: block;
+    }
+}
+
+.content__size {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 24px;
+    margin-top: 24px;
+}
+
+.content__size-title {
+    line-height: $line-height-base;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 16px;
+}
+
+.content__size-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.content__size-button {
+    color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(240, 240, 240, 1);
+    padding: 12px 24px;
+    border-radius: 62px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 1);
+        color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+        background-color: rgba(0, 0, 0, 1);
+        color: rgba(255, 255, 255, 1);
+    }
+
+}
+
+.content__purchase {
+    margin-top: 24px;
+}
+
+.content__purchase-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+.content__counter-button {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    background-color: rgba(240, 240, 240, 1);
+    border-radius: 62px;
+    padding: 15px 20px;
+}
+
+.content__purchase-button {
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 62px;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+@media(max-width: 1279px) {
+
+    .inner {
+        padding: 0 16px;
+    }
+
+    .navigation {
+        gap: 6px;
+    }
+
+    .navigation__link {
+        font-size: 14px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content__gallery-wrapper {
+        max-width: 358px;
+        margin: 0 auto;
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+
+    .content__gallery {
+        flex-direction: row;
+        gap: 12px;
+        max-height: 106px;
+    }
+
+    .content__image-small {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .content__image-main {
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+    }
+
+    .content__title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .content__stars {
+        max-width: 105px;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .content__estimation {
+        font-size: 14px;
+    }
+
+    .content__price-current {
+        font-size: 24px;
+    }
+
+    .content__price-old {
+        font-size: 14px;
+        padding: 6px 12px;
+        width: 62px;
+        height: 31px;
+    }
+
+    .content__description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .content__color-title,
+    .content__size-title {
+        font-size: 14px;
+    }
+
+    .content__color-list {
+        gap: 12px;
+    }
+
+    .content__color-item {
+        width: 39px;
+        height: 39px;
+    }
+
+    .content__size-buttons {
+        gap: 9px;
+    }
+
+    .content__size-button {
+        font-size: 12px;
+        padding: 10px 20px;
+        white-space: nowrap;
+    }
+
+    .content__counter-button {
+        font-size: 14px;
+        padding: 12px 16px;
+        gap: 16px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .content__purchase-button {
+        font-size: 14px;
+        padding: 13px;
+    }
+}
