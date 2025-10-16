@@ -16,7 +16,7 @@ $line-height-base: 1;
     align-items: center;
     gap: 4px;
     color: rgba(0, 0, 0, 0.6);
-    transition: color .5s ease-in-out;
+    transition: color .3s ease;
 
     &:hover {
         color: rgba(0, 0, 0, 1);
@@ -228,7 +228,7 @@ $line-height-base: 1;
     gap: 38px;
     background-color: rgba(240, 240, 240, 1);
     border-radius: 62px;
-    padding: 15px 20px;
+    padding: 14px 20px;
 }
 
 .content__purchase-button {
