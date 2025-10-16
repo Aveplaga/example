@@ -66,6 +66,7 @@ $line-height-base: 1;
     height: 530px;
     border-radius: 20px;
     display: block;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .content__title {
@@ -221,7 +222,7 @@ $line-height-base: 1;
     gap: 20px
 }
 
-.content__counter-button {
+.content__counter {
     display: flex;
     align-items: center;
     gap: 38px;
@@ -238,7 +239,6 @@ $line-height-base: 1;
     border-radius: 62px;
     color: rgba(255, 255, 255, 1);
 }
-
 
 @media(max-width: 1279px) {
 
@@ -343,7 +343,7 @@ $line-height-base: 1;
         white-space: nowrap;
     }
 
-    .content__counter-button {
+    .content__counter {
         font-size: 14px;
         padding: 12px 16px;
         gap: 16px;

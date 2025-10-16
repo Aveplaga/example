@@ -27,8 +27,6 @@ export default () => {
     })
 }
 
-
-
 const links = document.querySelectorAll('.rating__link');
 
 links.forEach(link => {

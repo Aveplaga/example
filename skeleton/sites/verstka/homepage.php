@@ -242,11 +242,11 @@ $recommendations = [
 
 ?>
 
-<?php 
-    $newsletter = [
+<?php
+$newsletter = [
     'newsletterTitle' => 'STAY UPTO DATE ABOUT OUR LATEST OFFERS',
-    'formText' => 'Subscribe to Newsletter' 
-    ]
+    'formText' => 'Subscribe to Newsletter'
+]
 ?>
 
 <div class="wrapper">
