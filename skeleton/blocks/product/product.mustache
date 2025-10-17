@@ -15,14 +15,30 @@
     <section class="content">
 
         <div class="content__gallery-wrapper">
-            <div class="content__gallery">
-                {{#images}}
-                    <a href="#" class="content__gallery-link">
-                        <img class="content__image-small" loading="lazy" src="{{image}}" alt="">
-                    </a>
-                {{/images}}
+
+            <div class="content__gallery swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {{#images}}
+                        <div class="swiper-slide">
+                            <a href="#" class="content__gallery-link">
+                                <img class="content__image-small" loading="lazy" src="{{image}}" alt="">
+                            </a>
+                        </div>
+                    {{/images}}
+                </div>
             </div>
-            <img class="content__image-main" loading="lazy" src="{{main_image}}" alt="">
+
+            <div thumbsSlider="" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    {{#images}}
+                        <div class="swiper-slide">
+                            <img class="content__image-main" loading="lazy" src="{{image}}" alt="">
+                        </div>
+                    {{/images}}
+                </div>
+            </div>
+
+
         </div>
 
         <div class="content__info">
@@ -79,7 +95,7 @@
 
             <div class="content__purchase">
                 <div class="content__purchase-buttons">
-                
+
                     <div class="content__counter">
                         <button class="content__counter-button minus">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

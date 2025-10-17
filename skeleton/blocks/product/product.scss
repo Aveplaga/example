@@ -16,7 +16,7 @@ $line-height-base: 1;
     align-items: center;
     gap: 4px;
     color: rgba(0, 0, 0, 0.6);
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 
     &:hover {
         color: rgba(0, 0, 0, 1);
@@ -40,6 +40,31 @@ $line-height-base: 1;
 .content__gallery-wrapper {
     display: flex;
     gap: 14px;
+}
+
+.mySwiper {
+    width: 152px;
+
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .swiper-slide {
+        width: auto !important;
+        height: auto !important;
+    }
+}
+
+.mySwiper2 {
+    width: 444px;
+    height: 530px;
+
+    .swiper-slide {
+        width: 100% !important;
+        height: 100% !important;
+    }
 }
 
 .content__gallery {
@@ -76,7 +101,6 @@ $line-height-base: 1;
     line-height: $line-height-base;
     max-width: 600px;
     margin-bottom: 14px;
-
 }
 
 .content__rating {
@@ -95,7 +119,7 @@ $line-height-base: 1;
 }
 
 .content__star {
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     &:hover {
         transform: scale(1.1);
@@ -138,13 +162,15 @@ $line-height-base: 1;
     padding-bottom: 24px;
 }
 
-.content__color {
+.content__color,
+.content__size {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 24px;
     margin-top: 24px;
 }
 
-.content__color-title {
+.content__color-title,
+.content__size-title {
     line-height: $line-height-base;
     color: rgba(0, 0, 0, 0.6);
     margin-bottom: 16px;
@@ -175,18 +201,6 @@ $line-height-base: 1;
     }
 }
 
-.content__size {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 24px;
-    margin-top: 24px;
-}
-
-.content__size-title {
-    line-height: $line-height-base;
-    color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 16px;
-}
-
 .content__size-buttons {
     display: flex;
     align-items: center;
@@ -200,16 +214,11 @@ $line-height-base: 1;
     border-radius: 62px;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
-    &:hover {
-        background-color: rgba(0, 0, 0, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
+    &:hover,
     &:active {
         background-color: rgba(0, 0, 0, 1);
-        color: rgba(255, 255, 255, 1);
+        color: #fff;
     }
-
 }
 
 .content__purchase {
@@ -219,7 +228,7 @@ $line-height-base: 1;
 .content__purchase-buttons {
     display: flex;
     align-items: center;
-    gap: 20px
+    gap: 20px;
 }
 
 .content__counter {
@@ -235,13 +244,12 @@ $line-height-base: 1;
     text-align: center;
     padding: 15px 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: #000;
     border-radius: 62px;
-    color: rgba(255, 255, 255, 1);
+    color: #fff;
 }
 
 @media(max-width: 1279px) {
-
     .inner {
         padding: 0 16px;
     }
@@ -267,21 +275,29 @@ $line-height-base: 1;
         gap: 12px;
     }
 
-    .content__gallery {
-        flex-direction: row;
-        gap: 12px;
-        max-height: 106px;
-    }
-
-    .content__image-small {
+    .mySwiper {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+
+        .swiper-wrapper {
+            flex-direction: row !important;
+            gap: 0 !important; 
+        }
+
+        .swiper-slide {
+            width: 112px !important;
+            height: 106px !important;
+        }
     }
 
-    .content__image-main {
+    .mySwiper2 {
         width: 100%;
         height: 290px;
+    }
+
+    .content__image-small,
+    .content__image-main {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
@@ -290,13 +306,9 @@ $line-height-base: 1;
         line-height: 28px;
     }
 
-    .content__stars {
-        max-width: 105px;
-
-        svg {
-            width: 18px;
-            height: 18px;
-        }
+    .content__stars svg {
+        width: 18px;
+        height: 18px;
     }
 
     .content__estimation {

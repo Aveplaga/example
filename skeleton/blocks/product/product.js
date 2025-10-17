@@ -1,9 +1,19 @@
-const mainImage = document.querySelector('.content__image-main');
-document.querySelectorAll('.content__image-small').forEach(smallImg => {
-    smallImg.addEventListener('click', (e) => {
-        e.preventDefault();
-        mainImage.src = smallImg.src;
-    });
+import Swiper from "swiper/bundle";
+import "swiper/css";
+import "swiper/css/thumbs";
+
+const swiper = new Swiper(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+const swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiper,
+    },
 });
 
 const colorItems = document.querySelectorAll('.content__color-item');
