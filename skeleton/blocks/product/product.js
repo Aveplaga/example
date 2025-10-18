@@ -1,6 +1,7 @@
+// Инициализация Swiper
+import { act } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css";
-import "swiper/css/thumbs";
 
 const swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
@@ -16,15 +17,23 @@ const swiper2 = new Swiper(".mySwiper2", {
     },
 });
 
-const colorItems = document.querySelectorAll('.content__color-item');
+// Активное состояние у элементов
+function toggleActive(items, active = 'active') {
+    items.forEach(item => {
+        item.addEventListener('click', e => {
+            e.preventDefault();
 
-colorItems.forEach(item => {
-    item.addEventListener('click', () => {
-        colorItems.forEach(i => i.classList.remove('content__color-item--active'));
-        item.classList.add('content__color-item--active');
+            items.forEach(i => i.classList.remove(active));
+            item.classList.add(active);
+        });
     });
-});
+}
 
+toggleActive(document.querySelectorAll('.content__gallery-link'), 'active');
+toggleActive(document.querySelectorAll('.content__color-item'), 'content__color-item--active');
+toggleActive(document.querySelectorAll('.content__size-button'), 'active');
+
+// Счётчик товара
 const value = document.querySelector('.counter-value');
 const plus = document.querySelector('.plus');
 const minus = document.querySelector('.minus');

@@ -86,6 +86,10 @@ $line-height-base: 1;
     }
 }
 
+.content__gallery-link.active .content__image-small {
+    border-color: rgba(0, 0, 0, 1);
+}
+
 .content__image-main {
     width: 444px;
     height: 530px;
@@ -214,11 +218,15 @@ $line-height-base: 1;
     border-radius: 62px;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
-    &:hover,
-    &:active {
+    &:hover {
         background-color: rgba(0, 0, 0, 1);
         color: #fff;
     }
+}
+
+.content__size-button.active {
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
 }
 
 .content__purchase {
@@ -280,7 +288,7 @@ $line-height-base: 1;
 
         .swiper-wrapper {
             flex-direction: row !important;
-            gap: 0 !important; 
+            gap: 0 !important;
         }
 
         .swiper-slide {
