@@ -1,3 +1,4 @@
+// Инициализация Expander
 import { Expander } from '../expander/Expander'
 
 export default () => {
@@ -27,13 +28,14 @@ export default () => {
     })
 }
 
+// Активное состоние навигации
 const links = document.querySelectorAll('.rating__link');
 
 links.forEach(link => {
-    link.addEventListener('click', (i) => {
-        i.preventDefault();
+    link.addEventListener('click' , (e) => {
+        e.preventDefault();
 
-        links.forEach(x => x.classList.remove('active'));
-        link.classList.add('active')
-    })
-})
+        links.forEach(i => i.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
