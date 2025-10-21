@@ -34,7 +34,7 @@ const links = document.querySelectorAll('.rating__link');
 links.forEach(link => {
     link.addEventListener('click' , (e) => {
         e.preventDefault();
-
+        
         links.forEach(i => i.classList.remove('active'));
         link.classList.add('active');
     });
