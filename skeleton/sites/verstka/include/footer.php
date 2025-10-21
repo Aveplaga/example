@@ -11,7 +11,7 @@ use ZLabs\Frontend\MustacheSingleton;
 /** @var MustacheSingleton $mustache */
 ?>
 </main>
-<footer>Подвал сайта</footer>
+<footer></footer>
 <?// page-inner?>
 </div>
 <?php
