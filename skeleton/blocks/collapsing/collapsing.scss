@@ -1,0 +1,70 @@
+.collapsing {
+    background-color: rgba(255, 255, 255, 1);
+    margin: 50px 0;
+}
+
+.collapsing-wrapper {
+    max-width: 1115px;
+    padding: 44px 15px 55px 29px;
+}
+
+.collapsing-title {
+    color: rgba(27, 27, 27, 1);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 3%;
+    margin-bottom: 20px;
+}
+
+.collapsing-hidden {
+    max-height: 175px;
+    color: rgba(27, 27, 27, 0.9);
+    font-size: 15px;
+    line-height: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 100%);
+        transition: opacity .5s ease;
+        pointer-events: none;
+        opacity: 1;
+    }
+}
+
+.collapsing.collapsing_expand .collapsing-hidden::after {
+    opacity: 0;
+}
+
+.collapsing-button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.collapsing-button-text{
+    color: rgba(19, 19, 19, 0.7);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    text-decoration: underline;
+}
+
+.collapsing-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform .5s ease;
+}
+
+.collapsing-button.active .collapsing-arrow {
+    transform: rotate(180deg);
+}

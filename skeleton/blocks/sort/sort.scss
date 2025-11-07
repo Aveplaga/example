@@ -1,0 +1,85 @@
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.sort {
+    max-width: 350px;
+    margin: 30px 0;
+    color: rgba(27, 27, 27, 0.9);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+}
+
+.sort-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 1.5px solid rgba(229, 229, 229, 1);
+    border-radius: 8px;
+}
+
+.sort-content {
+    display: flex;
+    gap: 8px;
+}
+
+.sort-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform .5s ease;
+}
+
+.sort.dropdown_expand .sort-arrow {
+    transform: rotate(180deg);
+}
+
+.sort-title {
+    color: rgba(27, 27, 27, 0.4);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.sort-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease;
+}
+
+.sort-item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 15px 0 20px 15px;
+}
+
+.sort.dropdown_expand .sort-list {
+    max-height: 500px;
+    display: block;
+}
+
+.sort-link {
+    color: rgba(27, 27, 27, 0.4);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    transition: color .5s ease;
+
+    &:hover {
+        color: rgba(27, 27, 27, 0.9);
+    }
+
+    &.active {
+        color: rgba(228, 45, 60, 1);
+    }
+
+}
+
+.sort-value {
+    color: rgba(27, 27, 27, 0.9);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+}

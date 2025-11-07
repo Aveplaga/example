@@ -1,0 +1,30 @@
+<div class="inner">
+    <div class="menu">
+        <div class="menu-wrapper">
+            <div class="menu-items">
+                {{#items}}
+                    <div class="menu-item">
+                        <div class="menu-content">
+                            <div class="menu-title">{{title}}</div>
+
+                            <button class="menu-button">
+                                <svg class="menu-arrow" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.11417" y="0.000244141" width="17.9392" height="2.98986" rx="1.49493" transform="rotate(45 2.11417 0.000244141)" fill="white" />
+                                    <rect x="25.3703" y="2.11426" width="17.9392" height="2.98986" rx="1.49493" transform="rotate(135 25.3703 2.11426)" fill="white" />
+                                </svg>
+                            </button>
+
+                        </div>
+                        <ul class="menu-list">
+                            <li class="menu-links">
+                                {{#links}}
+                                    <a href="#" class="menu-link">{{link}}</a>
+                                {{/links}}
+                            </li>
+                        </ul>
+                    </div>
+                {{/items}}
+            </div>
+        </div>
+    </div>
+</div>

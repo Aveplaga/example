@@ -1,0 +1,28 @@
+<div class="inner">
+    <div class="questions">
+        <div class="questions-wrapper">
+            <div class="questions-title">{{title}}</div>
+
+            <div class="questions-list">
+                {{#items}}
+                    <div class="questions-item">
+
+                        <div class="questions-content">
+                            <div class="questions-text">{{text}}</div>
+
+                            <button class="questions-button">
+                                <svg class="questions-plus" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.13626 17V9.86374H0V7.11758H7.13626V0H9.88242V7.11758H17V9.86374H9.88242V17H7.13626Z" />
+                                </svg>
+                            </button>
+                            
+                        </div>
+
+                        <div class="questions-hidden">{{hidden}}</div>
+
+                    </div>
+                {{/items}}
+            </div>
+        </div>
+    </div>
+</div>

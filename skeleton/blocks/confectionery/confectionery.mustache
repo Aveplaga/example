@@ -1,0 +1,28 @@
+<div class="inner">
+    <div class="confectionery">
+        <div class="confectionery-wrapper">
+            <div class="confectionery-cap">
+                <div class="confectionery-title">{{title}}</div>
+                <div class="confectionery-button">{{button}}</div>
+            </div>
+            <div class="confectionery-items">
+                {{#items}}
+                    <div class="confectionery-item">
+                        <div class="confectionery-content">
+                            <img src="{{item-logo}}" alt="" class="confectionery-logo">
+                            <div class="confectionery-text">{{text}}</div>
+                        </div>
+
+                        <ul class="confectionery-list">
+                            <li class="confectionery-links">
+                                {{#links}}
+                                    <a href="#" class="confectionery-lik">{{link}}</a>
+                                {{/links}}
+                            </li>
+                        </ul>
+                    </div>
+                {{/items}}
+            </div>
+        </div>
+    </div>
+</div>
