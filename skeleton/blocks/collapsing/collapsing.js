@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             expander: '.collapsing',
             toggle: '.collapsing-button',
             toggleText: '.collapsing-button-text',
-            hidden: '.collapsing-hidden'
+            hidden: '.collapsing-subtext'
         },
         classes: {
             opened: 'collapsing_expand',
@@ -21,11 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
         minHeight: 180
     });
 
-    const arrow = document.querySelectorAll('.collapsing-button');
+    const activeButton = document.querySelectorAll('.collapsing-button');
 
-    arrow.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
+    activeButton.forEach(button => {
+        button.addEventListener('click' , () => {
+            button.classList.toggle('active');
         });
     });
 });

@@ -1,0 +1,489 @@
+$color-link: rgba(27, 27, 27, 0.4);
+$color-title: rgba(21, 19, 19, 0.8);
+$color: rgba(27, 27, 27, 0.8);
+$link-active: rgba(27, 27, 27, 0.9);
+$button: rgba(220, 81, 50, 1);
+$span: rgba(19, 19, 19, 0.4);
+$form: rgba(255, 255, 255, 1);
+$form-title: rgba(19, 19, 19, 0.8);
+
+.floating {
+    max-width: 1433px;
+    margin: 25px 0;
+}
+
+.floating-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.floting-content {
+    max-width: 1074px;
+}
+
+.floating-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-bottom: 2px solid rgba(229, 229, 229, 1);
+    padding-bottom: 5px;
+}
+
+.floating-link {
+    color: $color-link;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 5%;
+    position: relative;
+    text-transform: uppercase;
+    transition: color .3s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(47, 47, 47, 1);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+    }
+}
+
+.floating-link:hover {
+    color: $link-active;
+
+    &::after {
+        transform: scaleX(1);
+    }
+}
+
+.floating-link.active {
+    color: $link-active;
+
+    &::after {
+        transform: scaleX(1);
+    }
+}
+
+.floating-description {
+    margin: 40px 0;
+}
+
+.description-title,
+.structure-title {
+    color: $color-title;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.description-subtitle {
+    color: $color;
+    line-height: 30px;
+}
+
+.structure-subtitle {
+    color: $color;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.value-title {
+    color: $color;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.structure-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.structure-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-title {
+    display: flex;
+    gap: 15px;
+    color: $color;
+    line-height: 30px;
+}
+
+.decstop {
+    line-height: 30px;
+    letter-spacing: 10%;
+}
+
+.mobile {
+    display: none;
+}
+
+.item-gram {
+    color: $color;
+    line-height: 30px;
+}
+
+.floating-form {
+    background-color: $form;
+    max-height: 286px;
+    max-width: 314px;
+    border: 1px solid rgba(242, 242, 242, 1);
+    border-radius: 4px;
+    box-shadow: 0 4px 54px rgba(15, 25, 63, 0.18);
+}
+
+.form-content {
+    padding: 25px 26px 0 25px;
+}
+
+.form-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.form-background {
+    background-color: rgba(57, 184, 93, 1);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.title-desctop {
+    font-size: 14px;
+    font-weight: 500;
+    color: $form-title;
+    line-height: 10px;
+    text-decoration: underline;
+}
+
+.title-mobile {
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(19, 19, 19, 0.6);
+    line-height: 10px;
+}
+
+.block-list {
+    display: none;
+}
+
+.block-price {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 210px;
+    margin-bottom: 20px;
+}
+
+.price-title {
+    background-color: $button;
+    border-radius: 10px;
+    padding: 8px 34px 7px 16px;
+    color: $form;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42px;
+}
+
+.price-title sup {
+    font-size: 18px;
+    line-height: 16.1px;
+}
+
+.price-title span {
+    font-size: 20px;
+    line-height: 17px;
+}
+
+.price-subtitle {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.price-value {
+    color: rgba(208, 208, 208, 1);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42px;
+    text-decoration: line-through;
+}
+
+.price-note {
+    color: rgba(19, 19, 19, 0.4);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.form-button {
+    background-color: $button;
+    border-radius: 10px;
+    color: $form;
+    padding: 17px 65px 17px 56px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+@media(max-width: 1279px) {
+    .floating-form {
+        max-width: 704px;
+    }
+
+    .form-content {
+        padding: 24px 81px 25px 24px;
+    }
+
+    .floating-wrapper {
+        flex-direction: column;
+        gap: 56px;
+    }
+
+    .floting-content {
+        order: 1;
+    }
+
+    .title-desctop,
+    .form-button {
+        display: none;
+    }
+
+    .title-mobile {
+        display: block;
+    }
+
+    .form-block {
+        display: flex;
+    }
+
+    .block-list {
+        display: block;
+        border-right: 2px solid rgba(19, 19, 19, 0.1);
+        padding-right: 136px;
+    }
+
+    .list-title {
+        color: rgba(19, 19, 19, 0.6);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    .block-items {
+        display: flex;
+        gap: 10px;
+    }
+
+    .list-button {
+        padding: 9px 20px;
+        border: 1.5px solid rgba(217, 219, 228, 0.7);
+        border-radius: 8px;
+        color: rgba(21, 19, 19, 1);
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 5%;
+        transition: border-color .3s ease;
+    }
+
+    .list-button:hover {
+        border-color: rgba(220, 81, 50, 1);
+    }
+
+    .list-button.active {
+        border-color: rgba(220, 81, 50, 1);
+    }
+
+    .block-price {
+        display: flex;
+        gap: 5px;
+        padding-left: 27px;
+    }
+
+    .price-title {
+        color: $button;
+        padding: 0;
+        background: none;
+    }
+
+    .price-value {
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    .price-note {
+        color: rgba(19, 19, 19, 0.3);
+        line-height: 18px;
+    }
+}
+
+@media(max-width: 767px) {
+    .floating-wrapper {
+        flex-direction: column;
+        gap: 56px;
+    }
+
+    .floting-content {
+        order: 1;
+    }
+
+    .floating-list {
+        gap: 20px;
+        max-width: 579px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .floating-link {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .description-title,
+    .structure-title {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .floating-description,
+    .floating-structure {
+        max-width: 312px;
+    }
+
+    .description-subtitle {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .structure-subtitle {
+        font-size: 14px;
+        line-height: 28px;
+        margin-bottom: 25px;
+    }
+
+    .structure-list {
+        gap: 12px;
+    }
+
+    .structure-item {
+        gap: 9px;
+    }
+
+    .item-title {
+        font-size: 15px;
+        line-height: 28px;
+        gap: 9px;
+    }
+
+    .item-gram {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .decstop,
+    .title-desctop,
+    .form-button {
+        display: none;
+    }
+
+    .mobile,
+    .title-mobile {
+        display: block;
+    }
+
+    .floating-form {
+        max-width: 312px;
+    }
+
+    .form-content {
+        padding: 25px;
+    }
+
+    .form-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block-list {
+        display: block;
+        border-bottom: 2px solid rgba(19, 19, 19, 0.1);
+        padding-bottom: 25px;
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .list-title {
+        color: rgba(19, 19, 19, 0.6);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    .block-items {
+        display: flex;
+        gap: 10px;
+    }
+
+    .list-button {
+        padding: 9px 20px;
+        border: 1.5px solid rgba(217, 219, 228, 0.7);
+        border-radius: 8px;
+        color: rgba(21, 19, 19, 1);
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 5%;
+        transition: border-color .3s ease;
+    }
+
+    .list-button:hover {
+        border-color: rgba(220, 81, 50, 1);
+    }
+
+    .list-button.active {
+        border-color: rgba(220, 81, 50, 1);
+    }
+
+    .block-price {
+        gap: 5px;
+        padding-top: 27px;
+        padding-left: 0;
+    }
+
+    .price-title {
+        color: $button;
+        padding: 0;
+        background: none;
+    }
+
+    .price-value {
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    .price-note {
+        color: rgba(19, 19, 19, 0.3);
+        line-height: 18px;
+    }
+
+}

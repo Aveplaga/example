@@ -1,85 +1,89 @@
-.inner {
-    max-width: 1440px;
-    margin: 0 auto;
+$background: rgba(255, 255, 255, 1);
+$color: rgba(27, 27, 27, 0.4);
+$color-active: rgba(228, 45, 60, 1);
+$color-hover: rgba(27, 27, 27, 0.9);
+
+.inner{
+    margin: 5px;
 }
 
-.sort {
+.sorting{
+    background-color: $background;
     max-width: 350px;
-    margin: 30px 0;
-    color: rgba(27, 27, 27, 0.9);
-    background-color: rgba(255, 255, 255, 1);
     border-radius: 8px;
 }
 
-.sort-wrapper {
+.sorting-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1.5px rgba(229, 229, 229, 1);
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.sorting-content{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    border: 1.5px solid rgba(229, 229, 229, 1);
-    border-radius: 8px;
-}
-
-.sort-content {
-    display: flex;
     gap: 8px;
 }
 
-.sort-arrow {
-    display: inline-block;
-    vertical-align: middle;
-    transition: transform .5s ease;
-}
-
-.sort.dropdown_expand .sort-arrow {
-    transform: rotate(180deg);
-}
-
-.sort-title {
-    color: rgba(27, 27, 27, 0.4);
-    font-size: 13px;
+.sorting-title{
+    color: $color;
     font-weight: 600;
+    font-size: 13px;
     line-height: 20px;
 }
 
-.sort-list {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .5s ease;
+.sorting-value{
+    color: $color-hover;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
 }
 
-.sort-item {
+.sorting-arrow{
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform .3s ease;
+}
+
+.sorting.dropdown_expand 
+.sorting-arrow {
+    transform: rotate(180deg);
+}
+
+.sorting-list{
+    max-height: 0;
+    overflow: hidden;
+    transition:  max-height .3s ease;
+}
+
+.sorting.sorting.dropdown_expand 
+.sorting-list {
+    display: block;
+    max-height: 500px;
+}
+
+.sorting-item{
     display: flex;
     flex-direction: column;
     gap: 14px;
     padding: 15px 0 20px 15px;
 }
 
-.sort.dropdown_expand .sort-list {
-    max-height: 500px;
-    display: block;
-}
-
-.sort-link {
-    color: rgba(27, 27, 27, 0.4);
-    font-size: 13px;
+.sorting-link{
+    color: $color;
     font-weight: 600;
+    font-size: 13px;
     line-height: 20px;
-    transition: color .5s ease;
+    transition: color .3s ease;
 
-    &:hover {
-        color: rgba(27, 27, 27, 0.9);
+    &:hover{
+        color: $color-hover;
     }
 
-    &.active {
-        color: rgba(228, 45, 60, 1);
+    &.active{
+        color: $color-active;
     }
-
-}
-
-.sort-value {
-    color: rgba(27, 27, 27, 0.9);
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 20px;
 }

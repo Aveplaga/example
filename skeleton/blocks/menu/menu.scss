@@ -1,11 +1,15 @@
+$background: rgba(18, 29, 46, 1);
+$color-title: rgba(255, 255, 255, 1);
+$color-link: rgba(201, 201, 201, 1);
+$link-hover: rgba(255, 255, 255, 1);
+
 .menu {
-    background-color: rgba(18, 29, 46, 1);
-    color: rgba(255, 255, 255, 1);
-    margin: 0 0 50px 0;
+    background-color: $background;
+    margin: 25px 0;
 }
 
 .menu-wrapper {
-    padding: 40px 0 94px 86px;
+    padding: 40px 0 56px 86px;
 }
 
 .menu-items {
@@ -13,42 +17,48 @@
     gap: 160px;
 }
 
-.menu-item {
-    display: flex;
-    flex-direction: column;
-}
-
 .menu-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .menu-title {
+    color: $color-title;
     font-size: 20px;
     font-weight: 600;
     line-height: 100%;
-    margin-bottom: 20px;
 }
 
 .menu-button {
     display: none;
 }
 
-.menu-links{
-    display: flex;
+.menu-list {
+    display: flex; 
     flex-direction: column;
     gap: 20px;
 }
 
 .menu-link {
-    color: rgba(201, 201, 201, 1);
+    color: $color-link;
     font-size: 14px;
     line-height: 100%;
     transition: color .3s ease;
 
-    &:hover{
-        color: rgba(255, 255, 255, 1);
+    &:hover {
+        color: $link-hover;
+    }
+}
+
+@media(max-width: 1279px){
+    .menu-wrapper {
+        padding: 44px 19px 400px 21px;
+    }
+
+    .menu-items{
+        gap: 50px;
     }
 }
 
@@ -63,28 +73,28 @@
         gap: 20px;
     }
 
-    .menu-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .menu-button{
+        display: block; 
     }
 
     .menu-arrow {
         display: inline-block;
         vertical-align: middle;
-        transition: transform .5s ease;
+        transition: transform .3s ease;
     }
 
-    .menu-button.active .menu-arrow{
+    .menu-button.active 
+    .menu-arrow {
         transform: rotate(180deg);
     }
 
-    .menu-list{
-        display: none;
+    .menu-list {
+        display: none; 
         margin-bottom: 40px;
     }
 
-    .menu-list_opened{
-        display: block;
+    .menu-list_opened {
+        display: block; 
     }
 }
+

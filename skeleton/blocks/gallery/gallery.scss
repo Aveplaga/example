@@ -1,0 +1,159 @@
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    max-width: 706px;
+}
+
+.gallery-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    padding: 25px 14px;
+}
+
+.block-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-link {
+    width: 100px;
+    height: 89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: border .3s ease;
+    border-radius: 5px;
+}
+
+.gallery-link:hover {
+    border-color: rgba(217, 217, 217, 1);
+}
+
+.gallery-image__small {
+    width: 80px;
+    height: 69px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.gallery-link.active .gallery-image__small {
+    border-color: rgba(217, 217, 217, 1);
+}
+
+.mySwiper {
+    height: 427px;
+    width: 100px;
+}
+
+.mySwiper2 {
+    width: 579px;
+    height: 519px;
+}
+
+.swiper-button-next {
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+.swiper-button-prev {
+    display: none;
+    cursor: pointer;
+}
+
+.general-block {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+}
+
+.gallery__image-general {
+    padding: 66px 64px 0 64px;
+    margin-bottom: 24px;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 1);
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media(max-width: 767px) {
+
+    .gallery-wrapper {
+        flex-direction: column;
+        max-width: 340px;
+        margin: 25px auto;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 5px;
+        padding: 0;
+    }
+
+    .gallery-block {
+        order: 1;
+        flex-direction: row;
+        padding: 23px 0;
+        margin-bottom: 0;
+        gap: 9px;
+    }
+
+    .gallery-link {
+        border: none;
+    }
+
+    .gallery-image__small {
+        padding: 0;
+    }
+
+    .swiper-button-next {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(270deg);
+    }
+
+    .swiper-button-prev {
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .swiper-button-prev.active {
+        display: block;
+        top: 50%;
+        right: 0;
+        transform: translateY(0) rotate(90deg);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .mySwiper {
+        height: 90px;
+        width: 259px;
+    }
+
+    .mySwiper2 {
+        width: 218px;
+        height: 187px;
+    }
+
+    .gallery__image-general {
+        width: 218px;
+        height: 187px;
+        padding: 30px 0 0 0;
+        margin-bottom: 0;
+    }
+}

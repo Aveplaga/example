@@ -1,0 +1,48 @@
+<div class="inner">
+    <div class="gallery-wrapper">
+        <div class="gallery-block">
+            <div class="swiper-button-prev">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.817089 4.47543L6.68518 10.3435L5.8681 11.1606L8.89799e-06 5.29251L0.817089 4.47543Z" fill="#CB2027" />
+                    <path d="M11.7362 5.29249L5.8681 11.1606L5.05103 10.3435L10.9191 4.47541L11.7362 5.29249Z" fill="#CB2027" />
+                    <path d="M6.44586 -0.000120575L6.44584 10.5293L5.29032 10.5293L5.29034 -0.000118046L6.44586 -0.000120575Z" fill="#CB2027" />
+                </svg>
+            </div>
+            <div class="block-image swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {{#images}}
+                        <div class="swiper-slide">
+                            <a href="#" class="gallery-link">
+                                <img src="{{image}}" alt="" class="gallery-image__small">
+                            </a>
+                        </div>
+                    {{/images}}
+                </div>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.817089 4.47543L6.68518 10.3435L5.8681 11.1606L8.89799e-06 5.29251L0.817089 4.47543Z" fill="#CB2027" />
+                    <path d="M11.7362 5.29249L5.8681 11.1606L5.05103 10.3435L10.9191 4.47541L11.7362 5.29249Z" fill="#CB2027" />
+                    <path d="M6.44586 -0.000120575L6.44584 10.5293L5.29032 10.5293L5.29034 -0.000118046L6.44586 -0.000120575Z" fill="#CB2027" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="general-block">
+            <div class="general-image swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    {{#images}}
+                        <div class="swiper-slide">
+                            <img class="gallery__image-general" loading="lazy" src="{{image}}" alt="">
+                        </div>
+                    {{/images}}
+                </div>
+            </div>
+            <div class="swiper-pagination">
+                {{#pagination}}
+                    <div class="pagination-dot"></div>
+                {{/pagination}}
+            </div>
+        </div>
+    </div>
+</div>

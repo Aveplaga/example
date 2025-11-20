@@ -14,24 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         oneOpen: true,
         transitionDuration: 300
-    })
+    });
 
-    const items = document.querySelectorAll('.questions-item');
+    const itemColorActive = document.querySelectorAll('.questions-item');
 
-    items.forEach(item => {
-        const activeBackground = item.querySelector('.questions-button');
-        const activeColor = item.querySelector('.questions-text');
-
-        activeBackground.addEventListener('click' , (e) => {
+    itemColorActive.forEach(item => {
+        const subtitleColorActive = item.querySelector('.questions-subtitle');
+        const buttonActive = item.querySelector('.questions-button');
+        
+        buttonActive.addEventListener('click' , (e) => {
             e.preventDefault();
 
-            items.forEach(i => {
+            const active = buttonActive.classList.contains('active');
+
+            itemColorActive.forEach(i => {
+                i.querySelector('.questions-subtitle').classList.remove('active');
                 i.querySelector('.questions-button').classList.remove('active');
-                i.querySelector('.questions-text').classList.remove('active');
             });
 
-            activeBackground.classList.add('active');
-            activeColor.classList.add('active');
+            if(!active){
+                subtitleColorActive.classList.add('active');
+                buttonActive.classList.add('active');
+            }
         });
     });
 });

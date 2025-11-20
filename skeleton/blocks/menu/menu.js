@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         hideOnStart: false,
     });
 
-    const arrow = document.querySelectorAll('.menu-button')
+    const activeMenuButton = document.querySelectorAll('.menu-button');
 
-    arrow.forEach(btn => {
-        btn.addEventListener('click' , () => {
-            btn.classList.toggle('active')
+    activeMenuButton.forEach(button => {
+        button.addEventListener('click' , () => {
+            button.classList.toggle('active')
         });
     });
 });

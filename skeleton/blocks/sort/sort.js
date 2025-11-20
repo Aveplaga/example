@@ -1,27 +1,29 @@
 import { Dropdown } from '../dropdown/Dropdown'
 
-const sortDropdown = new Dropdown({
-	selectors: {
-		dropdown: '.sort',              
-		current: '.sort-button',        
-		currentText: '.sort-value',     
-		value: '.sort-link'             
-	},
-	defaultCurrentText: 'Сортировать:', 
-	oneOpen: true,                      
-	multiple: false, 
-});
-
-const colorActive = document.querySelectorAll('.sort-link');
-
-colorActive.forEach(color => {
-    color.addEventListener('click' , (e) => {
-        e.preventDefault();
-
-        colorActive.forEach(i => i.classList.remove('active'));
-        color.classList.add('active');
-
-        const sortValue = color.closest('.sort').querySelector('.sort-value');
-        sortValue.textContent = color.textContent;
+document.addEventListener('DOMContentLoaded', () => {
+    const sortDropdown = new Dropdown({
+        selectors: {
+            dropdown: '.sorting',
+            current: '.sorting-button',
+            currentText: '.sorting-value',
+            value: '.sorting-link'
+        },
+        defaultCurrentText: 'Сортировать:',
+        oneOpen: true,
+        multiple: false,
     });
-})
+
+    const colorLinkActive = document.querySelectorAll('.sorting-link');
+
+    colorLinkActive.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            colorLinkActive.forEach(i => i.classList.remove('active'));
+            link.classList.add('active');
+
+            const sortingValue = link.closest('.sorting').querySelector('.sorting-value');
+            sortingValue.textContent = link.textContent;
+        });
+    });
+});

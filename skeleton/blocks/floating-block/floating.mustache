@@ -1,0 +1,62 @@
+<div class="inner">
+    <div class="floating">
+        <div class="floating-wrapper">
+            <div class="floting-content">
+                <div class="floating-list">
+                    {{#links}}
+                        <a href="#" class="floating-link {{#active}}active{{/active}}">{{link}}</a>
+                    {{/links}}
+                </div>
+                <div class="floating-description">
+                    <div class="description-title">{{title-description}}</div>
+                    <div class="description-subtitle">{{subtitle-description}}</div>
+                </div>
+                <div class="floating-structure">
+                    <div class="structure-title">{{title-structure}}</div>
+                    <div class="structure-subtitle">{{subtitle-structure}}</div>
+
+                    <div class="structure-value">
+                        <div class="value-title">{{title-value}}</div>
+
+                        <div class="structure-list">
+                            {{#items}}
+                                <div class="structure-item">
+                                    <div class="item-title">{{{title-item}}}</div>
+                                    <div class="item-gram">{{gram}}</div>
+                                </div>
+                            {{/items}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-form">
+                <div class="form-content">
+                    <div class="form-text">
+                        <div class="form-background"></div>
+                        <a href="#" class="form-title">{{{form-title}}}</a>
+                    </div>
+                    <div class="form-block">
+                        <div class="block-list">
+                            <div class="list-title">{{list-title}}</div>
+                            <div class="block-items">
+                                {{#buttons}}
+                                    <div class="list-item">
+                                        <button class="list-button {{#active}}active{{/active}}">{{list-button}}</button>
+                                    </div>
+                                {{/buttons}}
+                            </div>
+                        </div>
+                        <div class="block-price">
+                            <div class="price-title">{{{price-title}}}</div>
+                            <div class="price-subtitle">
+                                <span class="price-value">{{price}}</span>
+                                <span class="price-note">{{price-note}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="form-button">{{form-button}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,17 +1,26 @@
+$color: rgba(47, 47, 48, 1);
+$color-active: rgba(244, 62, 27, 1);
+$background-button: rgba(75, 75, 100, 0.08);
+$background: rgba(255, 255, 255, 1);
+$fill-active: rgba(255, 255, 255, 1);
+$fill: #2F2F30;
+
 .questions {
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(47, 47, 48, 1);
-    margin: 0 0 50px 0;
+    max-width: 1400px;
+    margin: 25px 0;
+    background-color: $background;
 }
 
 .questions-wrapper {
     max-width: 1280px;
-    padding: 58px 60px;
+    margin: 0 auto;
+    padding: 58px 25px;
 }
 
 .questions-title {
     display: flex;
     justify-content: center;
+    color: $color;
     font-size: 36px;
     font-weight: 800;
     line-height: 120%;
@@ -38,20 +47,21 @@
     justify-content: space-between;
 }
 
-.questions-text {
-    color: rgba(47, 47, 48, 1);
+.questions-subtitle {
+    color: $color;
     font-size: 18px;
     font-weight: 500;
     line-height: 26px;
-    transition: color .5s ease;
+    transition: color .3s ease;
 
     &.active {
-        color: rgba(244, 62, 27, 1);
+        color: $color-active;
     }
 }
 
 .questions-hidden {
     display: none;
+    color: $color;
     font-size: 14px;
     margin-top: 10px;
 }
@@ -60,33 +70,71 @@
     display: block;
 }
 
-.questions-plus {
-    fill: #2F2F30;
+.questions-toggle {
+    fill: $fill;
     fill-opacity: 0.5;
+    transition: transform .3s ease;
 }
 
-.questions-plus {
-    transition: transform .5s ease;
-}
-
-.questions-button.active .questions-plus {
+.questions-button.active .questions-toggle {
     transform: rotate(45deg);
 }
 
 .questions-button {
     height: 34px;
     width: 34px;
-    background-color: rgba(75, 75, 100, 0.08);
+    background-color: $background-button;
     border-radius: 6px;
     padding: 9px;
-    transition: background-color .5s ease;
+    transition: background-color .3s ease;
 
     &.active {
-        background-color: rgba(244, 62, 27, 1);
+        background-color: $color-active;
 
-        svg {
-            fill: rgba(255, 255, 255, 1);
+        .questions-toggle {
+            fill: $fill-active;
             fill-opacity: 1;
         }
     }
+}
+
+@media(max-width: 1279px){
+    .questions-title{
+        font-size: 30px;
+        margin-bottom: 34px;
+    }
+
+    .questions-subtitle{
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 767px){
+    .inner{
+        margin: 15px;
+    }
+
+    .questions-title{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .questions-content{
+        align-items: center;
+    }
+
+    .questions-subtitle{
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .questions-button{
+        background: none;
+    }
+
+    .questions-hidden{
+        font-size: 12px;
+    }
+
 }

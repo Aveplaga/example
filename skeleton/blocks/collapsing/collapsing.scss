@@ -1,6 +1,12 @@
+$color-title: rgba(27, 27, 27, 1);
+$color-subtext: rgba(27, 27, 27, 0.9);
+$color-button: rgba(19, 19, 19, 0.7);
+$background: rgba(255, 255, 255, 1);
+
 .collapsing {
-    background-color: rgba(255, 255, 255, 1);
-    margin: 50px 0;
+    background-color: $background;
+    max-width: 1159px;
+    margin: 25px 0;
 }
 
 .collapsing-wrapper {
@@ -9,7 +15,7 @@
 }
 
 .collapsing-title {
-    color: rgba(27, 27, 27, 1);
+    color: $color-title;
     font-size: 20px;
     font-weight: 500;
     line-height: 25px;
@@ -17,14 +23,14 @@
     margin-bottom: 20px;
 }
 
-.collapsing-hidden {
+.collapsing-subtext {
     max-height: 175px;
-    color: rgba(27, 27, 27, 0.9);
+    color: $color-subtext;
     font-size: 15px;
     line-height: 25px;
     position: relative;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: max-height .3s ease;
 
     &::after {
         content: "";
@@ -40,7 +46,7 @@
     }
 }
 
-.collapsing.collapsing_expand .collapsing-hidden::after {
+.collapsing.collapsing_expand .collapsing-subtext::after {
     opacity: 0;
 }
 
@@ -51,8 +57,8 @@
     margin-top: 20px;
 }
 
-.collapsing-button-text{
-    color: rgba(19, 19, 19, 0.7);
+.collapsing-button-text {
+    color: $color-button;
     font-size: 14px;
     font-weight: 500;
     line-height: 25px;
@@ -62,9 +68,37 @@
 .collapsing-arrow {
     display: inline-block;
     vertical-align: middle;
-    transition: transform .5s ease;
+    transition: transform .3s ease;
 }
 
 .collapsing-button.active .collapsing-arrow {
     transform: rotate(180deg);
+}
+
+@media (max-width: 1279px) {
+    .collapsing-wrapper {
+        padding: 44px 15px 55px 17px;
+    }
+
+    .collapsing-title {
+        margin-bottom: 15px;
+    }
+
+    .collapsing-button{
+        margin-top: 10px;
+    }
+}
+
+@media(max-width: 767px) {
+    .collapsing-wrapper {
+        padding: 44px 32px;
+    }
+
+    .collapsing-title {
+        margin-bottom: 15px;
+    }
+
+    .collapsing-button{
+        margin-top: 15px;
+    }
 }
