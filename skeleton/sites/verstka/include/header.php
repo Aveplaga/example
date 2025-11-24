@@ -43,17 +43,7 @@ $mustache = new Mustache_Engine([
     </div>
     <div class="page-inner">
 
-        <div class="header-header">
-            <div class="inner">
-                <div class="header-wrapper">
-                    <a href="#" class="header-logo">Arredo</a>
-
-                    <nav class="header-menu">
-                        
-                    </nav>
-                </div>
-            </div>
-        </div>
+        
          
 
         <main class="main <?= $pageConfig['mainClass'] ?>">
