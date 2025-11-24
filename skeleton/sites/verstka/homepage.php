@@ -135,7 +135,7 @@ $menu = [
 <?php
 $gallery = [
     'images' => [
-        ['image' => './local/assets/images/device.png'],
+        ['image' => './local/assets/images/device.png' , 'active' => true],
         ['image' => './local/assets/images/device.png'],
         ['image' => './local/assets/images/device.png'],
         ['image' => './local/assets/images/device.png'],

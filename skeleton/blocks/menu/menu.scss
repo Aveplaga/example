@@ -35,7 +35,7 @@ $link-hover: rgba(255, 255, 255, 1);
     display: none;
 }
 
-.menu-list {
+.menu-links {
     display: flex; 
     flex-direction: column;
     gap: 20px;
@@ -59,6 +59,12 @@ $link-hover: rgba(255, 255, 255, 1);
 
     .menu-items{
         gap: 50px;
+    }
+}
+
+@media(min-width: 768px) {
+    .menu-list {
+        display: flex !important;
     }
 }
 
@@ -94,7 +100,8 @@ $link-hover: rgba(255, 255, 255, 1);
     }
 
     .menu-list_opened {
-        display: block; 
+        display: flex; 
+        flex-direction: column;
     }
 }
 

@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     activeMenuButton.forEach(button => {
         button.addEventListener('click' , () => {
+            activeMenuButton.forEach(b => {
+                if (b !== button) b.classList.remove('active');
+            });
             button.classList.toggle('active')
         });
     });

@@ -36,15 +36,16 @@ swiperThumbs.on('slideChange', function () {
 });
 
 const borderActive = document.querySelectorAll('.gallery-link');
+
 borderActive.forEach(item => {
-    const img = item.querySelector('.gallery-image__small');
     item.addEventListener('click', e => {
         e.preventDefault();
 
-        borderActive.forEach(i => i.querySelector('.gallery-image__small').classList.remove('active'));
-        img.classList.add('active');
+        borderActive.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
     });
 });
+
 
 const swiperMain = new Swiper(".mySwiper2", {
     thumbs: {
