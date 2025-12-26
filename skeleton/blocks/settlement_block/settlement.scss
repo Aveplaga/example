@@ -1,0 +1,131 @@
+$white: #fff;
+$gray-light: #ccc;
+$red: #ff022c;
+$dark: #494b50;
+
+.settlement {
+    max-height: 453px;
+    overflow: hidden;
+    margin: 0 0 128px 0;
+    border-radius: 16px;
+    background-color: $dark;
+}
+
+.settlement-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 40px 0 80px;
+}
+
+.settlement-content {
+    margin-top: 40px;
+}
+
+.settlement-content_title {
+    color: $white;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+}
+
+.settlement-content_subtitle {
+    color: $gray-light;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 1%;
+    margin-bottom: 40px;
+}
+
+.settlement-content_button {
+    max-width: 189px;
+    color: $white;
+    background-color: $red;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 21px 32px 19px 32px;
+}
+
+.settlement-image {
+    max-width: 571px;
+    max-height: 581px;
+}
+
+@media (max-width: 1279px) {
+    .settlement {
+        height: 318px;
+        margin: 48px 32px;
+    }
+
+    .settlement-wrapper {
+        padding: 32px 0 0 48px;
+    }
+
+    .settlement-content {
+        max-width: 376px;
+        margin-top: 16px;
+    }
+
+    .settlement-content_title {
+        font-size: 28px;
+    }
+
+    .settlement-content_subtitle {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .settlement-image {
+        position: absolute;
+        width: 443px;
+        height: 449px;
+        left: 345px;
+    }
+}
+
+@media (max-width: 767px) {
+    .settlement {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .settlement-wrapper {
+        padding: 48px 24px;
+    }
+
+    .settlement-content {
+        margin: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .settlement-content_title {
+        font-size: 22px;
+    }
+
+    .settlement-content_subtitle {
+        margin-bottom: 24px;
+    }
+
+    .settlement-content_button {
+        display: block;
+        max-width: 272px;
+        width: 100%;
+    }
+
+    .settlement-image {
+        position: absolute;
+        width: 355px;
+        height: 359px;
+        left: 126px;
+        top: -189px;
+        opacity: 30%;
+        z-index: 0;
+    }
+}

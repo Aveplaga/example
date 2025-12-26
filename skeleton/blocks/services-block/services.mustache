@@ -1,0 +1,34 @@
+<div class="services">
+    <div class="inner">
+        <div class="services-wrapper">
+            <div class="services-title">{{services-title}}</div>
+
+            <div class="services-cards">
+                {{#services-cards}}
+                    <div class="services-card">
+                        <div class="card-wrapper">
+                            <div class="card-content">
+                                <img class="card-icon" src="{{card-icon}}" alt="">
+                                <button class="card-button">
+                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.707031 0.707031L5.70703 5.70703L10.707 0.707031" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div><span class="card-title">{{card-title}}</span></div>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-subtitle">{{card-subtitle}}</div>
+                            <a href="#" class="card-link">
+                                <span class="link-title">{{card-link}}</span>
+                                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 5.70703H8H16M16 5.70703L11 0.707031M16 5.70703L11 10.707" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                {{/services-cards}}
+            </div>
+        </div>
+    </div>
+</div>

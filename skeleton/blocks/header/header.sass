@@ -1,0 +1,210 @@
+.header
+    margin: 40px 0 0 0
+    width: 100%
+    z-index: 3
+
+.inner
+    max-width: 1224px
+    margin: 0 auto
+
+.header-wrapper
+    padding: 40px 0
+
+.header-wrapper ,
+.header-content
+    display: flex
+    align-items: center
+    gap: 48px
+
+.header-burger
+    display: none
+    position: relative
+    cursor: pointer
+
+.header-burger.active
+    .burger-menu
+        display: none
+
+    .burger-close
+        display: block
+
+.header-list
+    display: flex
+    align-items: center
+    gap: 32px
+
+.dropdown-list
+    position: relative
+    background-color: rgba(255, 255, 255, 1)
+    border-radius: 8px 8px 0 0
+    max-width: 256px
+    transition: all .3s ease
+    z-index: 4
+
+.dropdown-list:hover
+    svg
+        transform: rotate(180deg)
+        color: rgba(255, 2, 44, 1)
+
+    padding: 16px 24px
+
+.hidden-list
+    display: none
+    position: absolute
+    background-color: rgba(255, 255, 255, 1)
+    border-radius: 8px
+    top: 100%
+    left: 0
+    z-index: 5
+    
+.dropdown-list:hover .hidden-list
+    display: block
+
+.hidden-item
+    border-bottom: solid 1px rgba(242, 242, 242, 1)
+
+    &:last-child
+        border-bottom: none
+    
+
+.hidden-link
+    display: block
+    font-size: 12px
+    padding: 20px 24px
+    white-space: nowrap
+    transition: all .3s ease
+
+.hidden-link:hover
+    background-color: rgba(242, 242, 242, 1)
+    color: rgba(0, 9, 26, 1)
+
+.header-link
+    position: relative
+    display: flex
+    align-items: center
+    gap: 8px
+    color: rgba(0, 9, 26, 1)
+    font-size: 14px
+    font-weight: 600
+    line-height: 100%
+    letter-spacing: 5%
+    text-transform: uppercase
+
+    &::after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: -5px
+        width: 0%
+        height: 3px
+        background-color: rgba(255, 2, 44, 1)
+        transition: width .3s ease
+
+.header-link:hover::after
+    width: 100%
+
+.header-blank
+    display: flex
+    align-items: center
+    gap: 12px
+
+.blank-link
+    color: rgba(0, 9, 26, 1)
+    font-size: 14px
+    font-weight: 600
+    line-height: 100%
+    letter-spacing: 5%
+    text-transform: uppercase
+    white-space: nowrap
+
+.header-phone
+    display: none
+
+.call-title
+    color: rgba(98, 101, 106, 1)
+    font-size: 10px
+    font-weight: 500
+    line-height: 100%
+    letter-spacing: 5%
+    text-transform: uppercase
+    margin-bottom: 8px
+    white-space: nowrap
+
+.call-phone
+    color: rgba(0, 9, 26, 1)
+    font-size: 22px
+    font-weight: 600
+    line-height: 100%
+    letter-spacing: 4%
+    white-space: nowrap
+
+.header-application
+    padding: 21px 32px 19px 32px 
+    background-color: rgba(255, 2, 44, 1)
+    border-radius: 5px
+    color: rgba(255, 255, 255, 1)
+    font-size: 12px
+    font-weight: 700
+    line-height: 16px
+    letter-spacing: 10%
+    text-transform: uppercase
+    white-space: nowrap
+
+@media(max-width: 1279px)
+
+    .header-menu ,
+    .header-blank ,
+    .burger-close
+        display: none
+
+    .header
+        margin: 0
+        background-color: rgba(255, 255, 255, 1)
+        box-shadow: 0 4px 0 rgba(247, 247, 247, 1)
+
+    .header-wrapper
+        padding: 25px 32px
+        justify-content: space-between
+
+    .header-content
+        gap: 32px
+        align-items: normal
+
+    .header-logo img 
+        margin-right: 8px
+
+    .header-burger
+        display: block
+
+@media(max-width: 767px)
+
+    .header-burger ,
+    .header-phone
+        display: block
+
+    .header-menu ,
+    .header-blank ,
+    .header-application ,
+    .header-call ,
+    .burger-close
+        display: none
+
+    .header
+        margin: 0
+        background-color: rgba(255, 255, 255, 1)
+        box-shadow: 0 4px 0 rgba(247, 247, 247, 1)
+
+    .header-wrapper
+        padding: 15px 24px
+        justify-content: space-between
+
+    .header-content
+        gap: 24px
+
+    .header-logo img 
+        width: 88px
+        height: 35px
+
+
+
+    

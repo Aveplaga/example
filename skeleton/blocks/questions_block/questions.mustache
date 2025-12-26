@@ -1,0 +1,21 @@
+<div class="questions">
+    <div class="questions-wrapper">
+        <div class="questions-title">{{questions-title}}</div>
+
+        <div class="questions-items">
+            {{#questions-items}}
+                <div class="questions-item">
+                    <div class="questions-item_content">
+                        <div class="questions-content_title">{{questions-content_title}}</div>
+                        <a href="#" class="questions-content_button">
+                            <svg class="questions-arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.707153 0.707031L7.70715 7.70703L14.7072 0.707031" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="questions-content_text">{{questions-content_text}}</div>
+                </div>
+            {{/questions-items}}
+        </div>
+    </div>
+</div>

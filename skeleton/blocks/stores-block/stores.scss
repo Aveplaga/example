@@ -1,0 +1,296 @@
+$black: #00091A;
+$dark: #303236;
+$gray: #62656A;
+$gray-light: #97989B;
+$gray-border: #E6E6E6;
+$gray-bg: #F7F7F7;
+$gray-ui: #F2F2F2;
+$shadow: #F7F7F7;
+$pink: #FFB8C4;
+$red: #FF022C;
+$white: #FFFFFF;
+
+.stores {
+    margin: 0 0 128px 0;
+}
+
+.stores-cap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.stores-cap_title {
+    color: $black;
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -4%;
+}
+
+.stores-cap_arrows {
+    display: flex;
+    gap: 16px;
+}
+
+.arrow-left_stores,
+.arrow-right_stores,
+.arrow-hidden {
+    width: 64px;
+    height: 64px;
+    padding: 24px 20px;
+    border-radius: 64px;
+    transition: border .3s ease, box-shadow .3s ease;
+}
+
+.arrow-left_stores:hover,
+.arrow-right_stores:hover {
+    border: solid 1px $gray-ui;
+    box-shadow: 0 4px 0 0 $shadow;
+}
+
+.arrow-left_stores.is-disabled,
+.arrow-right_stores.is-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.stores-card {
+    max-width: 392px;
+    border: solid 1px $gray-border;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.stores-card_image {
+    width: 376px;
+    height: 204px;
+    border-radius: 12px;
+    padding: 8px 8px 32px 8px;
+    object-fit: cover;
+}
+
+.stores-card_content {
+    padding: 0 32px 52px 32px;
+}
+
+.stores-card_title {
+    display: inline-block;
+    color: $dark;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -1%;
+    margin-bottom: 8px;
+    transition: box-shadow .3s ease;
+}
+
+.stores-card:hover .stores-card_title {
+    box-shadow: inset 0 -8px 0 0 $pink;
+}
+
+.stores-card_subtext {
+    color: $gray-light;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 10%;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+.stores-card_subtitle {
+    color: $gray;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: 2%;
+}
+
+.stores-card_link {
+    display: none;
+}
+
+.stores-cards_services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 0;
+    background-color: $gray-bg;
+    padding: 32px;
+    text-align: center;
+    transition: background-color .3s ease;
+}
+
+.stores-card:hover .stores-cards_services {
+    background-color: transparent;
+}
+
+.stores-services_title {
+    color: #7C7E83;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 2%;
+    transition: color .3s ease;
+}
+
+.stores-card:hover .stores-services_title {
+    color: $black;
+}
+
+.stores-card_button {
+    color: $gray;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 10%;
+    width: 328px;
+    margin: 32px;
+    padding: 21px 32px 19px;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.stores-card:hover .stores-card_button {
+    background-color: $red;
+    color: $white;
+}
+
+.stores-paganion {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 64px 0;
+    gap: 24px;
+}
+
+.stores-slides {
+    display: flex;
+    gap: 6px;
+}
+
+.stores-slide {
+    width: 8px;
+    height: 8px;
+    background-color: $pink;
+    border-radius: 50%;
+}
+
+.arrow-hidden {
+    display: none;
+}
+
+.stores-button {
+    max-width: 251px;
+    display: block;
+    margin: 0 auto;
+    color: $gray;
+    border-radius: 5px;
+    border: solid 1px $gray;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 10%;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 21px 32px 19px;
+    transition: background-color .3s ease, color .3s ease, border-color;
+}
+
+.stores-button:hover{
+    background-color: $red;
+    border-color: $red;
+    color: $white;
+}
+
+@media (max-width: 1279px) {
+    .stores {
+        margin: 64px 32px;
+    }
+
+    .stores-cap {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .stores-cap_title {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .stores-cap_arrows,
+    .stores-button,
+    .stores-card_button {
+        display: none;
+    }
+
+    .stores-card{
+        max-width: 704px;
+        height: 332px;
+    }
+
+    .stores-card_wrapper{
+        display: flex;
+    }
+
+    .stores-card_content {
+        padding: 24px 32px;
+    }
+
+    .stores-card_image {
+        max-width: 272px;
+        height: 224px;
+        padding: 8px 0 16px 8px;
+    }
+
+    .stores-card_title {
+        font-size: 28px;
+    }
+
+    .stores-card_subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .stores-card_link {
+        display: block;
+        max-width: 99px;
+        color: $gray;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 10%;
+        padding: 13px 16px 11px;
+        border: solid 1px $gray;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+
+    .stores-cards_services {
+        display: flex;
+        gap: 28px;
+        padding: 20px 21px;
+        margin: 0 9px 12px;
+        border-radius: 12px;
+    }
+
+    .stores-services_title {
+        color: $black;
+        font-size: 10px;
+        text-align: left;
+    }
+
+    .stores-paganion {
+        align-items: center;
+        margin: 32px 0 64px 0;
+    }
+
+    .arrow-hidden {
+        display: block;
+        border: solid 1px $gray-ui;
+        box-shadow: 0 4px 0 0 $shadow;
+    }
+}
+
+@media (max-width: 767px) {
+    // .stores-card_wrapper {
+    //     flex-direction: column;
+    // }
+}

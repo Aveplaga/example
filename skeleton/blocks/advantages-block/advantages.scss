@@ -1,0 +1,119 @@
+$text: #00091A;
+$subtext: #62656A;
+
+.advantages {
+    margin: 128px 0;
+}
+
+.advantages-title {
+    text-align: center;
+    color: $text;
+    font-size: 52px;
+    line-height: 120%;
+    letter-spacing: -4%;
+    margin-bottom: 64px;
+}
+
+.advantages-desks {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+}
+
+.advantages-desk {
+    max-width: 288px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desk-content {
+    text-align: center;
+    padding: 24px 24px 0 24px;
+}
+
+.desk-title {
+    color: $text;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -1%;
+    margin-bottom: 16px;
+}
+
+.desk-subtext {
+    color: $subtext;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 2%;
+}
+
+@media (max-width: 1279px) {
+    .advantages {
+        margin: 64px 32px;
+    }
+
+    .advantages-title {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+
+    .advantages-desks {
+        max-width: 704px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 64px 16px;
+    }
+
+    .advantages-desk {
+        max-width: 344px;
+    }
+
+    .desk-content {
+        padding: 23px 52px 13px 52px;
+    }
+
+    .desk-title {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .advantages {
+        margin: 48px 24px;
+    }
+
+    .advantages-title {
+        font-size: 30px;
+        margin-bottom: 24px;
+    }
+
+    .advantages-desks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .advantages-desk {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .desk-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .desk-content {
+        text-align: start;
+        padding: 0;
+    }
+
+    .desk-subtext {
+        font-size: 12px;
+        letter-spacing: 4%;
+    }
+}

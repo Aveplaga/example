@@ -1,0 +1,45 @@
+<div class="about">
+    <div class="about-wrapper">
+        <div class="adout-content_wrapper">
+            <div class="about-content">
+                <div class="about-content_title">{{about-content_title}}</div>
+                <div class="about-content_subtitle">{{{about-content_subtitle}}}</div>
+
+                <div class="about-content_buttons">
+                    <a href="#" class="about-contact_button">{{about-contact_button}}</a>
+                    <a href="#" class="about-more_button">{{about-more_button}}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-card-wrapper">
+            <div class="about-card swiper">
+                <div class="swiper-wrapper">
+                    {{#about-cards}}
+                        <div class="about-card-slide swiper-slide">
+                            <div class="about-card_image-wrapper">
+                                <img class="about-card_image" src="{{about-card_image}}" alt="">
+                                <div class="card-image_text">
+                                    <div class="card-image_title">{{card-image_title}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/about-cards}}
+                </div>
+            </div>
+
+            <div class="about-navigation">
+                <a href="#" class="about-left_arrow">
+                    <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.4142 8.70703H1.41418M1.41418 8.70703L9.41418 0.707031M1.41418 8.70703L9.41418 16.707" stroke="black" stroke-width="2" />
+                    </svg>
+                </a>
+                <a href="#" class="about-right_arrow">
+                    <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 8.70703H24M24 8.70703L16 0.707031M24 8.70703L16 16.707" stroke="black" stroke-width="2" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

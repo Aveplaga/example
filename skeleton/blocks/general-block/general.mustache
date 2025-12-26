@@ -2,10 +2,19 @@
     <div class="inner">
         <div class="general-wrapper">
             <div class="general-content">
-                <div class="content-title">{{content-title}}</div>
-                <div class="content-subtext">{{content-subtext}}</div>
-                <a href="#" class="content-link">{{content-link}}</a>
+                <div class="general-suptext">{{general-suptext}}</div>
+                <div class="general-title">{{{general-title}}}</div>
+
+                <div class="general-trigers">
+                    {{#general-trigers}}
+                        <div class="general-triger">
+                            <div class="triger-title">{{triger-title}}</div>
+                            <div class="triger-subtext">{{triger-subtext}}</div>
+                        </div>
+                    {{/general-trigers}}
+                </div>
             </div>
         </div>
     </div>
+    <img class="background-image" src="{{background-image}}" alt="">
 </div>

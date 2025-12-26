@@ -1,0 +1,67 @@
+<div class="stores">
+    <div class="inner">
+        <div class="stores-cap">
+            <div class="stores-cap_title">{{stores-cap_title}}</div>
+
+            <div class="stores-cap_arrows">
+                <a href="#" class="arrow-left_stores">
+                    <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.4142 8.70703H1.41418M1.41418 8.70703L9.41418 0.707031M1.41418 8.70703L9.41418 16.707" stroke="black" stroke-width="2" />
+                    </svg>
+                </a>
+                <a href="#" class="arrow-right_stores">
+                    <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 8.70703H24M24 8.70703L16 0.707031M24 8.70703L16 16.707" stroke="black" stroke-width="2" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="stores-cards swiper">
+            <div class="swiper-wrapper">
+                {{#stores-cards}}
+                    <div class="stores-card swiper-slide">
+                        <div class="stores-card_wrapper">
+                            <img src="{{stores-card_image}}" alt="" class="stores-card_image">
+
+                            <div class="stores-card_content">
+                                <div><span class="stores-card_title">{{stores-card_title}}</span></div>
+                                <div class="stores-card_subtext">{{stores-card_subtext}}</div>
+                                <div class="stores-card_subtitle">{{stores-card_subtitle}}</div>
+                                <div class="stores-card_link">{{stores-card_link}}</div>
+                            </div>
+                        </div>
+                        <div class="stores-cards_services">
+                            {{#stores-cards_services}}
+                                <div class="stores-card_services">
+                                    <img src="{{stores-card_icon}}" alt="" class="stores-card_icon">
+
+                                    <div class="stores-services_title">{{stores-services_title}}</div>
+                                </div>
+                            {{/stores-cards_services}}
+                        </div>
+                        <div class="stores-card_button">{{stores-card_button}}</div>
+                    </div>
+                {{/stores-cards}}
+            </div>
+        </div>
+        <div class="stores-paganion">
+            <a href="#" class="arrow-left_stores arrow-hidden">
+                <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.4142 8.70703H1.41418M1.41418 8.70703L9.41418 0.707031M1.41418 8.70703L9.41418 16.707" stroke="black" stroke-width="2" />
+                </svg>
+            </a>
+            <div class="stores-slides">
+                <div class="stores-slide"></div>
+                <div class="stores-slide"></div>
+                <div class="stores-slide"></div>
+                <div class="stores-slide"></div>
+            </div>
+            <a href="#" class="arrow-right_stores arrow-hidden">
+                <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 8.70703H24M24 8.70703L16 0.707031M24 8.70703L16 16.707" stroke="black" stroke-width="2" />
+                </svg>
+            </a>
+        </div>
+        <a href="#" class="stores-button">{{stores-button}}</a>
+    </div>
+</div>
