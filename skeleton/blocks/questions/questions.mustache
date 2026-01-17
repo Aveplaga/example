@@ -1,0 +1,19 @@
+<div class="questions">
+    <div class="questions-title">{{questions-title}}</div>
+
+    <div class="questions-list">
+        {{#questions-items}}
+            <div class="questions-item">
+                <div class="questions-item__content">
+                    <div class="questions-content__title">{{questions-content__title}}</div>
+                    <button class="questions-content__button">
+                        <svg class="questions-button__arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.707153 0.707031L7.70715 7.70703L14.7072 0.707031" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-item__subtitle">{{questions-item__subtitle}}</div>
+            </div>
+        {{/questions-items}}
+    </div>
+</div>

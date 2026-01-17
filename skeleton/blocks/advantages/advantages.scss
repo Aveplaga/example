@@ -1,0 +1,126 @@
+.advantages{
+    margin: 128px 0;
+}
+
+.layout{
+    max-width: 1224px;
+    margin: 0 auto;
+}
+
+.advantages-title{
+    color: #00091A;
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -4%;
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.advantages-list{
+    display: flex;
+    gap: 24px;
+}
+
+.advantages-item{
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.advantages-item__icon{
+    margin-bottom: 23px;
+}
+
+.advantages-item__content{
+    padding: 0 24px;
+}
+
+.advantages-item__title{
+    color: #00091A;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -1%;
+    margin-bottom: 16px;
+}
+
+.advantages-item__subtitle{
+    color: #62656A;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 2%;
+}
+
+@media(max-width: 1279px){
+    .advantages{
+        margin: 64px 32px;
+    }
+
+    .advantages-title{
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+
+    .advantages-list{
+        max-width: 704px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 64px 16px;
+    }
+
+    .advantages-item{
+        width: 344px;
+    }
+
+    .advantages-item__title{
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+}
+
+@media(max-width: 767px){
+    .advantages{
+        margin: 48px 24px;
+    }
+
+    .advantages-title{
+        font-size: 33px;
+        margin-bottom: 24px;
+    }
+
+    .advantages-list{
+        max-width: 272px;
+        margin: 0 auto;
+        grid-template-columns: repeat(1 , 1fr);
+        gap: 24px;
+    }
+
+    .advantages-item{
+        width: 272px;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: start;
+        gap: 16px;
+    }
+
+    .advantages-item__icon{
+        width: 32px;
+        height: 32px;
+    }
+
+    .advantages-item__content{
+        padding: 0;
+    }
+
+    .advantages-item__title{
+        margin-bottom: 8px;
+    }
+
+    .advantages-item__subtitle{
+        font-size: 12px;
+        letter-spacing: 4%;
+    }
+}

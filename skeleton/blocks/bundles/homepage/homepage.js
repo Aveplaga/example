@@ -1,25 +1,20 @@
 import './homepage.sass';
-import '../../general-block/general.mustache';
-import '../../advantages-block/advantages.mustache';
-import '../../services-block/services.mustache';
-import '../../logistics-block/logistics.mustache';
-import '../../settlement_block/settlement.mustache';
-import '../../stores-block/stores.mustache';
-import '../../about-block/about.mustache';
-import '../../questions_block/questions.mustache';
-import '../../info_block/info.mustache';
+import '../../advantages/advantages.mustache';
+import '../../offers/offers.mustache';
+import '../../logistics/logistics.mustache';
+import '../../calculator/calculator.mustache';
+import '../../solutions/solutions.mustache';
+import '../../cases/cases.mustache';
+import '../../about/about.mustache';
+import '../../questions/questions.mustache';
+import '../../feedback/feedback.mustache';
 
-
-import '../../general-block/general.js';
-import '../../services-block/services.js';
-import '../../logistics-block/logistics.js';
-import '../../stores-block/stores.js';
-import '../../about-block/about.js'
-import '../../questions_block/questions.js';
-
+import '../../offers/offers.js';
+import '../../logistics/logistics.js';
+import '../../cases/cases.js';
+import '../../about/about.js';
+import '../../questions/questions.js';
+import '../../feedback/feedback.js';
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-})

@@ -1,0 +1,66 @@
+<div class="layout">
+    <div class="feedback">
+        <div class="feedback-wrapper">
+            <div class="feedback-content">
+                <div class="feedback-content__text">
+                    <div class="feedback-content__title">{{feedback-content__title}}</div>
+                    <div class="feedback-content__subtitle">{{{feedback-content__subtitle}}}</div>
+                    <div class="feedback-content__subtext">{{{feedback-content__subtext}}}</div>
+                </div>
+                <img class="feedback-content__image" src="{{feedback-content__image}}" alt="">
+            </div>
+            <div class="feedback-form">
+                <div class="feedback-content">
+                    <div class="feedback-content__input">
+                        <label class="feedback-content__label-name">{{{feedback-content__label-name}}}</label>
+                        <input class="feedback-content__input-name" type="text">
+                    </div>
+                    <div class="feedback-content__dropdown">
+                        <div class="feedback-dropdown__wrapper">
+                            <div class="feedback-dropdown__content">
+                                <div class="feedback-dropdown__title">{{feedback-dropdown__title}}</div>
+                                <div class="feedback-dropdown__value">{{feedback-dropdown__value}}</div>
+                            </div>
+                            <button class="feedback-dropdown__button">
+                                <svg class="feedback-dropdown__button-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.530273 0.530273L4.53027 4.53027L8.53027 0.530273" stroke="#494B50" stroke-width="1.5" />
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="feedback-dropdown__list">
+                            <li class="feedback-dropdown__item">
+                                {{#feedback-dropdown__links}}
+                                    <a href="#" class="feedback-dropdown__link">{{feedback-dropdown__link}}</a>
+                                {{/feedback-dropdown__links}}
+                            </li>
+                        </ul>
+                    </div>
+                    <label class="feedback-content__file">
+                        <input type="file" class="feedback-content__file-input">
+
+                        <div class="feedback-content__file-wrapper">
+                            <svg class="feedback-content__file-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23 7C23 5.89543 22.1046 5 21 5H12.0018C12.0419 4.99978 12.0292 4.98428 11.9412 4.87732L11.9412 4.8773C11.9196 4.85103 11.8935 4.81925 11.8625 4.78082C11.8318 4.74283 11.7461 4.63236 11.6707 4.53515L11.6706 4.535C11.6171 4.46608 11.5688 4.40385 11.549 4.37885C10.8329 3.47545 10.12 3 9 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H14V19H3V11H21V15H23V7ZM21 9V7L11.9946 6.99999C11.2765 6.99614 10.8087 6.65991 10.3058 6.03654C10.2603 5.98007 10.1496 5.83739 10.0692 5.73379L10.0692 5.73376L10.0692 5.73375L10.0691 5.73357L10.0684 5.73274C10.0267 5.67899 9.9933 5.63592 9.9816 5.62116C9.60702 5.14857 9.38424 5 9 5H3V9H21ZM17 21V19H19V17H21V19H23V21H21V23H19V21H17Z" fill="#FF022C" />
+                            </svg>
+                            <div class="feedback-content__file-text">
+                                <div class="feedback-content__file-title">{{feedback-content__file-title}}</div>
+                                <div class="feedback-content__file-subtitle">{{feedback-content__file-subtitle}}</div>
+                            </div>
+                        </div>
+                    </label>
+                    <button class="feedback-content-button">{{feedback-content-button}}</button>
+                </div>
+                <div class="feedback-form__column">
+                    <div class="feedback-content__input">
+                        <label class="feedback-content__label-number" for="phone">{{{feedback-content__label-number}}}</label>
+                        <input id="phone" class="feedback-content__input-number" type="text">
+                    </div>
+                    <div class="feedback-content-textarea">
+                        <label class="feedback-label" for="message">{{feedback-label}}</label>
+                        <textarea class="feedback-textarea" name="message" id="message"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

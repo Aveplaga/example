@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Fonts */
 /* Colors */
 /* Breakpoints
@@ -24,6 +25,27 @@
 /* Миксин для медиа-запросов
  * Значения точек берутся из коллекции $breakpoints
  * */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./local/assets/local./fonts/Gilroy-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./local/assets/local./fonts/Gilroy-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./local/assets/local./fonts/Gilroy-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
 .custom-fancybox .fancybox__content {
   padding: 0;
 }
@@ -32,7 +54,7 @@
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -72,6 +94,7 @@ textarea {
   background-color: transparent;
   border: none;
   outline: none;
+
 }
 
 .link-as-card {
@@ -104,14 +127,16 @@ textarea {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "";
   display: table;
 }
+
 .clearfix:after {
   clear: both;
 }
@@ -119,6 +144,7 @@ textarea {
 .mobile-hide {
   display: none;
 }
+
 .mobile-show {
   display: inline;
 }
@@ -128,40 +154,50 @@ textarea {
     display: none;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .tablet-hide {
     display: none;
   }
+
   .tablet-show {
     display: inline;
   }
+
   .tablet-only {
     display: block;
   }
+
   .tablet-block {
     display: block;
   }
 }
+
 @media only screen and (max-width: 1279px) {
   .desktop-only {
     display: none;
   }
 }
+
 @media only screen and (min-width: 1280px) {
   .tablet-only {
     display: none;
   }
+
   .desktop-hide {
     display: none;
   }
+
   .desktop-show {
     display: inline;
   }
 }
+
 .animate {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .animate:not(.loaded) {
   opacity: 0;
 }
@@ -188,6 +224,7 @@ textarea {
     padding-right: 32px;
   }
 }
+
 @media only screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;

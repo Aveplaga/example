@@ -1,0 +1,71 @@
+<div class="cases">
+    <div class="layout">
+        <div class="cases-cap">
+            <div class="cases-cap__title">{{cases-cap__title}}</div>
+            <div class="cases-cap__links">
+                <a href="#" class="cases-button__left">
+                    <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.4142 8.70703H1.41418M1.41418 8.70703L9.41418 0.707031M1.41418 8.70703L9.41418 16.707" stroke="black" stroke-width="2" />
+                    </svg>
+                </a>
+                <a href="#" class="cases-button__right">
+                    <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 8.70703H24M24 8.70703L16 0.707031M24 8.70703L16 16.707" stroke="black" stroke-width="2" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <div class="cases-list swiper">
+            <div class="swiper-wrapper">
+                {{#cases-items}}
+                    <div class="cases-item swiper-slide">
+                        <div class="cases-item__wrapper">
+                            <img src="{{cases-item__image}}" alt="" class="cases-item__image">
+
+                            <div class="cases-item__content">
+                                <div class="cases-item__title-wrap"><span class="cases-item__title">{{cases-item__title}}</span></div>
+                                <div class="cases-item__subtext">{{cases-item__subtext}}</div>
+                                <div class="cases-item__subtitle">{{cases-item__subtitle}}</div>
+                                <a href="#" class="cases-item__content-link">
+                                    <span class="cases-item__link-text tablet-text">{{cases-item__link-tablet}}</span>
+                                    <span class="cases-item__link-text mobile-text">{{cases-item__link-mobile}}</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cases-item__list">
+                            {{#cases-items__features}}
+                                <div class="cases-item__features">
+                                    <img class="cases-features__icon" src="{{cases-features__icon}}" alt="">
+                                    <div class="cases-features__title">{{cases-features__title}}</div>
+                                </div>
+                            {{/cases-items__features}}
+                        </div>
+                        <a href="#" class="cases-item__link">{{cases-item__link}}</a>
+                    </div>
+                {{/cases-items}}
+            </div>
+        </div>
+        <div class="cases-pagination">
+            <a href="#" class="cases-button__left hidden-button">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.4143 6.70703H1.41431M1.41431 6.70703L7.41431 0.707031M1.41431 6.70703L7.41431 12.707" stroke="black" stroke-width="2" />
+                </svg>
+            </a>
+            <div class="cases-pagination__list">
+                <div class="swiper-pagination">
+                    {{#cases-pagination__dots}}
+                        <div class="cases-pagination__dot"></div>
+                    {{/cases-pagination__dots}}
+                </div>
+            </div>
+            <a href="#" class="cases-button__right hidden-button">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 6.70703H18M18 6.70703L12 0.707031M18 6.70703L12 12.707" stroke="black" stroke-width="2" />
+                </svg>
+            </a>
+        </div>
+        <a href="#" class="cases-link">{{cases-link}}</a>
+    </div>
+</div>

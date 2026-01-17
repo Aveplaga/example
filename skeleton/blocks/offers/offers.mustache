@@ -1,0 +1,36 @@
+<div class="offers">
+    <div class="layout">
+        <div class="offers-wrapper">
+            <div class="offers-title">{{offers-title}}</div>
+            <div class="offers-list">
+                {{#offers-items}}
+                    <div class="offers-item">
+                        <div class="offers-item__wrapper">
+                            <div class="offers-item__detalis">
+                                <img class="offers-item__icon" src="{{offers-item__icon}}" alt="">
+
+                                <button class="offers-item__button">
+                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.707031 0.707031L5.70703 5.70703L10.707 0.707031" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="offers-item__title-wrap"><span class="offers-item__title">{{offers-item__title}}</span></div>
+                        </div>
+
+                        <div class="offers-item__content">
+                            <div class="offers-content__subtitle">{{offers-content__subtitle}}</div>
+
+                            <a href="#" class="offers-content__link">
+                                <span class="offers-link__title">{{offers-link__title}}</span>
+                                <svg class="offers-link__arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 5.70703H8H16M16 5.70703L11 0.707031M16 5.70703L11 10.707" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                {{/offers-items}}
+            </div>
+        </div>
+    </div>
+</div>

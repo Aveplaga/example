@@ -1,0 +1,61 @@
+<div class="solutions">
+    <div class="solutions-sourcing">
+        <div class="sourcing-wrapper">
+            <div class="sourcing-content">
+                <div class="sourcing-content__title">{{sourcing-content__title}}</div>
+                <div class="sourcing-content__subtitle">{{{sourcing-content__subtitle}}}</div>
+
+                <div class="sourcing-content__links">
+                    <a href="#" class="sourcing-link__more">{{sourcing-link__more}}</a>
+                    <a href="#" class="sourcing-link__application">{{sourcing-link__application}}</a>
+                </div>
+            </div>
+            <img class="sourcing-image" src="{{sourcing-image}}" alt="">
+        </div>
+    </div>
+
+    <div class="solutions-consulting">
+        <div class="consulting-wrapper">
+            <div class="consulting-content">
+                <div class="consulting-content__title">{{consulting-content__title}}</div>
+                <div class="consulting-content__subtitle">{{consulting-content__subtitle}}</div>
+
+                <div class="consulting-content__list">
+                    <div class="consulting-list__title">{{consulting-list__title}}</div>
+                    <div class="consulting-list__items">
+                        {{#consulting-list__items}}
+                            <div class="consulting-list__item">
+                                <svg class="consulting-item__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" width="11.3136" height="11.3136" transform="rotate(45 8 0)" fill="#FF022C" />
+                                    <rect width="5.65692" height="5.65692" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 12 8)" fill="white" />
+                                </svg>
+                                <div class="consulting-item__title">{{consulting-item__title}}</div>
+                            </div>
+                        {{/consulting-list__items}}
+                    </div>
+                </div>
+
+                <div class="consulting-content__links">
+                    <a href="#" class="consulting-link__consultation">{{consulting-link__consultation}}</a>
+                    <a href="#" class="consulting-link__more">{{consulting-link__more}}</a>
+                </div>
+            </div>
+
+            <div class="consulting-content__image">
+                <img class="consulting-image" src="{{consulting-image}}" alt="">
+
+                <div class="consulting-content__description">
+                    <div class="consulting-description__item">
+                        <svg class="consulting-description__icon" width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.3041 21.1382C26.9659 21.1382 29.9447 18.1595 29.9447 14.4976C29.9447 10.965 27.1725 8.06765 23.6893 7.86748C23.629 7.21635 23.6742 5.44389 25.3727 2.97828C25.501 2.79229 25.4777 2.54145 25.3183 2.38199C24.6233 1.68697 24.1937 1.24925 23.8931 0.9431C23.4996 0.54281 23.3201 0.360048 23.0573 0.121511C22.9682 0.040659 22.8559 0 22.743 0C22.6333 0 22.5241 0.0383644 22.4359 0.114679C19.4763 2.68996 16.1887 8.01098 16.6644 14.5314C16.9431 18.3596 19.7354 21.1382 23.3041 21.1382ZM22.7384 1.10715C22.8598 1.22676 22.9973 1.36669 23.1952 1.56796C23.2051 1.57809 23.2152 1.58837 23.2255 1.59882C23.4859 1.86426 23.8433 2.228 24.3852 2.77175C22.3239 5.94791 22.7133 8.21017 22.8837 8.53461C22.9646 8.6886 23.1305 8.79233 23.3041 8.79233C26.4496 8.79233 29.0089 11.3516 29.0089 14.4976C29.0089 17.6432 26.4496 20.2024 23.3041 20.2024C20.2399 20.2024 17.8401 17.7889 17.5974 14.4638C17.0628 7.12997 21.4215 2.36828 22.7384 1.10715Z" fill="#E6E6E6" />
+                            <path d="M22.7384 1.10715C22.8598 1.22676 22.9973 1.36669 23.1952 1.56796L23.2255 1.59882C23.4859 1.86426 23.8433 2.228 24.3852 2.77175C22.3239 5.94791 22.7133 8.21017 22.8837 8.53461C22.9646 8.6886 23.1305 8.79233 23.3041 8.79233C26.4496 8.79233 29.0089 11.3516 29.0089 14.4976C29.0089 17.6432 26.4496 20.2024 23.3041 20.2024C20.2399 20.2024 17.8401 17.7889 17.5974 14.4638C17.0628 7.12997 21.4215 2.36828 22.7384 1.10715Z" fill="#E6E6E6" />
+                            <path d="M0.0461121 14.5314C0.325776 18.3591 3.11854 21.1382 6.68629 21.1382C10.3482 21.1382 13.3274 18.1595 13.3274 14.4976C13.3274 10.965 10.5547 8.06765 7.07104 7.86748C7.01073 7.21681 7.05644 5.44529 8.7553 2.97828C8.88369 2.79229 8.86039 2.54145 8.70093 2.38199C8.00867 1.68973 7.58007 1.2529 7.2794 0.947218C6.88416 0.544214 6.70365 0.360518 6.43956 0.121092C6.35047 0.0406609 6.23762 0 6.12518 0C6.0155 0 5.90629 0.0383644 5.81814 0.115147C2.85857 2.69043 -0.429088 8.0114 0.0461121 14.5314ZM6.12064 1.10715C6.24903 1.23371 6.39567 1.38265 6.61184 1.60289C6.62559 1.61688 6.6396 1.63114 6.65389 1.64569C6.91036 1.90675 7.25669 2.25928 7.76789 2.77175C5.70664 5.94838 6.09547 8.21017 6.26546 8.53461C6.34635 8.68813 6.51265 8.79233 6.68629 8.79233C9.83231 8.79233 12.3916 11.3516 12.3916 14.4976C12.3916 17.6432 9.83231 20.2024 6.68629 20.2024C3.62256 20.2024 1.22227 17.7889 0.9792 14.4633C0.445045 7.13044 4.80373 2.36828 6.12064 1.10715Z" fill="#E6E6E6" />
+                            <path d="M6.12064 1.10715C6.24903 1.23371 6.39567 1.38265 6.61184 1.60289L6.65389 1.64569C6.91036 1.90675 7.25669 2.25928 7.76789 2.77175C5.70664 5.94838 6.09547 8.21017 6.26546 8.53461C6.34635 8.68813 6.51265 8.79233 6.68629 8.79233C9.83231 8.79233 12.3916 11.3516 12.3916 14.4976C12.3916 17.6432 9.83231 20.2024 6.68629 20.2024C3.62256 20.2024 1.22227 17.7889 0.9792 14.4633C0.445045 7.13044 4.80373 2.36828 6.12064 1.10715Z" fill="#E6E6E6" />
+                        </svg>
+                        <div class="consulting-description__text">{{consulting-description__text}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

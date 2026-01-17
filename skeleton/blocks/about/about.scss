@@ -1,0 +1,229 @@
+.about {
+    margin: 128px auto;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-content {
+    max-width: 664px;
+}
+
+.about-content__title {
+    color: #00091A;
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -4%;
+    margin-bottom: 32px;
+}
+
+.about-content__subtitle {
+    color: #62656A;
+    font-size: 18px;
+    line-height: 170%;
+    letter-spacing: 1%;
+    margin-bottom: 48px;
+}
+
+.about-content__links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.about-link__connection {
+    width: 226px;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 10%;
+    background-color: #FF022C;
+    border-radius: 5px;
+    padding: 21px 32px 19px 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about-link__connection::before {
+    content: '';
+    top: 32px;
+    height: 24px;
+    box-shadow: 0 4px 32px 0 rgba(255, 2, 44, 0.8);
+}
+
+.adout-link__more {
+    width: 144px;
+    height: 56px;
+    color: #62656A;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 10%;
+    border: solid 1px #62656A;
+    border-radius: 5px;
+    padding: 21px 32px 19px 32px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.adout-link__more:hover {
+    background-color: #FF022C;
+    border-color: #FF022C;
+    color: #FFFFFF;
+}
+
+.about-list.swiper {
+    max-width: 392px;
+}
+
+.about-item__image {
+    width: 100%;
+    height: 545px;
+    border: solid 8px #FFFFFF;
+    border-radius: 16px;
+}
+
+.about-item__text {
+    position: relative;
+    max-width: 261px;
+    margin: 0 auto;
+    padding: 21px 32px;
+    text-align: center;
+    top: -40px;
+    z-index: 1;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 0 0 rgba(4, 27, 73, 0.02);
+}
+
+.about-text__title {
+    color: #303236;
+    font-size: 12px;
+}
+
+.about-pagination {
+    max-width: 144px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.about-button__left,
+.about-button__right {
+    display: block;
+    width: 64px;
+    height: 64px;
+    padding: 24px 20px;
+    border: solid 1px #FFFFFF;
+    border-radius: 64px;
+    transition: border .3s ease, box-shadow .3s ease;
+}
+
+.about-button__left:hover,
+.about-button__right:hover {
+    box-shadow: 0 4px 0 0 #F7F7F7;
+    border-color: #F2F2F2;
+}
+
+.about-button__left.is-disabled,
+.about-button__right.is-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+@media(max-width: 1279px) {
+    .about {
+        margin: 64px 32px;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .about-content__wrapper {
+        max-width: 100%;
+        background-color: rgba(247, 247, 247, 1);
+        border-radius: 16px;
+        padding: 52px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-content__title {
+        font-size: 48px;
+        margin-bottom: 16px;
+    }
+
+    .about-content__subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .about-pagination {
+        gap: 24px;
+    }
+}
+
+@media(max-width: 767px) {
+    .about {
+        margin: 48px 24px;
+    }
+
+    .about-content__wrapper {
+        background-color: inherit;
+        padding: 0;
+    }
+
+    .about-content__title {
+        font-size: 30px;
+        margin-bottom: 24px;
+    }
+
+    .about-content__subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .about-content__links {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .about-link__connection,
+    .adout-link__more {
+        width: 100%;
+    }
+
+    .about-list.swiper {
+        max-width: 272px;
+    }
+
+    .about-item__image {
+        width: 100%;
+        height: 379px;
+    }
+
+    .about-item__text {
+        top: 16px;
+        padding: 21px 37px;
+        margin-bottom: 32px;
+    }
+
+    .about-pagination {
+        gap: 16px;
+    }
+
+    .about-button__left,
+    .about-button__right {
+        width: 48px;
+        height: 48px;
+        padding: 18px 15px;
+    }
+
+}

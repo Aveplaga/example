@@ -1,0 +1,49 @@
+<div class="logistics">
+    <div class="layout">
+        <div class="logistics-title">{{logistics-title}}</div>
+        <div class="logistics-list swiper">
+            <div class="swiper-wrapper">
+                {{#logistics-items}}
+                    <div class="logistics-item swiper-slide">
+                        <img class="logistics-item__icon" src="{{logistics-item__icon}}" alt="">
+
+                        <div class="logistics-item__content">
+                            <div class="logistics-content__title-wrap"><span class="logistics-content__title">{{logistics-content__title}}</span></div>
+                            <div class="logistics-content__subtitle">{{logistics-content__subtitle}}</div>
+
+                            <div class="logistics-content__list">
+                                {{#logistics-content__items}}
+                                    <div class="logistics-content__item">
+                                        <div class="logistics-content__item-title">{{logistics-content__item-title}}</div>
+                                        <div class="logistics-content__item-subtitle">{{logistics-content__item-subtitle}}</div>
+                                    </div>
+                                {{/logistics-content__items}}
+                            </div>
+
+                            <a href="#" class="logistics-content__link">{{logistics-content__link}}</a>
+                        </div>
+                    </div>
+                {{/logistics-items}}
+            </div>
+        </div>
+        <div class="logistics-pagination">
+            <a href="#" class="logistics-button__left">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.4143 6.70703H1.41431M1.41431 6.70703L7.41431 0.707031M1.41431 6.70703L7.41431 12.707" stroke="black" stroke-width="2" />
+                </svg>
+            </a>
+            <div class="logistics-pagination__list">
+                <div class="swiper-pagination">
+                    {{#logistics-pagination__dots}}
+                        <div class="logistics-pagination__dot"></div>
+                    {{/logistics-pagination__dots}}
+                </div>
+            </div>
+            <a href="#" class="logistics-button__right">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 6.70703H18M18 6.70703L12 0.707031M18 6.70703L12 12.707" stroke="black" stroke-width="2" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
