@@ -84,6 +84,9 @@
 }
 
 .logistics-content__link {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     display: block;
     width: 230px;
     color: #62656A;
@@ -99,10 +102,25 @@
     transition: background-color .3s ease, border-color .3s ease, color .3s ease;
 }
 
-.logistics-item:hover .logistics-content__link {
+.logistics-content__link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
     background-color: #FF022C;
+    transition: height .3s ease;
+    z-index: -1;
+}
+
+.logistics-item:hover .logistics-content__link {
     border-color: #FF022C;
     color: #FFFFFF;
+}
+
+.logistics-item:hover .logistics-content__link::before {
+    height: 100%;
 }
 
 .logistics-pagination {

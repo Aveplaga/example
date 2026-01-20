@@ -415,7 +415,7 @@ $feedback = [
     'feedback-content__title' => 'Мы всегда готовы сотрудничеству',
     'feedback-content__subtitle' => 'Оставьте заявку на сотрудничество и наши менеджеры свяжутся с вами в течение <span>24 часов</span>',
     'feedback-content__subtext' => 'Отправляя заявку, вы соглашаетесь с правилами обработки персональных данных и <a href="#">политикой конфиденциальности.</a>',
-    'feedback-content__image' => '',
+    'feedback-content__image' => './local/assets/images/Frame 2.png',
 
     'feedback-content__label-name' => 'Ваше имя <span>*</span>',
     'feedback-content__file-title' => 'Прикрепите файл',
