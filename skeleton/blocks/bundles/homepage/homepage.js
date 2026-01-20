@@ -1,9 +1,9 @@
 import './homepage.sass';
-import '../../general-block/general.mustache';
-import '../../product-block/product.mustache';
+import '../../hero/hero.mustache';
 
-import '../../product-block/product.js';
-import '../../general-block/general.js';
+
+import '../../hero/hero.js';
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

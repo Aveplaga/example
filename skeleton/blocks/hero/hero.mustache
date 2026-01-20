@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <div class="hero">
+        <div class="hero-wrapper">
+            <a href="#" class="hero-link__left">
+                <svg class="hero-link__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2D2926">
+                    <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                </svg>
+            </a>
+            <div class="hero-content">
+                <div class="hero-slides swiper">
+                    <div class="swiper-wrapper">
+                        {{#hero-slides}}
+                            <div class="hero-slide swiper-slide">
+                                <div class="hero-slide__title">{{hero-slide__title}}</div>
+                                <div class="hero-slide__subtitle">{{hero-slide__subtitle}}</div>
+                            </div>
+                        {{/hero-slides}}
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="hero-link__right">
+                <svg class="hero-link__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2D2926">
+                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
