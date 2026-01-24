@@ -1,4 +1,5 @@
 import './homepage.sass';
+import '../../hero/hero.mustache';
 import '../../advantages/advantages.mustache';
 import '../../offers/offers.mustache';
 import '../../logistics/logistics.mustache';

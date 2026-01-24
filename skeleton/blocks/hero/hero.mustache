@@ -1,0 +1,20 @@
+<div class="hero">
+    <div class="layout">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <div class="hero-content__top-text">{{hero-content__top-text}}</div>
+                <div class="hero-content__title">{{{hero-content__title}}}</div>
+
+                <div class="hero-content__list">
+                    {{#hero-content__items}}
+                        <div class="hero-content__item">
+                            <div class="hero-item__title">{{hero-item__title}}</div>
+                            <div class="hero-item__subtitle">{{hero-item__subtitle}}</div>
+                        </div>
+                    {{/hero-content__items}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="{{hero-image}}" alt="" class="hero-image">
+</div>

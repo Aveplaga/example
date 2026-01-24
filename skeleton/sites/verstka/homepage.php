@@ -29,7 +29,28 @@ $pageConfig = [
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
-
+<b></b>
+<?php
+$hero = [
+    'hero-content__top-text' => 'Работаем с малым бизнесом и возим небольшие партии',
+    'hero-content__title' => '<b>Выкуп</b> и <b>доставка</b> товаров <b>консалтинговые</b> услуги, <b>помощь в открытии</b> точек продаж.',
+    'hero-content__items' => [
+        [
+            'hero-item__title' => '7',
+            'hero-item__subtitle' => 'Складов в РФ и Китае'
+        ],
+        [
+            'hero-item__title' => '12',
+            'hero-item__subtitle' => 'Лет опыта работы с Китаем'
+        ],
+        [
+            'hero-item__title' => '50 кг',
+            'hero-item__subtitle' => 'Минимальный обьем партии'
+        ],
+    ],
+    'hero-image' => './local/assets/images/c1a166d687a507ba454bcdc93d3ce61ec56b109a.png'
+]
+?>
 
 <?php
 $advantages = [
@@ -437,6 +458,7 @@ $feedback = [
 ?>
 
 <div class="wrapper">
+    <?= $mustache->render('hero', $hero); ?>
     <?= $mustache->render('advantages', $advantages); ?>
     <?= $mustache->render('offers', $offers); ?>
     <?= $mustache->render('logistics', $logistics); ?>
