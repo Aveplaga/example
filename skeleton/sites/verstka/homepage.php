@@ -32,27 +32,26 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 
 <?php
 $hero = [
-    'hero-slides' => [
-        [
-            'hero-slide__title' => 'Crafting Moments, One Sip at a Time'
-        ],
-        [
-            'hero-slide__title' => 'Crafting Moments, One Sip at a Time'
-        ],
-        [
-            'hero-slide__title' => 'Crafting Moments, One Sip at a Time'
-        ],
-        [
-            'hero-slide__title' => 'Crafting Moments, One Sip at a Time'
-        ],
-    ]
+    'hero-content__title' => 'Living Place',
+    'hero-content__subtitle' => 'мебель, которая помнит лучшие моменты и хранит тепло ваших встреч.',
 ]
 ?>
 
-
+<?php  
+    $products = [
+        'products-dropdown__title' => 'Все категории',
+        'products-dropdown__links' => [
+            ['products-dropdown__link' => 'Домашний декор'],
+            ['products-dropdown__link' => 'Лампы'],
+            ['products-dropdown__link' => 'Светильники'],
+            ['products-dropdown__link' => 'Стулья'],
+        ]
+    ]
+?>
 
 <div class="inner">
     <?= $mustache->render('hero', $hero); ?>
+    <?= $mustache->render('products', $products); ?>
 </div>
 
 
