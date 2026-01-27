@@ -29,7 +29,7 @@ $pageConfig = [
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
-<b></b>
+
 <?php
 $hero = [
     'hero-content__top-text' => 'Работаем с малым бизнесом и возим небольшие партии',
@@ -79,7 +79,6 @@ $advantages = [
     ]
 ]
 ?>
-
 
 <?php
 $offers = [

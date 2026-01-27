@@ -1,4 +1,5 @@
 .hero {
+    position: relative;
     overflow: hidden;
     min-height: 1080px;
 }
@@ -51,11 +52,13 @@
 }
 
 .hero-image {
-    position: relative;
+    position: absolute; 
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 1080px;
+    height: 100%; 
     object-fit: cover;
-    
+    z-index: 0;
 }
 
 @keyframes fadeUp {
@@ -116,7 +119,7 @@
     }
 
     .hero-image {
-        height: 420px;
+        height: 480px;
         margin: 0;
     }
 }
