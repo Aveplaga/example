@@ -25,11 +25,13 @@
 /* Миксин для медиа-запросов
  * Значения точек берутся из коллекции $breakpoints
  * */
+
 @font-face {
   font-family: 'Gilroy';
   src: url('./local/assets/local/fonts/Gilroy-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -37,6 +39,7 @@
   src: url('./local/assets/local/fonts/Gilroy-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -44,6 +47,7 @@
   src: url('./local/assets/local/fonts/Gilroy-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 .custom-fancybox .fancybox__content {
@@ -113,7 +117,7 @@ textarea {
   color: #000000;
   background-color: rgb(247, 247, 247);
   font-size: 16px;
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.25;

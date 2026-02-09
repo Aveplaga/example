@@ -1,0 +1,105 @@
+.header 
+    margin: 40px 0
+
+.wrapper
+    max-width: 1224px
+    margin: 0 auto
+
+.header-wrapper
+    position: relative
+    display: flex
+    align-items: center
+    gap: 47px
+    padding: 40px
+
+.header-burger,
+.header-button__phone
+    display: none
+
+.header-content__menu
+    display: flex
+    align-items: center
+    gap: 32px
+
+.header-content__item--hidden 
+    position: relative
+
+.header-content__item--hidden:hover .header-content__menu--hidden
+    opacity: 1
+    visibility: visible
+    transform: translateY(0)
+
+.header-content__link
+    position: relative
+    display: flex
+    align-items: center
+    gap: 8px
+    color: #00091A
+    font-size: 14px
+    font-weight: 600
+    text-transform: uppercase
+
+.header-content__link::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -5px
+    width: 0
+    height: 3px
+    background: #FF022C
+    transition: width .3s ease
+
+.header-content__link:hover::after
+    width: 100%
+
+.header-icon__arrow
+    color: #303236
+    transition: transform .3s ease , color .3s ease
+
+.header-content__link:hover .header-icon__arrow
+    color: #FF022C
+    transform: rotate(180deg)
+
+.header-content__menu--hidden
+    position: absolute
+    top: 100%
+    left: 0
+    opacity: 0
+    visibility: hidden
+    transform: translateY(10px)
+
+.header-content__link--hidden
+    color: #494B50
+    font-size: 12px
+    font-weight: 500
+    white-space: nowrap
+    text-transform: uppercase
+    transition: color .3s ease
+
+.header-content__link--hidden:hover    
+    color: #00091A
+
+.header-content
+    display: flex
+    align-items: center
+    gap: 47px
+
+.header-content__blank
+    display: flex
+    align-items: center
+    gap: 12px
+
+.header-content__blank--title
+    color: #00091A
+    font-size: 14px
+    font-weight: 600
+    white-space: nowrap
+    text-transform: uppercase
+
+.header-content__number--title
+    color: #62656A
+    font-size: 10px
+    font-weight: 500
+    white-space: nowrap
+    text-transform: uppercase
+    margin-bottom: 8px
