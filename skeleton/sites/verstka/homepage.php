@@ -30,19 +30,15 @@ $pageConfig = [
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
 
-
+<?php 
+$hero = [
+    'hero-content__title' => 'Shop empearl',
+    'hero-content__subtitle' => 'Наша компания — это современный магазин мебели и декора, который помогает создавать уютные, стильные и функциональные пространства для жизни и работы.',
+]
+?>
 
 <div class="inner">
     <?= $mustache->render('hero', $hero); ?>
-    <?= $mustache->render('advantages', $advantages); ?>
-    <?= $mustache->render('offers', $offers); ?>
-    <?= $mustache->render('logistics', $logistics); ?>
-    <?= $mustache->render('calculator', $calculator); ?>
-    <?= $mustache->render('solutions', $solutions); ?>
-    <?= $mustache->render('cases', $cases); ?>
-    <?= $mustache->render('about', $about); ?>
-    <?= $mustache->render('questions', $questions); ?>
-    <?= $mustache->render('feedback', $feedback); ?>
 </div>
 
 
