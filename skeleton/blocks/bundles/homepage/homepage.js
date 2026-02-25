@@ -1,11 +1,10 @@
 import './homepage.sass';
 import '../../hero/hero.mustache';
-import '../../products/products.mustache';
-
-
+import '../../resume-form/resume-form.mustache';
 
 import '../../hero/hero.js';
-import '../../products/products.js';
+import '../../resume-form/resume-form.js';
+
 
 
 

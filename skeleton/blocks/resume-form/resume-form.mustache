@@ -1,0 +1,78 @@
+<div class="wrapper">
+    <div id="resume" class="resume">
+        <div class="resume-wrapper">
+            <div class="resume-content">
+                <div class="resume-content__title">{{resume-content__title}}</div>
+                <div class="resume-content__subtitle">{{{resume-content__subtitle}}}</div>
+            </div>
+
+            <form action="" class="resume-form">
+                <label>
+                    <span>ФИО*</span>
+                    <input class="resume-form__input--name" type="text" placeholder="Введите ваши инициалы" name="fullName">
+                </label>
+                <label>
+                    <span>Электронная почта*</span>
+                    <input class="resume-form__input--email" type="email" placeholder="Введите вашу почту" name="email">
+                </label>
+                <label>
+                    <span>Телефон*</span>
+                    <input class="resume-form__input--number" type="text" placeholder="Введите ваш телефон" name="number">
+                </label>
+                <label>
+                    <span>Образование*</span>
+                    <textarea class="resume-form__textarea--education" placeholder="Опишите ваше образование" name="education"></textarea>
+                </label>
+                <label>
+                    <span>Опыт работы / О себе*</span>
+                    <textarea class="resume-form__textarea--experience" placeholder="Расскажите о себе и про опыт работы" name="experience"></textarea>
+                </label>
+                <label>
+                    <span>Навыки*</span>
+                    <input class="resume-form__input--skills" type="text" placeholder="Введите ваши навыки" name="skills">
+                </label>
+            </form>
+        </div>
+
+        <div class="preview__wrapper">
+            <div class="preview__content">
+                <div class="preview-content__title">{{preview-content__title}}</div>
+                <div class="preview-content__subtitle">{{{preview-content__subtitle}}}</div>
+
+                <button class="preview-content__button">{{preview-content__button}}</button>
+            </div>
+
+            <div class="resume-preview__form">
+                <div class="resume-preview__content--name preview">
+                    <span class="preview-label preview-label--name">{{preview-label--name}}</span>
+                    <div class="preview-text"></div>
+                </div>
+
+                <div class="resume-preview__content--email preview">
+                    <span class="preview-label preview-label--email">{{preview-label--email}}</span>
+                    <div class="preview-text"></div>
+                </div>
+
+                <div class="resume-preview__content--number preview">
+                    <span class="preview-label preview-label--number">{{preview-label--number}}</span>
+                    <div class="preview-text"></div>
+                </div>
+
+                <div class="resume-preview__content--education preview">
+                    <span class="preview-label preview-label--education">{{preview-label--education}}</span>
+                    <div class="preview-text"></div>
+                </div>
+
+                <div class="resume-preview__content--experience preview">
+                    <span class="preview-label preview-label--experience">{{preview-label--experience}}</span>
+                    <div class="preview-text"></div>
+                </div>
+
+                <div class="resume-preview__content--skills preview">
+                    <span class="preview-label preview-label--skills">{{preview-label--skills}}</span>
+                    <div class="preview-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -43,7 +43,5 @@ $mustache = new Mustache_Engine([
     </div>
     <div class="page-inner">
 
-        
-         
 
         <main class="main <?= $pageConfig['mainClass'] ?>">
