@@ -43,5 +43,12 @@ $mustache = new Mustache_Engine([
     </div>
     <div class="page-inner">
 
+        <div class="header">
+            <div class="wrapper">
+                <div class="header-wrapper">
+                    <a href="#" class="header-logo">Auto Resume</a>
+                </div>
+            </div>
+        </div>
 
         <main class="main <?= $pageConfig['mainClass'] ?>">
