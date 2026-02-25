@@ -12,7 +12,29 @@ use ZLabs\Frontend\MustacheSingleton;
 ?>
 </main>
 
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <a href="#" class="footer-logo">Empearl</a>
+                <div class="footer-content__info">© 2026 All rights reserved.</div>
+            </div>
 
+            <nav class="footer-menu">
+                <div class="footer-menu__title">Навигация</div>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="#catalog-products" class="footer-link">Каталог продукции</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#order-form" class="footer-link">Оформление заказа</a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </div>
+</footer>
 
 <? // page-inner
 ?>

@@ -1,10 +1,13 @@
 .order-form {
+    border: solid 1px #555555;
+    border-radius: 16px;
     margin: 350px 25px;
 }
 
 .order-form__wrapper {
     display: flex;
     gap: 15px;
+    padding: 60px;
 }
 
 .order-form__content {
@@ -49,13 +52,13 @@
 .order-form__content--inputs input {
     border: solid 1px #555555;
     border-radius: 5px;
-    padding: 18px 24px;
+    padding: 18px;
 }
 
 .order-form__delivery {
     border: solid 1px #555555;
     border-radius: 5px;
-    padding: 18px 24px;
+    padding: 18px;
 }
 
 .order-form__delivery--content {
@@ -70,9 +73,14 @@
     justify-content: space-between;
 }
 
-.order-form__delivery--title,
-.order-form__delivery--link {
+.order-form__delivery--title {
     color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+.order-form__delivery--link{
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.5px;
@@ -133,6 +141,7 @@
     .order-form__wrapper {
         flex-direction: column;
         gap: 50px;
+        padding: 40px;
     }
 
     .order-form__content {
