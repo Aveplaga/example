@@ -1,0 +1,141 @@
+.order-form {
+    margin: 350px 25px;
+}
+
+.order-form__wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.order-form__content {
+    max-width: 612px;
+}
+
+.order-form__content--title {
+    color: #1C1C1C;
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.order-form__content--subtitle {
+    color: #555555;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-bottom: 50px;
+}
+
+.order-form__content--button {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    border: 1px solid #555555;
+    padding: 21px 32px;
+}
+
+.order-form__content {
+    max-width: 612px;
+    width: 100%;
+}
+
+.order-form__content--inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.order-form__content--inputs input {
+    border: solid 1px #555555;
+    border-radius: 5px;
+    padding: 18px 24px;
+}
+
+.order-form__delivery {
+    border: solid 1px #555555;
+    border-radius: 5px;
+    padding: 18px 24px;
+}
+
+.order-form__delivery--content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.order-form__delivery--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-form__delivery--title,
+.order-form__delivery--link {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+.order-form__delivery--value {
+    color: #555555;
+    font-size: 14px;
+}
+
+.order-form__delivery--button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    width: 20px;
+    height: 20px;
+    border-radius: 88px;
+    padding: 8px 6px;
+}
+
+.arrow {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform .3s ease;
+}
+
+.order-form__delivery.dropdown_expand .order-form__delivery--list {
+    display: block;
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.order-form__delivery.dropdown_expand .arrow {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.order-form__delivery--list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
+
+.order-form__delivery--item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 15px;
+}
+
+@media(max-width: 767px) {
+    .order-form {
+        margin: 250px 30px;
+    }
+
+    .order-form__wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .order-form__content {
+        max-width: 100%;
+    }
+}

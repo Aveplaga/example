@@ -51,10 +51,10 @@ $mustache = new Mustache_Engine([
                     <nav class="header-menu">
                         <ul class="header-list">
                             <li class="header-item">
-                                <a href="" class="header-link">Каталог продукции</a>
+                                <a href="#catalog-products" class="header-link">Каталог продукции</a>
                             </li>
                             <li class="header-item">
-                                <a href="" class="header-link">Оформление заказа</a>
+                                <a href="#order-form" class="header-link">Оформление заказа</a>
                             </li>
                         </ul>
                     </nav>

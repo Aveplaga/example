@@ -1,0 +1,43 @@
+<div id="order-form" class="order-form fade">
+    <div class="wrapper">
+        <div class="order-form__wrapper">
+            <div class="order-form__content">
+                <div class="order-form__content--title">{{order-form__content--title}}</div>
+                <div class="order-form__content--subtitle">{{order-form__content--subtitle}}</div>
+                <button class="order-form__content--button">{{order-form__content--button}}</button>
+            </div>
+
+            <form action="" class="order-form__content">
+                <div class="order-form__content--inputs">
+                    <input class="order-form__input--name" placeholder="Ваше имя" type="text" required>
+                    <input class="order-form__input--tel" placeholder="Ваш телефон" type="tel" required>
+                    <input class="order-form__input--adress" placeholder="Ваш адрес" type="text" required>
+                    <input class="order-form__input--number" placeholder="Номер карты" type="text" required>
+                    <input class="order-form__input--" placeholder="Код карты" type="text" required>
+
+                    <div class="order-form__delivery">
+                        <div class="order-form__delivery--wrapper">
+                            <div class="order-form__delivery--content">
+                                <div class="order-form__delivery--title">{{order-form__delivery--title}}</div>
+                                <div class="order-form__delivery--value">{{order-form__delivery--value}}</div>
+                            </div>
+                            <button class="order-form__delivery--button">
+                                <svg class="order-form__delivery--arrow arrow" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.946667 0L4 3.09042L7.06 0L8 0.951417L4 5L0 0.951417L0.946667 0Z" fill="#1B1B1B" />
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="order-form__delivery--list">
+                            <li class="order-form__delivery--item">
+                                {{#order-form__delivery--links}}
+                                    <a href="{{href}}" class="order-form__delivery--link">{{order-form__delivery--link}}</a>
+                                {{/order-form__delivery--links}}
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
