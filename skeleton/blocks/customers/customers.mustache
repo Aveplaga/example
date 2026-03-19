@@ -1,0 +1,30 @@
+<div class="customers fade">
+    <div class="wrapper">
+        <div class="customers-wrapper">
+            <div class="customers-title">{{customers-title}}</div>
+
+            <div class="customers-list swiper">
+                <div class="swiper-wrapper">
+                    {{#customers-items}}
+                        <div class="customers-item swiper-slide">
+                            <img src="{{customers-item__logo}}" alt="" class="customers-item__logo">
+                        </div>
+                    {{/customers-items}}
+                </div>
+            </div>
+
+            <div class="customers-pagination">
+                <button class="customers-link customers-link--left">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 7L4 7L9.5 1.5L8 4.4509e-07L4.4509e-07 8L8 16L9.5 14.5L4 9L16 9L16 7Z" fill="currentColor" />
+                    </svg>
+                </button>
+                <button class="customers-link customers-link--right">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00726e-07 7L12 7L6.5 1.5L8 4.45091e-07L16 8L8 16L6.5 14.5L12 9L3.89454e-07 9L5.00726e-07 7Z" fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

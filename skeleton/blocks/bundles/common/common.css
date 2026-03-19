@@ -24,6 +24,169 @@
 /* Миксин для медиа-запросов
  * Значения точек берутся из коллекции $breakpoints
  * */
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-ExtraLight/Gilam-ExtraLight.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-ExtraLight/Gilam-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam Regular';
+  src: url('./local/assets/local/fonts/Gilam-Regular/Gilam-RegularItalic.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Regular/Gilam-RegularItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-ExtraLight/Gilam-ExtraLightItalic.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-ExtraLight/Gilam-ExtraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Light/Gilam-LightItalic.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Light/Gilam-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Bold/Gilam-BoldItalic.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Bold/Gilam-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Heavy/Gilam-HeavyItalic.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Heavy/Gilam-HeavyItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Bold/Gilam-Bold.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Bold/Gilam-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Black/Gilam-Black.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Black/Gilam-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Regular/Gilam-Regular.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Regular/Gilam-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Black/Gilam-BlackItalic.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Black/Gilam-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-SemiBold/Gilam-SemiBold.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-SemiBold/Gilam-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-SemiBold/Gilam-SemiBoldItalic.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-SemiBold/Gilam-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Light/Gilam-Light.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Light/Gilam-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam Book';
+  src: url('./local/assets/local/fonts/Gilam-Book/Gilam-BookItalic.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Book/Gilam-BookItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Heavy/Gilam-Heavy.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Heavy/Gilam-Heavy.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam Book';
+  src: url('./local/assets/local/fonts/Gilam-Book/Gilam-Book.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Book/Gilam-Book.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Thin/Gilam-Thin.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Thin/Gilam-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilam';
+  src: url('./local/assets/local/fonts/Gilam-Thin/Gilam-ThinItalic.woff2') format('woff2'),
+    url('./local/assets/local/fonts/Gilam-Thin/Gilam-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
 .custom-fancybox .fancybox__content {
   padding: 0;
 }
@@ -32,7 +195,7 @@
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -66,7 +229,6 @@ button {
 
 input,
 textarea {
-  font-family: "Montserrat", Arial, sans-serif;
   width: 100%;
   display: block;
   background-color: transparent;
@@ -90,7 +252,7 @@ textarea {
   color: #000000;
   background-color: rgb(247, 247, 247);
   font-size: 16px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Gilam", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.25;
@@ -104,14 +266,16 @@ textarea {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "";
   display: table;
 }
+
 .clearfix:after {
   clear: both;
 }
@@ -119,6 +283,7 @@ textarea {
 .mobile-hide {
   display: none;
 }
+
 .mobile-show {
   display: inline;
 }
@@ -128,40 +293,50 @@ textarea {
     display: none;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .tablet-hide {
     display: none;
   }
+
   .tablet-show {
     display: inline;
   }
+
   .tablet-only {
     display: block;
   }
+
   .tablet-block {
     display: block;
   }
 }
+
 @media only screen and (max-width: 1279px) {
   .desktop-only {
     display: none;
   }
 }
+
 @media only screen and (min-width: 1280px) {
   .tablet-only {
     display: none;
   }
+
   .desktop-hide {
     display: none;
   }
+
   .desktop-show {
     display: inline;
   }
 }
+
 .animate {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .animate:not(.loaded) {
   opacity: 0;
 }
@@ -188,6 +363,7 @@ textarea {
     padding-right: 32px;
   }
 }
+
 @media only screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;

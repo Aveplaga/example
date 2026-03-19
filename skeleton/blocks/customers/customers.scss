@@ -1,0 +1,30 @@
+.customers-wrapper{
+    padding: 140px 0 100px 0;
+}
+
+.customers-title{
+    color: #333333;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 80%;
+    letter-spacing: -5%;
+    text-align: center;
+}
+
+.customers-list .swiper-wrapper{
+    margin: 80px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.customers-item{
+    width: 365px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #E6E6E6;
+    border-radius: 5px;
+    cursor: pointer;
+}
