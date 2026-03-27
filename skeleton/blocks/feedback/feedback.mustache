@@ -1,0 +1,62 @@
+<div id="feedback" class="feedback ">
+    <div class="wrapper">
+        <div class="feedback__wrapper">
+            <div class="feedback__content">
+                <div class="feedback__header">
+                    <div class="feedback__title">{{feedback__title}}</div>
+                    <div class="feedback__nav">
+                        <button class="feedback__btn feedback__btn--up">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 16L7 4L1.5 9.5L0 8L8 0L16 8L14.5 9.5L9 4L9 16L7 16Z" fill="currentColor" />
+                            </svg>
+                        </button>
+                        <button class="feedback__btn feedback__btn--down">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0L7 12L1.5 6.5L0 8L8 16L16 8L14.5 6.5L9 12L9 0L7 0Z" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <a href="#" class="feedback__link">
+                    {{feedback__link}}
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 10.59L6.88563 6L2.25 1.41L3.67713 0L9.75 6L3.67713 12L2.25 10.59Z" fill="white" />
+                    </svg>
+                </a>
+            </div>
+            <div class="feedback__slider swiper">
+                <div class="swiper-wrapper">
+                    {{#feedback-items}}
+                        <div class="feedback__item swiper-slide">
+                            <div class="feedback__item-top">
+                                <div class="feedback__item-info">
+                                    <div class="feedback__item-title">{{feedback__item-title}}</div>
+                                    <div class="feedback__item-subtitle">{{feedback__item-subtitle}}</div>
+                                </div>
+                                <img class="feedback__item-icon" src="{{feedback__item-icon}}" alt="">
+                            </div>
+                            <div class="feedback__item-text">{{feedback__item-text}}</div>
+                            <button class="feedback__accordion-btn">
+                                {{feedback__item-button}}
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.06 1.5L4 4.59042L0.94 1.5L0 2.45142L4 6.5L8 2.45142L7.06 1.5Z" fill="#FFD98C" />
+                                </svg>
+                            </button>
+                            <div class="feedback__rating">
+                                {{#feedback-rating}}
+                                    <div class="feedback__rating-item">
+                                        <a href="#">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 6.21579L10.248 5.72632L8 0.5L5.752 5.73421L0 6.21579L4.368 9.95L3.056 15.5L8 12.5553L12.944 15.5L11.64 9.95L16 6.21579ZM7.99671 10.5233L5.52506 11.9935L6.18242 9.2215L4 7.35622L6.87921 7.1101L7.99671 4.5L9.12079 7.11658L12 7.36269L9.81758 9.22798L10.4749 12L7.99671 10.5233Z" fill="#FFD98C" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                {{/feedback-rating}}
+                            </div>
+                        </div>
+                    {{/feedback-items}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

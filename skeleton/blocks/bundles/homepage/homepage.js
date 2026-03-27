@@ -2,11 +2,13 @@ import './homepage.sass';
 import '../../services/services.mustache';
 import '../../project/project.mustache';
 import '../../news/news.mustache';
-import '../../statistics/statistics.mustache';
+import '../../about/about.mustache';
+import '../../feedback/feedback.mustache';
 import '../../customers/customers.mustache';
 
 
 import '../../project/project.js';
+import '../../feedback/feedback.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const options = {
@@ -25,6 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, options);
 
-    const targets = document.querySelectorAll('.fade');
+    const targets = document.querySelectorAll('.homepage-fade');
     targets.forEach(target => observer.observe(target));
 });

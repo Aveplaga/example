@@ -1,15 +1,20 @@
-<div class="news fade">
+<div class="news homepage-fade">
     <div class="wrapper">
         <div class="news-wrapper">
-            <div class="news-title">{{news-title}}</div>
+            <div class="news-title__wrapper">
+                <span class="news-title news-title__desktop">{{news-title__desktop}}</span>
+                <span class="news-title news-title__mobile">{{news-title__mobile}}</span>
+            </div>
+
             <div class="news-list">
                 {{#news-items}}
                     <div class="news-item">
-                        <a href="#" class="news-item__title-wrap"><span class="news-item__title">{{news-item__title}}</span></a>
-                        <div class="news-item__data">{{news-item__data}}</div>
+                        <div class="news-item__text"><span class="news-item__text--title">{{news-item__text--title}}</span></div>
+                        <div class="news-item__date">{{news-item__date}}</div>
                         <div class="news-item__subtitle">{{news-item__subtitle}}</div>
-                        <a href="#" class="news-item__button">
-                            {{news-item__button}}
+
+                        <a href="#" class="news-item__link">
+                            {{news-item__link}}
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 10.59L6.88563 6L2.25 1.41L3.67713 0L9.75 6L3.67713 12L2.25 10.59Z" fill="currentColor" />
                             </svg>
@@ -17,10 +22,11 @@
                     </div>
                 {{/news-items}}
             </div>
-            <a href="#" class="news-button">
-                {{news-button}}
+
+            <a href="#" class="news-link">
+                {{news-link}}
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 10.59L6.88563 6L2.25 1.41L3.67713 0L9.75 6L3.67713 12L2.25 10.59Z" fill="#333333" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 10.59L6.88563 6L2.25 1.41L3.67713 0L9.75 6L3.67713 12L2.25 10.59Z" fill="currentColor" />
                 </svg>
             </a>
         </div>

@@ -1,54 +1,63 @@
 .header
     box-shadow: 0 30px 60px 0 rgba(13, 13, 13, 0.03)
 
+.wrapper
+    max-width: 1300px
+    margin: 0 auto
+    width: 100%
+    padding-left: 25px
+    padding-right: 25px
+
 .header-wrapper
     display: flex
     align-items: center
     justify-content: space-between
     padding: 20px 0
 
-.header-content
+.header-wrapper__content
     display: flex
     align-items: center
-    gap: 90px
 
 .header-logo
     display: flex
     align-items: center
     gap: 15px
-    
-.header-logo__subtitle
+    margin-right: 90px
+
+.header-logo__text--top
+    display: block
     color: #262626
     font-size: 10px
     font-weight: 700
     line-height: 100%
     text-transform: uppercase
 
-.header-logo__title
+.header-logo__text--title
+    display: block
     color: #000000
     font-size: 20px
     line-height: 100%
     letter-spasing: -5%
     text-transform: uppercase
 
-.header-contact
+.header-calls
     display: flex
     align-items: center
     gap: 60px
 
-.header-contact__item
+.header-calls__item
     display: flex
     align-items: center
     gap: 10px
 
-.header-contact__icon
+.header-calls__item--icon
     width: 36px
     height: 36px
     padding: 12px
-    border: solid 2px #FFD98C
+    border: 2px solid #FFD98C
     border-radius: 5px
 
-.header-contact__subtitle
+.header-calls__item--text__addresses
     display: flex
     align-items: center
     gap: 5px
@@ -57,7 +66,8 @@
     line-height: 100%
     margin-bottom: 2px
 
-.header-contact__number
+.header-calls__item--text__tels
+    display: block
     color: #4D4D4D
     font-size: 18px
     font-weight: 600
@@ -68,7 +78,7 @@
     display: flex
     gap: 20px
 
-.header-button__contact
+.header-button__contacts
     color: #262626
     font-size: 14px
     font-weight: 600
@@ -80,17 +90,39 @@
     text-transform: uppercase
 
 .header-button__menu
+    position: relative
     display: flex
     align-items: center
+    justify-content: center
     gap: 15px
     color: #7F5369
     font-size: 14px
     font-weight: 600
     line-height: 100%
-    border: solid 2px #7F5369
+    border: 2px solid #7F5369
     border-radius: 5px
-    padding: 22px 30px 20px 30px
+    padding: 22px 30px 20px
     text-transform: uppercase
+    overflow: hidden
+    z-index: 1
+    transition: color .3s ease-in-out
+
+.header-button__menu::before
+    content: ""
+    position: absolute
+    inset: 0
+    background: #7F5369
+    transform: scaleY(0)
+    transform-origin: bottom
+    transition: transform .3s ease-in-out
+    z-index: -1
+
+.header-button__menu:hover::before
+    transform: scaleY(1)
+    transform-origin: bottom
+
+.header-button__menu:hover
+    color: #ffffff
 
 .header-button__icons
     position: relative
@@ -141,10 +173,10 @@
     transition: border .3s ease-in-out
 
 .header-item:hover
-    border: solid 2px #7F5369
+    border: 2px solid #7F5369
 
 .header-item.active
-    border: solid 2px #7F5369
+    border: 2px solid #7F5369
 
 .header-link
     display: flex
@@ -168,14 +200,96 @@
 .header-item .header-link__title.active
     color: #7F5369
 
-.fade 
+.homepage-fade
     opacity: 0
     transition: opacity .5s ease-in-out, transform .5s ease-in-out
 
-.fade.visible 
+.homepage-fade.visible 
     opacity: 1
+    transform: translateY(0)
 
 
+@media(max-width: 1279px)
+    .header-wrapper
+        padding: 24px 0
+
+    .wrapper
+        padding-left: 32px
+        padding-right: 32px
+
+    .header-logo
+        margin-right: 32px
+
+    .header-logo__text,
+    .header-calls__item--hidden,
+    .header-button__menu--title
+        display: none
+
+    .header-buttons
+        gap: 24px
+
+    .header-button__contacts
+        padding: 16px 30px 14px 30px
+
+    .header-button__menu
+        width: 48px
+        height: 48px
+        padding: 0
+
+    .header-list
+        padding: 24px 0
+    
+@media(max-width: 767px)
+    .header-wrapper
+        padding: 12px 0
+
+    .wrapper
+        padding-left: 16px
+        padding-right: 16px
+
+    .header-logo
+        margin-right: 25px
+
+    .header-logo img
+        width: 44px
+        height: 40px
+    
+    .header-calls__item--icon,
+    .header-button__contacts
+        display: none
+
+    .header-calls__item--text__addresses
+        font-size: 10px
+        margin-bottom: 1px
+
+    .header-calls__item--text__tels
+        font-size: 14px
+
+    .header-button__menu
+        width: 32px
+        height: 32px
+
+    .header-nav .wrapper
+        padding-left: 0
+        padding-right: 0
+
+    .header-list
+        flex-direction: column
+        align-items: flex-start
+        padding: 0
+
+    .header-item
+        width: 100%
+        height: 56px
+        padding: 12px 16px
+
+    .header-link
+        flex-direction: row
+        justify-content: flex-start
+
+    .header-link__logo
+        width: 32px
+        height: 32px
 
 
 
