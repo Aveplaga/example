@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuActive = document.querySelector('.header-button__menu');
-    const headerNav = document.querySelector('.header-nav');
+    const menuButton = document.querySelector('.header__button--menu');
+    const activeMenu = document.querySelector('.header__menu');
 
-    menuActive.addEventListener('click', () => {
-        menuActive.classList.toggle('active');
-        headerNav.classList.toggle('active');
+    menuButton.addEventListener('click', () => {
+        menuButton.classList.toggle('active');
+        activeMenu.classList.toggle('active');
     });
 
-    const itemActive = document.querySelectorAll('.header-item');
-    const linkTitleActive = document.querySelectorAll('.header-link__title')
+    const itemActive = document.querySelectorAll('.header__menu--item');
+    const linkTitleActive = document.querySelectorAll('.header__menu--title')
     itemActive.forEach((item, index) => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
@@ -20,5 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
             linkTitleActive[index].classList.add('active');
         });
     });
-
 })

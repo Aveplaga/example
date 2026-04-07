@@ -1,30 +1,33 @@
 <div class="news homepage-fade">
     <div class="wrapper">
-        <div class="news-wrapper">
-            <div class="news-title__wrapper">
-                <span class="news-title news-title__desktop">{{news-title__desktop}}</span>
-                <span class="news-title news-title__mobile">{{news-title__mobile}}</span>
+        <div class="news__wrapper">
+            <div class="news__title--wrapper">
+                <div class="news__title news__title--desktop">{{news__title--desktop}}</div>
+                <div class="news__title news__title--mobile">{{news__title--mobile}}</div>
             </div>
 
-            <div class="news-list">
-                {{#news-items}}
-                    <div class="news-item">
-                        <div class="news-item__text"><span class="news-item__text--title">{{news-item__text--title}}</span></div>
-                        <div class="news-item__date">{{news-item__date}}</div>
-                        <div class="news-item__subtitle">{{news-item__subtitle}}</div>
+            <div class="news__list">
+                {{#news__list--items}}
+                    <div class="news__list--item">
+                        <div class="news__item--title-wrapper"><span class="news__item--title">{{news__item--title}}</span></div>
 
-                        <a href="#" class="news-item__link">
-                            {{news-item__link}}
+                        <div class="news__item--content">
+                            <div class="news__item--date">{{news__item--date}}</div>
+                            <div class="news__item--subtitle">{{news__item--subtitle}}</div>
+                        </div>
+                        
+                        <a href="#" class="news__item--button">
+                            {{news__item--button}}
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 10.59L6.88563 6L2.25 1.41L3.67713 0L9.75 6L3.67713 12L2.25 10.59Z" fill="currentColor" />
                             </svg>
                         </a>
                     </div>
-                {{/news-items}}
+                {{/news__list--items}}
             </div>
 
-            <a href="#" class="news-link">
-                {{news-link}}
+            <a href="#" class="news__button">
+                {{news__button}}
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 10.59L6.88563 6L2.25 1.41L3.67713 0L9.75 6L3.67713 12L2.25 10.59Z" fill="currentColor" />
                 </svg>

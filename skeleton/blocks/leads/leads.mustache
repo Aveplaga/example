@@ -1,0 +1,61 @@
+<div class="leads homepage-fade">
+    <div class="wrapper">
+        <div class="leads__wrapper">
+            <div class="leads__content">
+                <div class="leads__text">
+                    <div class="leads__text--title">{{leads__text--title}}</div>
+                    <div class="leads__text--subtitle">{{leads__text--subtitle}}</div>
+                </div>
+
+                <div class="leads__form">
+                    <div class="leads__form--content">
+                        <div class="leads__form--group">
+                            <label class="leads__form--label leads__form--label-name">{{leads__form--label-name}}</label>
+                            <input type="text" class="leads__form--input leads__form--input-name" required>
+                        </div>
+                        <div class="leads__form--group">
+                            <label class="leads__form--label leads__form--label-tels">{{leads__form--label-tels}}</label>
+                            <input type="number" class="leads__form--input leads__form--input-tels" required>
+                        </div>
+
+                        <div class="leads__form--dropdown">
+                            <div class="leads__dropdown--wrapper">
+                                <div class="leads__dropdown--content">
+                                    <div class="leads__dropdown--title">{{leads__dropdown--title}}</div>
+                                    <div class="leads__dropdown--value">{{leads__dropdown--value}}</div>
+                                </div>
+                                <button class="leads__dropdown--button">
+                                    <svg class="leads__dropdown--arrow" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 2L4 6L0 2L8 2Z" fill="black" />
+                                    </svg>
+
+                                </button>
+                            </div>
+
+                            <ul class="form__dropdown--list">
+                                {{#form__dropdown--items}}
+                                    <a href="#" class="form__dropdown--item">
+                                        <div class="form__item--title">{{form__item--title}}</div>
+                                        <img src="{{form__item--icon}}" alt="" class="form__item--icon">
+                                    </a>
+                                {{/form__dropdown--items}}
+                            </ul>
+                        </div>
+
+                        <button class="leads__form--button">
+                            {{leads__form--button}}
+                            <svg class="leads__button--icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1111 11.1111C14 11.1111 12.9333 10.9333 11.9378 10.6044C11.6267 10.5067 11.28 10.5778 11.0311 10.8178L9.07556 12.7733C6.56 11.4933 4.49778 9.44 3.21778 6.91556L5.17333 4.95111C5.42222 4.72 5.49333 4.37333 5.39556 4.06222C5.06667 3.06667 4.88889 2 4.88889 0.888889C4.88889 0.4 4.48889 0 4 0H0.888889C0.4 0 0 0.4 0 0.888889C0 9.23556 6.76444 16 15.1111 16C15.6 16 16 15.6 16 15.1111V12C16 11.5111 15.6 11.1111 15.1111 11.1111ZM14.2222 8H16C16 3.58222 12.4178 0 8 0V1.77778C11.44 1.77778 14.2222 4.56 14.2222 8ZM10.6667 7.94444H12.4444C12.4444 5.49111 10.4533 3.5 8 3.5V5.27778C9.47556 5.27778 10.6667 6.46889 10.6667 7.94444Z" fill="#333333" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="leads__form--agreement">
+                        <input type="checkbox" class="leads__agreement--checkbox">
+                        <div class="leads__agreement--title">{{leads__agreement--title}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

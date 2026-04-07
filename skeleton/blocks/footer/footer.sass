@@ -1,0 +1,135 @@
+.footer
+    background-color: #262626
+
+.footer__wrapper
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding: 80px 0
+
+.footer__link
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 12px
+    color: #B3B3B3
+    border: 1px dashed transparent
+    border-radius: 5px
+    padding: 15px
+    text-align: center
+    transition: color .3s ease-in-out , background-color .3s ease-in-out , border-color .3s ease-in-out
+
+.footer__link:hover
+    color: #FAFAFA
+    border-color: #3B3B3B
+    background-color: #333333
+
+.footer__link-title
+    display: block
+    font-size: 14px
+    font-weight: 600
+    line-height: 80%
+    border-bottom: 1px solid transparent
+    transition: border-color .3s ease-in-out
+
+.footer__link-title:hover
+    border-color: #FAFAFA
+
+.footer__logo
+    text-align: center
+
+.footer__logo-icon
+    width: 60px
+    height: 55px
+    margin-bottom: 22px
+
+.footet__logo-suptitle
+    color: #4D4D4D
+    font-size: 10px
+    font-weight: 700
+    line-height: 100%
+    text-transform: uppercase
+    margin-bottom: 5px
+
+.footet__logo-title
+    color: #808080
+    font-size: 22px
+    line-height: 100%
+    letter-spacing: -5%
+    text-transform: uppercase
+
+.footer__menu
+    border-top: 2px solid #3B3B3B
+    padding: 37px 0
+    text-align: center
+
+.footer__menu-list
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 60px
+    margin-bottom: 24px
+    
+.footer__menu-link
+    color: #FFFFFF
+    font-size: 14px 
+    font-weight: 700
+    line-height: 100%
+    letter-spacing: 10%
+    text-transform: uppercase
+    transition: color .3s ease-in-out
+
+.footer__menu-link:hover
+    color: #FFD98C
+
+.footer__menu-dev
+    color: #4D4D4D
+    font-size: 15px
+    line-height: 100%
+    letter-spacing: -3%
+
+.footer__dev-link
+    color: #FFD98C
+    border-bottom: 1px solid transparent
+    transition: border-color .3s ease-in-out
+
+.footer__dev-link:hover
+    border-color: #FFD98C
+
+
+@media(max-width: 1279px)
+    .footer__menu
+        padding: 37px 0 24px 0
+
+    .footer__menu-list
+        gap: 40px
+
+    .footer__menu-link,
+    .footer__menu-dev
+        font-size: 12px
+
+
+@media(max-width: 767px)
+    .footer__menu
+        padding: 0
+
+    .footer__menu .wrapper
+        padding-left: 0
+        padding-right: 0
+
+    .footer__link
+        display: none
+
+    .footer__menu-list
+        flex-direction: column
+        gap: 0
+        margin: 0
+
+    .footer__menu-item
+        width: 100%
+        padding: 20px 0
+        border-bottom: 1px solid #3B3B3B
+
+    .footer__menu-dev
+        padding: 32px 0
+

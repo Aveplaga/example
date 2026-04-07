@@ -1,9 +1,8 @@
-.news-wrapper {
+.news__wrapper {
     padding: 140px 0 100px 0;
 }
 
-.news-title {
-    display: block;
+.news__title {
     color: #333333;
     font-size: 46px;
     font-weight: 600;
@@ -12,18 +11,19 @@
     text-align: center;
 }
 
-.news-title__mobile,
-.news-item:last-child {
+.news__title--mobile,
+.news__list--item:last-child {
     display: none;
 }
 
-.news-list {
+.news__list {
     display: flex;
+    align-items: stretch;
     gap: 20px;
     padding: 80px 0;
 }
 
-.news-item {
+.news__list--item {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -32,43 +32,48 @@
     cursor: pointer;
 }
 
-.news-item__text {
+.news__item--title-wrapper {
     min-height: 115px;
     padding: 20px;
     border-bottom: 1px solid #E6E6E6;
 }
 
-.news-item__text--title {
+.news__item--title {
     color: #333333;
     font-size: 22px;
     font-weight: 600;
     line-height: 90%;
     letter-spacing: -3%;
-    border-bottom: solid 2px #ffffff;
+    border-bottom: 2px solid #ffffff;
     transition: border-color .3s ease-in-out;
 }
 
-.news-item__text--title:hover {
+.news__item--title:hover {
     border-color: #333333;
 }
 
-.news-item__date {
+.news__item--content {
+    padding: 20px;
+}
+
+.news__item--date {
     color: #666666;
     font-size: 12px;
     line-height: 100%;
     letter-spacing: -5%;
-    padding: 20px 0 13px 20px;
+    margin-bottom: 13px;
     text-transform: uppercase;
 }
 
-.news-item__subtitle {
+.news__item--subtitle {
     color: #666666;
     line-height: 120%;
     letter-spacing: -5%;
-    padding: 0px 20px 20px;
 }
 
-.news-item__link {
+.news__item--button {
+    position: relative;
+    overflow: hidden;
     margin-top: auto;
     width: 180px;
     display: flex;
@@ -80,13 +85,11 @@
     border: solid 1px #E6E6E6;
     border-radius: 0 5px;
     padding: 20px;
-    position: relative;
-    overflow: hidden;
     z-index: 1;
     transition: color .3s ease-in-out, border-color .3s ease-in-out;
 }
 
-.news-item__link::before {
+.news__item--button::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -97,17 +100,17 @@
     z-index: -1;
 }
 
-.news-item:hover .news-item__link::before {
+.news__list--item:hover .news__item--button::before {
     transform: scaleY(1);
     transform-origin: bottom;
 }
 
-.news-item:hover .news-item__link {
+.news__list--item:hover .news__item--button {
     border-color: #FFD98C;
     color: #333333;
 }
 
-.news-link {
+.news__button {
     width: 265px;
     margin: 0 auto;
     display: flex;
@@ -124,16 +127,17 @@
     padding: 20px 30px;
 }
 
+
 @media(max-width: 1279px) {
-    .news-wrapper {
+    .news__wrapper {
         padding: 98px 0 80px 0;
     }
 
-    .news-title {
+    .news__title {
         font-size: 42px;
     }
 
-    .news-list {
+    .news__list {
         max-width: 1000px;
         margin: 0 auto;
         display: grid;
@@ -142,59 +146,55 @@
         padding: 48px 0;
     }
 
-    .news-item:last-child {
+    .news__list--item:last-child {
         display: flex;
     }
 
-    .news-item__text {
+    .news__item--title-wrapper {
         padding: 20px 30px 20px 20px;
     }
 
-    .news-item__text--title {
+    .news__item--title {
         font-size: 20px;
         line-height: 100%;
     }
 
-    .news-item__subtitle {
-        padding: 0 20px 31px 20px;
+    .news__item--content {
+        padding: 20px 20px 31px 20px;
     }
 }
 
+
 @media(max-width: 767px) {
-    .news-wrapper {
+    .news__wrapper {
         padding: 64px 0;
     }
 
-    .news-title__desktop {
+    .news__title--desktop {
         display: none;
     }
 
-    .news-title__mobile {
+    .news__title--mobile {
         display: block;
         font-size: 36px;
     }
 
-    .news-list {
+    .news__list {
         max-width: 500px;
         grid-template-columns: repeat(1, 1fr);
         padding: 32px 0;
     }
 
-    .news-item__text {
+    .news__item--title-wrapper {
         min-height: 92px;
         padding: 16px;
     }
 
-    .news-item__text--title {
+    .news__item--title{
         font-size: 16px;
     }
 
-    .news-item__date {
-        padding: 16px 0 13px 16px;
-    }
-
-    .news-item__subtitle {
-        font-size: 15px;
-        padding: 0px 16px 21px 16px;
+    .news__item--content{
+        padding: 16px 16px 21px 16px;
     }
 }

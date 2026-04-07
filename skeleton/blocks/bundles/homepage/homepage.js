@@ -1,14 +1,14 @@
 import './homepage.sass';
 import '../../services/services.mustache';
-import '../../project/project.mustache';
+import '../../keys/keys.mustache';
+import '../../leads/leads.mustache';
 import '../../news/news.mustache';
 import '../../about/about.mustache';
-import '../../feedback/feedback.mustache';
-import '../../customers/customers.mustache';
+import'../../clients/clients.mustache';
 
-
-import '../../project/project.js';
-import '../../feedback/feedback.js';
+import '../../keys/keys.js';
+import '../../leads/leads.js';
+import'../../clients/clients.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const options = {
