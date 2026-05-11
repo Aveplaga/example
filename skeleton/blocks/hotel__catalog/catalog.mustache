@@ -1,0 +1,60 @@
+<section class="catalog">
+    <div class="catalog__container container">
+        <div class="catalog__top">
+            <div class="catalog__top-title">{{catalog__top-title}}</div>
+
+            <div class="catalog__top-grid">
+                <div class="catalog__top-container">
+                    <div class="catalog__top-content">
+                        <a href="#" class="catalog__top-content--link catalog__top-link active">
+                            {{#catalog__top-link--stars}}
+                                <svg class="catalog__top-link--star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 12.0553L12.944 15L11.632 9.45L16 5.71579L10.248 5.23421L8 0L5.752 5.23421L0 5.71579L4.368 9.45L3.056 15L8 12.0553Z" fill="currentColor" />
+                                </svg>
+                            {{/catalog__top-link--stars}}
+                        </a>
+                    </div>
+
+                    <ul class="catalog__top-list">
+                        <li class="catalog__top-links">
+                            {{#catalog__top-links}}
+                                <a href="#" class="catalog__top-link">
+                                    {{#catalog__top-rating}}
+                                        <svg class="catalog__top-link--star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 12.0553L12.944 15L11.632 9.45L16 5.71579L10.248 5.23421L8 0L5.752 5.23421L0 5.71579L4.368 9.45L3.056 15L8 12.0553Z" fill="currentColor" />
+                                        </svg>
+                                    {{/catalog__top-rating}}
+                                    {{catalog__top-link--title}}
+                                </a>
+                            {{/catalog__top-links}}
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog__grid">
+            {{#catalog__items}}
+                <div class="catalog__item">
+                    <img src="{{catalog__item-image}}" alt="" class="catalog__item-image">
+
+                    <div class="catalog__item-content">
+                        <div class="catalog__item-stars">
+                            {{#catalog__item-stars}}
+                                <svg class="catalog__item-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M8 12.0553L12.944 15L11.632 9.45L16 5.71579L10.248 5.23421L8 0L5.752 5.23421L0 5.71579L4.368 9.45L3.056 15L8 12.0553Z" fill="currentColor" />
+                                </svg>
+                            {{/catalog__item-stars}}
+                        </div>
+                        
+                        <div class="catalog__item-title">{{catalog__item-title}}</div>
+                        <div class="catalog__item-subtitle">{{catalog__item-subtitle}}</div>
+
+                        <a href="#" class="catalog__item-link">{{catalog__item-link}}</a>
+                    </div>
+                </div>
+            {{/catalog__items}}
+        </div>
+    </div>
+</section>

@@ -347,27 +347,3 @@ textarea {
   transition: 0.3s;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-  width: 100%;
-  max-width: 410px;
-}
-
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    padding-left: 55px;
-    padding-right: 55px;
-  }
-}

@@ -16,6 +16,7 @@ $pageConfig = [
     'isMainPage' => true,
     'mainClass' => 'index',
     'inlineCss' => collect([
+        'bundle-common',
         'bundle-homepage',
     ]),
     'inlineJs' => collect([]),
@@ -31,161 +32,191 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
 
 <?php
-$keys = [
-    'keys__content-title' => 'Реализованные проекты',
-    'keys__content-subtitle' => 'Что за реализованные проекты, для кого они были реализованы, какой-то маркетинговый текст, который зацепит потенциального клиента.',
-    'keys__content-button' => 'Посмотреть все кейсы',
-    'keys__list-items' => [
+$catalog = [
+    'catalog__top-title' => 'ТОП-10 лучших отелей Вьетнама с нашими рекомендациями',
+    'catalog__top-link--stars' => [
+        ['catalog__top-link--star' => 1],
+        ['catalog__top-link--star' => 2],
+        ['catalog__top-link--star' => 3],
+        ['catalog__top-link--star' => 4],
+        ['catalog__top-link--star' => 5],
+    ],
+    'catalog__top-links' => [
         [
-            'keys__item-title' => 'Доставка оборудования для компании «Север Руси»',
-            'keys__item-subtitle' => 'Из-за возникших сложностей в конце квартального периода, Клиент мог отправить, только двумя частями, суммы на предоплату...',
-            'keys__menu-title' => 'Оказанные услуги',
-            'keys__menu-items' => [
-                [
-                    'keys__menu-icon' => './local/assets/images/storage.svg',
-                    'keys__menu-subtitle' => 'Хранение товара'
-                ],
-                [
-                    'keys__menu-icon' => './local/assets/images/customs.svg',
-                    'keys__menu-subtitle' => 'Таможенное оформление'
-                ],
-                [
-                    'keys__menu-icon' => './local/assets/images/logistics.svg',
-                    'keys__menu-subtitle' => 'Логистика и доставка'
-                ],
-                [
-                    'keys__menu-icon' => './local/assets/images/procurement.svg',
-                    'keys__menu-subtitle' => 'Поиск и закупка'
-                ]
-            ],
-            'keys__item-button' => 'Подробнее о проекте'
+            'catalog__top-rating' => [
+                ['catalog__top-link--star' => 1],
+                ['catalog__top-link--star' => 2],
+                ['catalog__top-link--star' => 3],
+                ['catalog__top-link--star' => 4],
+            ]
         ],
         [
-            'keys__item-title' => 'Подбор и транспартировка кофейного оборудования для сети уличных Кофеин',
-            'keys__item-subtitle' => 'Наш оптовый клиент остался без товара, за неделю у него полностью выкупили весь запас кофе со склада. ',
-            'keys__menu-title' => 'Оказанные услуги',
-            'keys__menu-items' => [
-                [
-                    'keys__menu-icon' => './local/assets/images/procurement.svg',
-                    'keys__menu-subtitle' => 'Поиск и закупка'
-                ],
-                [
-                    'keys__menu-icon' => './local/assets/images/customs.svg',
-                    'keys__menu-subtitle' => 'Таможенное оформление'
-                ],
-                [
-                    'keys__menu-icon' => './local/assets/images/logistics.svg',
-                    'keys__menu-subtitle' => 'Логистика и доставка'
-                ]
-            ],
-            'keys__item-button' => 'Подробнее о проекте'
+            'catalog__top-rating' => [
+                ['catalog__top-link--star' => 1],
+                ['catalog__top-link--star' => 2],
+                ['catalog__top-link--star' => 3],
+            ]
         ],
         [
-            'keys__item-title' => 'Доставка пиломатериалов для строительной компании «Амурский Строитель»',
-            'keys__item-subtitle' => 'Крупное производственное предприятие вышла на нашу команду по средствам сайта, с запросом на логистику и таможенное...',
-            'keys__menu-title' => 'Оказанные услуги',
-            'keys__menu-items' => [
-                [
-                    'keys__menu-icon' => './local/assets/images/customs.svg',
-                    'keys__menu-subtitle' => 'Таможенное оформление'
-                ],
-                [
-                    'keys__menu-icon' => './local/assets/images/logistics.svg',
-                    'keys__menu-subtitle' => 'Логистика и доставка'
-                ],
-                [
-                    'keys__menu-icon' => './local/assets/images/procurement.svg',
-                    'keys__menu-subtitle' => 'Поиск и закупка'
-                ]
+            'catalog__top-link--title' => 'Все отели'
+        ]
+    ],
+
+    'catalog__items' => [
+        [
+            'catalog__item-rating' => 5,
+            'catalog__item-stars' => [
+                ['catalog__item-star' => 1],
+                ['catalog__item-star' => 2],
+                ['catalog__item-star' => 3],
+                ['catalog__item-star' => 4],
+                ['catalog__item-star' => 5],
             ],
-            'keys__item-button' => 'Подробнее о проекте'
+
+            'catalog__item-image' => './local/assets/images/Swandor__Hotels.png',
+            'catalog__item-title' => 'Swandor Hotels & Resorts Cam Ran',
+            'catalog__item-subtitle' => 'Отель расположен на лазурном побережье красивейшего пляжа Бай Дай. В 2017 г. стал победителем...',
+            'catalog__item-link' => 'Узнать цену'
+        ],
+        [
+            'catalog__item-rating' => 5,
+            'catalog__item-stars' => [
+                ['catalog__item-star' => 1],
+                ['catalog__item-star' => 2],
+                ['catalog__item-star' => 3],
+                ['catalog__item-star' => 4],
+                ['catalog__item-star' => 5],
+            ],
+
+            'catalog__item-image' => './local/assets/images/Vinpearl__Nha.png',
+            'catalog__item-title' => 'Vinpearl Nha Trang Resort',
+            'catalog__item-subtitle' => 'Отель расположен на острове Хон Тре, в 40 км от международного аэропорта Камрань, добраться до отеля можно на катере или по ...',
+            'catalog__item-link' => 'Узнать цену'
+        ],
+        [
+            'catalog__item-rating' => 5,
+            'catalog__item-stars' => [
+                ['catalog__item-star' => 1],
+                ['catalog__item-star' => 2],
+                ['catalog__item-star' => 3],
+                ['catalog__item-star' => 4],
+                ['catalog__item-star' => 5],
+            ],
+
+            'catalog__item-image' => './local/assets/images/Duyen__Ha.png',
+            'catalog__item-title' => 'Duyen Ha Resort Cam Ranh',
+            'catalog__item-subtitle' => 'Все номера оформлены в современном стиле с оттенком вьетнамского очарования, что обеспечивает максимальный комфо...',
+            'catalog__item-link' => 'Узнать цену'
+        ],
+        [
+            'catalog__item-rating' => 5,
+            'catalog__item-stars' => [
+                ['catalog__item-star' => 1],
+                ['catalog__item-star' => 2],
+                ['catalog__item-star' => 3],
+                ['catalog__item-star' => 4],
+                ['catalog__item-star' => 5],
+            ],
+
+            'catalog__item-image' => './local/assets/images/Diamond__Bay.png',
+            'catalog__item-title' => 'Diamond Bay Resort and Spa',
+            'catalog__item-subtitle' => 'Расположен в 11 км к югу от центра города Нячанг (20 мин езды), на берегу моря, в уединенной бухте, в 22 км от аэропорта Камрань/Cam Ranh...',
+            'catalog__item-link' => 'Узнать цену'
+        ],
+        [
+            'catalog__item-rating' => 5,
+            'catalog__item-stars' => [
+                ['catalog__item-star' => 1],
+                ['catalog__item-star' => 2],
+                ['catalog__item-star' => 3],
+                ['catalog__item-star' => 4],
+                ['catalog__item-star' => 5],
+            ],
+
+            'catalog__item-image' => './local/assets/images/Fusion__Resort.png',
+            'catalog__item-title' => 'Fusion Resort Cam Ranh',
+            'catalog__item-subtitle' => 'Прекрасный отель с большой территорией, уютными номерами и отличной анимацией.',
+            'catalog__item-link' => 'Узнать цену'
         ],
     ]
 ]
 ?>
 
 
-<?php
-$news =  [
-    'news__title--desktop' => 'Последние новости',
-    'news__title--mobile' => 'Новости',
-    'news__list--items' => [
-        [
-            'news__item--title' => 'В ходе тестового рейса Falco прошел по заданному маршруту',
-            'news__item--date' => '29 августа 2018',
-            'news__item--subtitle' => 'В ходе тестового рейса Falco прошел по заданному маршруту, успешно обошел все препятствия и даже сам пришвартовался в порту',
-            'news__item--button' => 'Полная новость'
-        ],
-        [
-            'news__item--title' => 'Вот это скорость: склад для Яндекс.Маркета» построили за 14 дней',
-            'news__item--date' => '12 января 2019',
-            'news__item--subtitle' => 'В комплексе будут собираться заказы для клиентов маркетплейса «Беру», запущенного в октябре',
-            'news__item--button' => 'Полная новость'
-        ],
-        [
-            'news__item--title' => 'Вот это скорость: склад для Яндекс.Маркета» построили за 14 дней',
-            'news__item--date' => '12 января 2019',
-            'news__item--subtitle' => 'В комплексе будут собираться заказы для клиентов маркетплейса «Беру», запущенного в октябре',
-            'news__item--button' => 'Полная новость'
-        ],
-        [
-            'news__item--title' => 'Rolls-Royce выставила на показ первый в мире беспилотный паром',
-            'news__item--date' => '5 февраля 2019',
-            'news__item--subtitle' => 'Согласно прогнозам, с помощью первой европейской платформы электронной коммерции в КНР будет импортировано товаров на общую сумму порядка $200...',
-            'news__item--button' => 'Полная новость'
-        ]
-    ],
-    'news__button' => 'Посмотреть все новости'
-]
-?>
+
 
 <?php
-$about = [
-    'about__title--desktop' => 'Немного статистики',
-    'about__title--mobile' => 'Статистика',
-    'about__list--items' => [
+$resorts = [
+    'resorts__top-title' => 'Курорты Вьетнама',
+    'resorts__items' => [
         [
-            'about__item--image' => './local/assets/images/market.svg',
-            'about__item--title' => 'Успешной работы на рынке'
+            'resorts__item-image' => './local/assets/images/resorts__nhatrang.png',
+            'resorts__item-title' => 'Нячанг',
+            'resorts__item-subtitle' => 'Превосходный вариант для отдыха: удобный перелет и невысокая цена. Курорт славится песчаными пляжами, ароматным вьетнамским кофе, необыкновенно вкусными деликатесами и развлечениями для всей семьи. ',
+            'resorts__item-link' => 'Подробнее'
         ],
         [
-            'about__item--image' => './local/assets/images/warehouse.svg',
-            'about__item--title' => 'На территории России и Китая'
+            'resorts__item-image' => './local/assets/images/resorts__phanthiet.png',
+            'resorts__item-title' => 'Фантхьет',
+            'resorts__item-subtitle' => 'Очень популярный курорт Вьетнама, особенно в осенне-зимний период. Отдых на этом курорте отлично подходит для людей, которые хотят спокойного умиротворенного отпуска. Преимущества вьетнамского курорта: уютные отели, обилие морепродуктов',
+            'resorts__item-link' => 'Подробнее'
         ],
         [
-            'about__item--image' => './local/assets/images/projects.svg',
-            'about__item--title' => 'Выполнено за время работы компании'
+            'resorts__item-image' => './local/assets/images/resorts__phuquoc.png',
+            'resorts__item-title' => 'Фукуок',
+            'resorts__item-subtitle' => 'Самый большой и быстро развивающийся остров во Вьетнаме. Удовольствия для гостей острова: белоснежные пляжи, теплое море, изумрудные джунгли, мягкий климат, дайвинг, массажи, вкусные морепродукты и романтические закаты.',
+            'resorts__item-link' => 'Подробнее'
         ],
-        [
-            'about__item--image' => './local/assets/images/customers.svg',
-            'about__item--title' => 'Среди крупнейших компаний России'
-        ]
-    ],
-    'about__button' => 'Подробнее о компании'
-]
-?>
-
-<?php  
-$clients = [
-    'clients__title' => 'Клиенты компании',
-    'clients__items' => [
-        ['clients__item-image' => './local/assets/images/fresh-market-logo.svg'],
-        ['clients__item-image' => './local/assets/images/sibur-logo.svg'],
-        ['clients__item-image' => './local/assets/images/ahk-logo.svg'],
-        ['clients__item-image' => './local/assets/images/union-icon.svg'],
-        ['clients__item-image' => './local/assets/images/fresh-market-logo.svg'],
-        ['clients__item-image' => './local/assets/images/sibur-logo.svg'],
-        ['clients__item-image' => './local/assets/images/ahk-logo.svg'],
-        ['clients__item-image' => './local/assets/images/union-icon.svg'],
     ]
 ]
 ?>
 
-<div class="inner">
-    <?= $mustache->render('news', $news); ?>
-    <?= $mustache->render('about', $about); ?>
-    <?= $mustache->render('clients', $clients); ?>
+<?php
+$questions = [
+    'questions__title' => 'Часто задаваемые вопросы',
+    'questions__items' => [
+        [
+            'questions__item-title' => 'Когда и где лучше отдыхать во Вьетнаме?',
+            'questions__item-subtitle' => 'Отдых во Вьетнаме возможен круглый год, так как всегда тепло. Но в разное время следует предпочесть тот или иной курорт.<br><br>В центральном районе Вьетнама (Нячанг, Дананг) сезон дождей длится с ноября по март, отличное время для отдыха с апреля по октябрь, пик сезона приходится на июнь, июль, август.<br><br>На юге Вьетнама (Фантьет, Муйне) сезон дождей с мая по ноябрь, благоприятное время для отдыха с ноября по апрель, пик сезона приходится на Новогодние праздники.<br><br>На острове Фукуок самый короткий сезон дождей.',
+        ],
+        [
+            'questions__item-title' => 'Входит ли перелёт в стоимость тура?',
+            'questions__item-subtitle' => 'Да, все наши туры пакетные и включают авиаперелёт туда-обратно, трансфер из аэропорта в отель и обратно, а также проживание. В некоторых тарифах также включено питание (завтраки или всё включено). Точный состав тура указан в карточке каждого предложения.',
+        ],
+        [
+            'questions__item-title' => 'Как можно оплатить тур?',
+            'questions__item-subtitle' => 'Мы принимаем оплату банковскими картами (Visa, MasterCard, МИР), через системы быстрых платежей (СБП), а также безналичным расчётом для юридических лиц. Оплата производится в рублях по текущему курсу банка-партнёра.',
+        ],
+        [
+            'questions__item-title' => 'Можно ли оформить тур в рассрочку?',
+            'questions__item-subtitle' => 'Да, мы сотрудничаем с ведущими банками-партнёрами и предлагаем оформление беспроцентной рассрочки на срок от 3 до 12 месяцев. Решение принимается онлайн за несколько минут. Для оформления потребуется только паспорт и карта банка.',
+        ],
+        [
+            'questions__item-title' => 'При бронировании я должен внести всю сумму сразу?',
+            'questions__item-subtitle' => 'Нет, полная оплата не требуется сразу. Для фиксации цены и места в отеле достаточно внести предоплату (обычно от 10% до 30% стоимости тура, зависит от отеля и даты вылета). Оставшуюся сумму необходимо оплатить за 7–14 дней до начала путешествия.',
+        ],
+        [
+            'questions__item-title' => 'Сколько мне брать с собой денег?',
+            'questions__item-subtitle' => 'Это зависит от ваших личных предпочтений. В среднем, на еду, сувениры и экскурсии во Вьетнаме достаточно $30–50 на человека в день. В крупных городах и на популярных курортах цены выше, чем в провинции. Также рекомендуем иметь небольшой запас наличных долларов или евро на случай непредвиденных расходов.',
+        ],
+        [
+            'questions__item-title' => 'Что я получу от этого тура?',
+            'questions__item-subtitle' => 'Вы получите незабываемые эмоции, полное погружение в культуру Азии, вкуснейшую кухню и потрясающие пейзажи. Мы берём на себя всю организационную часть: подбор оптимального маршрута, проверку отелей, страховку и поддержку 24/7 во время вашего отдыха. Вам остаётся только наслаждаться путешествием.',
+        ],
+        [
+            'questions__item-title' => 'Нужна ли виза во Вьетнам?',
+            'questions__item-subtitle' => 'Для граждан РФ при пребывании во Вьетнаме сроком до 45 дней виза не нужна (безвизовый режим). Если вы планируете остаться дольше, необходимо оформить электронную визу (E-visa) заранее. Наши менеджеры проконсультируют вас по актуальным правилам въезда перед бронированием.',
+        ],
+    ]
+]
+?>
+
+<div class="wrapper">
+    <?= $mustache->render('catalog', $catalog); ?>
+    <?= $mustache->render('resorts', $resorts); ?>
+    <?= $mustache->render('questions', $questions); ?>
 </div>
+
 
 
 <?php

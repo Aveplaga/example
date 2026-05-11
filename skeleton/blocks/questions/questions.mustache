@@ -1,0 +1,28 @@
+<section class="questions">
+    <div class="questions__container container">
+        <div class="questions__title">{{questions__title}}</div>
+
+        <div class="questions__grid">
+            {{#questions__items}}
+                <div class="questions__item">
+                    <div class="questions__item-top">
+                        <div class="questions__item-title">{{questions__item-title}}</div>
+                        <button class="questions__button">
+                            <span class="questions__icon questions__icon--plus">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" d="M12 10H22V12H12V22H10V12H0V10H10V0H12V10Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                            <span class="questions__icon questions__icon--minus">
+                                <svg width="22" height="2" viewBox="0 0 22 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect opacity="0.3" x="22" width="2" height="22" transform="rotate(90 22 0)" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="questions__item-subtitle">{{{questions__item-subtitle}}}</div>
+                </div>
+            {{/questions__items}}
+        </div>
+    </div>
+</section>

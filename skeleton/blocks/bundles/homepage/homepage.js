@@ -1,32 +1,16 @@
 import './homepage.sass';
-import '../../services/services.mustache';
-import '../../keys/keys.mustache';
-import '../../leads/leads.mustache';
-import '../../news/news.mustache';
-import '../../about/about.mustache';
-import'../../clients/clients.mustache';
+import '../../hotel__catalog/catalog.mustache';
+import '../../resorts/resorts.mustache';
+import '../../questions/questions.mustache';
+import '../../tour__form/form.mustache';
 
-import '../../keys/keys.js';
-import '../../leads/leads.js';
-import'../../clients/clients.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const options = {
-        root: null,
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible');
-            }
-        });
-    }, options);
 
-    const targets = document.querySelectorAll('.homepage-fade');
-    targets.forEach(target => observer.observe(target));
-});
+import '../../hotel__catalog/catalog.js';
+import '../../resorts/resorts.js';
+import '../../questions/questions.js';
+
+
+
+
