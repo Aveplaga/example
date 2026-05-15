@@ -1,0 +1,32 @@
+<section class="form">
+    <div class="form__container container">
+        <div class="form__title">{{form__title}}</div>
+
+        <div class="form__dropdown">
+            {{#dropdown__list}}
+                <div class="dropdown__item">
+                    <div class="dropdown__container">
+                        <div class="dropdown__title">{{dropdown__title}}</div>
+
+                        <button class="dropdown__button">
+                            <svg class="dropdown__button-arrow" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.946667 8.41102e-08L4 3.09042L7.06 1.12094e-08L8 0.951417L4 5L4.88183e-07 0.951417L0.946667 8.41102e-08Z" fill="currentColor" fill-opacity="0.9" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <form action="" class="form__dropdown-form">
+                        <div class="form__dropdown-container">
+                            {{#form__dropdown-list}}
+                                <div class="form__dropdown-item">
+                                    <label for="" class="form__dropdown-label">{{{form__dropdown-label}}}</label>
+                                    <input type="{{form__dropdown-input--type}}" placeholder="{{form__dropdown-input--placeholder}}" class="form__dropdown-input">
+                                </div>
+                            {{/form__dropdown-list}}
+                        </div>
+                    </form>
+                </div>
+            {{/dropdown__list}}
+        </div>
+    </div>
+</section>

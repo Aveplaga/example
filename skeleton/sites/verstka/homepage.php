@@ -32,75 +32,132 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 
 <?php
 $hero = [
-    'hero-content__title' => 'Shop empearl',
-    'hero-content__subtitle' => 'Наша компания — это современный магазин мебели и декора, который помогает создавать уютные, стильные и функциональные пространства для жизни и работы.',
+    'hero__content-title' => 'Nexus',
+    'hero__content-subtitle' => 'Персональное онлайн-резюме',
 ]
 ?>
 
 <?php
-$catalog = [
-    'catalog-products__content--title' => 'Каталог товаров',
-    'catalog-products__content--subtitle' => 'Каталог товаров — это удобная подборка всей продукции магазина, где представлены мебель, декор и аксессуары с описанием, ценой и фото, чтобы клиенты могли быстро выбрать и оформить покупку.',
-    'catalog-products__content--links' => [
-        ['catalog-products__content--link' => 'Все'],
-        ['catalog-products__content--link' => 'Диваны'],
-        ['catalog-products__content--link' => 'Кресла'],
-    ],
-    'catalog-products__items' => [
+$form = [
+    'form__title' => 'Создайте резюме прямо сейчас',
+    'dropdown__list' => [
         [
-            'catalog-products__item--image' => './local/assets/images/Node-sofa.png',
-            'catalog-products__item--title' => 'Node sofa',
-            'catalog-products__item--price' => '₽10 000',
-            'catalog-products__item--link' => 'Оформить заказ',
-            'catalog-products__item--category' => 'Кресла',
+            'dropdown__title' => 'Основная информация',
+            'form__dropdown-list' => [
+                [
+                    'form__dropdown-label' => 'Фамилия <span>*</span>',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Хмелёв'
+                ],
+                [
+                    'form__dropdown-label' => 'Имя <span>*</span>',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Владислав'
+                ],
+                [
+                    'form__dropdown-label' => 'Отчество <span>*</span>',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Алексеевич'
+                ],
+                [
+                    'form__dropdown-label' => 'Телефон <span>*</span>',
+                    'form__dropdown-input--type' => 'tel',
+                    'form__dropdown-input--placeholder' => 'Ваш номер'
+                ],
+                [
+                    'form__dropdown-label' => 'E-mail <span>*</span>',
+                    'form__dropdown-input--type' => 'email',
+                    'form__dropdown-input--placeholder' => 'example@gmail.com'
+                ],
+                [
+                    'form__dropdown-label' => 'Должность',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Программист'
+                ],
+                [
+                    'form__dropdown-label' => 'Желаеммая зарплата',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Сумма'
+                ],
+                [
+                    'form__dropdown-label' => 'График работы',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Полный день'
+                ],
+                [
+                    'form__dropdown-label' => 'Готовность к командировкам',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Готов'
+                ],
+                [
+                    'form__dropdown-label' => 'Занятость',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Стажировка'
+                ],
+            ]
         ],
         [
-            'catalog-products__item--image' => './local/assets/images/Develius_Conf.png',
-            'catalog-products__item--title' => 'Uppla',
-            'catalog-products__item--price' => '₽27 500',
-            'catalog-products__item--link' => 'Оформить заказ',
-            'catalog-products__item--category' => 'Диваны',
+            'dropdown__title' => 'Образование',
+            'form__dropdown-list' => [
+                [
+                    'form__dropdown-label' => 'Учебное заведение',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Введите название'
+                ],
+                [
+                    'form__dropdown-label' => 'Факультет',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Введите название'
+                ],
+                [
+                    'form__dropdown-label' => 'Специальность',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Введите название'
+                ],
+                [
+                    'form__dropdown-label' => 'Год окончания обучения',
+                    'form__dropdown-input--type' => 'number',
+                    'form__dropdown-input--placeholder' => '2023'
+                ],
+                [
+                    'form__dropdown-label' => 'Форма обучения',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Введите название'
+                ],
+            ]
         ],
         [
-            'catalog-products__item--image' => './local/assets/images/Kalia-sofa.png',
-            'catalog-products__item--title' => 'Develius Conf A Hot Madison',
-            'catalog-products__item--price' => '₽426 000',
-            'catalog-products__item--link' => 'Оформить заказ',
-            'catalog-products__item--category' => 'Диваны',
+            'dropdown__title' => 'Опыт работы',
+            'form__dropdown-list' => [
+                [
+                    'form__dropdown-label' => 'Организация',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Введите название'
+                ],
+                [
+                    'form__dropdown-label' => 'Должность',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Введите название'
+                ],
+                [
+                    'form__dropdown-label' => 'Устроился',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Введите год и месяц'
+                ],
+                [
+                    'form__dropdown-label' => 'Уволился',
+                    'form__dropdown-input--type' => 'text',
+                    'form__dropdown-input--placeholder' => 'Введите год и месяц'
+                ],
+            ]
         ],
-        [
-            'catalog-products__item--image' => './local/assets/images/Numo.png',
-            'catalog-products__item--title' => 'Numo',
-            'catalog-products__item--price' => '₽26 000',
-            'catalog-products__item--link' => 'Оформить заказ',
-            'catalog-products__item--category' => 'Кресла',
-        ],
-    ],
-]
-?>
-
-<?php
-$order = [
-    'order-form__content--title' => 'Оформите заказ в пару кликов',
-    'order-form__content--subtitle' => 'Выберите товары, укажите контактные данные и способ доставки — мы позаботимся обо всём остальном. Быстро, удобно и без лишних шагов',
-    'order-form__content--button' => 'Оформить заказ',
-
-    'order-form__delivery--title' => 'Тип доставки:',
-    'order-form__delivery--links' => [
-        ['order-form__delivery--link' => 'Самовывоз'],
-        ['order-form__delivery--link' => 'На дом'],
     ]
 ]
 ?>
 
 
 
-<div class="inner">
-    <?= $mustache->render('hero', $hero); ?>
-    <?= $mustache->render('catalog-products', $catalog); ?>
-    <?= $mustache->render('order-form', $order); ?>
-</div>
-
-
+<?= $mustache->render('hero', $hero); ?>
+<?= $mustache->render('form', $form); ?>
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/footer.php');

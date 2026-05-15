@@ -1,19 +1,16 @@
 .container
-  margin-left: auto
-  margin-right: auto
-  padding-left: $co1
-  padding-right: $co1
-  width: 100%
-  max-width: $wp1
+    max-width: 1000px
+    margin: 0 auto
+    padding-right: 30px
+    padding-left: 30px
+    overflow: visible
 
-+mq(tablet)
-  .container
-    max-width: $wp2
-    padding-left: $co2
-    padding-right: $co2
+@media(max-width: 1279px)
+    .container
+        padding-right: 24px
+        padding-left: 24px
 
-+mq(desktop)
-  .container
-    max-width: $wp3
-    padding-left: $co3
-    padding-right: $co3
+@media(max-width: 767px)
+    .container
+        padding-right: 16px
+        padding-left: 16px

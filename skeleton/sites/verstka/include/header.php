@@ -43,33 +43,6 @@ $mustache = new Mustache_Engine([
     </div>
     <div class="page-inner">
 
-        <header class="header">
-            <div class="wrapper">
-                <div class="header-wrapper">
-                    <a href="#" class="header-logo">Empearl</a>
-
-                    <nav class="header-menu">
-                        <ul class="header-list">
-                            <li class="header-item">
-                                <a href="#catalog-products" class="header-link">Каталог продукции</a>
-                            </li>
-                            <li class="header-item">
-                                <a href="#order-form" class="header-link">Оформление заказа</a>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <button class="header-menu__button">
-                        <svg class="header-menu__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#292929">
-                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                        </svg>
-                        <svg class="header-close__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#292929">
-                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                        </svg>
-                    </button>
-                    
-                </div>
-            </div>
-        </header>
+        
 
         <main class="main <?= $pageConfig['mainClass'] ?>">

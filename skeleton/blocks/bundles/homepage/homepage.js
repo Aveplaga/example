@@ -1,11 +1,12 @@
-import './homepage.sass';
-
+import './homepage.sass'
 import '../../hero/hero.mustache';
-import '../../catalog-products/catalog-products.mustache';
-import '../../order-form/order-form.mustache';
+import '../../form-dropdown/form.mustache';
 
-import '../../catalog-products/catalog-products.js';
-import '../../order-form/order-form.js';
+
+
+
+import '../../form-dropdown/form.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const options = {
