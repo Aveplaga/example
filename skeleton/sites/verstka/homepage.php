@@ -63,42 +63,53 @@ $about = [
 ]
 ?>
 
-<section class="reviews">
-    <div class="reviews__container container">
-        <div class="reviews__top">
-            <div class="reviews__top-title">{{reviews__top-title}}</div>
+<?php
+$reviews = [
+    'reviews__top-title' => 'Отзывы туристов',
+    'reviews__slides' => [
+        [
+            'reviews__slide-image' => './local/assets/images/',
+            'reviews__slide-title' => 'Анна Цуканова-Котт',
+            'reviews__slide-contact--title' => '@anna_tsukanova_kott',
 
-            <div class="reviews__navigation">
-                <button class="reviews__navigation-button reviews__navigation-button--prev">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.75 10.59L5.11437 6L9.75 1.41L8.32287 0L2.25 6L8.32287 12L9.75 10.59Z" fill="currentColor" />
-                    </svg>
+            'reviews__slide-subtitle' => 'Ура! Глава нашего семейства @akottttt наконец-то долетел до нас! Правда, всего лишь на 5 дней, но всё равно мы очень рады! Наши графики редко совпадают, чтобы вместе полноценно отдохнуть с детьми! Сейчас, когда у меня отпуск, у Саши как раз активный рабочий период... Хочу поблагодарить нашу знакомую @portnyagina_olesya и ее компанию @asiago.ru, которые смогли организовать приезд мужа быстро, комфортно и в срок! Ребята, занимаются всем! От покупобилетови трансфера до организации туристических необычных программ и Путешествий! А у вас как обстоят дела...',
+            'reviews__slide-button--expand' => 'Отзыв полностью',
+            'reviews__slide-button--screenshot' => 'Скриншот отзыва'
+        ],
+        [
+            'reviews__slide-image' => './local/assets/images/',
+            'reviews__slide-title' => 'Анна Цуканова-Котт',
+            'reviews__slide-contact--title' => '@anna_tsukanova_kott',
 
-                </button>
-                <button class="reviews__navigation-button reviews__navigation-button--next">
-                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.00682e-08 10.59L4.63563 6L9.00682e-08 1.41L1.42713 0L7.5 6L1.42713 12L9.00682e-08 10.59Z" fill="currentColor" />
-                    </svg>
-                </button>
-            </div>
-        </div>
+            'reviews__slide-subtitle' => 'Ура! Глава нашего семейства @akottttt наконец-то долетел до нас! Правда, всего лишь на 5 дней, но всё равно мы очень рады! Наши графики редко совпадают, чтобы вместе полноценно отдохнуть с детьми! Сейчас, когда у меня отпуск, у Саши как раз активный рабочий период... Хочу поблагодарить нашу знакомую @portnyagina_olesya и ее компанию @asiago.ru, которые смогли организовать приезд мужа быстро, комфортно и в срок! Ребята, занимаются всем! От покупобилетови трансфера до организации туристических необычных программ и Путешествий! А у вас как обстоят дела...',
+            'reviews__slide-button--expand' => 'Отзыв полностью',
+            'reviews__slide-button--screenshot' => 'Скриншот отзыва'
+        ],
+        [
+            'reviews__slide-image' => './local/assets/images/',
+            'reviews__slide-title' => 'Анна Цуканова-Котт',
+            'reviews__slide-contact--title' => '@anna_tsukanova_kott',
 
-        <div class="reviews__slider swiper">
-            <div class="reviews__wrapper swiper-wrapper">
-                {{#reviews__slides}}
-                    <div class="reviews__slide swiper-slide">
-                        <div class="reviews__slide-top">
-                            
-                        </div>
-                    </div>
-                {{/reviews__slides}}
-            </div>
-        </div>
-    </div>
-</section>
+            'reviews__slide-subtitle' => 'Ура! Глава нашего семейства @akottttt наконец-то долетел до нас! Правда, всего лишь на 5 дней, но всё равно мы очень рады! Наши графики редко совпадают, чтобы вместе полноценно отдохнуть с детьми! Сейчас, когда у меня отпуск, у Саши как раз активный рабочий период... Хочу поблагодарить нашу знакомую @portnyagina_olesya и ее компанию @asiago.ru, которые смогли организовать приезд мужа быстро, комфортно и в срок! Ребята, занимаются всем! От покупобилетови трансфера до организации туристических необычных программ и Путешествий! А у вас как обстоят дела...',
+            'reviews__slide-button--expand' => 'Отзыв полностью',
+            'reviews__slide-button--screenshot' => 'Скриншот отзыва'
+        ],
+        [
+            'reviews__slide-image' => './local/assets/images/',
+            'reviews__slide-title' => 'Анна Цуканова-Котт',
+            'reviews__slide-contact--title' => '@anna_tsukanova_kott',
+
+            'reviews__slide-subtitle' => 'Ура! Глава нашего семейства @akottttt наконец-то долетел до нас! Правда, всего лишь на 5 дней, но всё равно мы очень рады! Наши графики редко совпадают, чтобы вместе полноценно отдохнуть с детьми! Сейчас, когда у меня отпуск, у Саши как раз активный рабочий период... Хочу поблагодарить нашу знакомую @portnyagina_olesya и ее компанию @asiago.ru, которые смогли организовать приезд мужа быстро, комфортно и в срок! Ребята, занимаются всем! От покупобилетови трансфера до организации туристических необычных программ и Путешествий! А у вас как обстоят дела...',
+            'reviews__slide-button--expand' => 'Отзыв полностью',
+            'reviews__slide-button--screenshot' => 'Скриншот отзыва'
+        ],
+    ]
+]
+?>
 
 <div class="wrapper">
     <?= $mustache->render('about', $about); ?>
+    <?= $mustache->render('reviews', $reviews); ?>
 </div>
 
 

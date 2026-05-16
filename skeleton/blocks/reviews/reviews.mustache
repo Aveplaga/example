@@ -1,0 +1,64 @@
+<section class="reviews">
+    <div class="reviews__container container">
+        <div class="reviews__top">
+            <div class="reviews__top-title">{{reviews__top-title}}</div>
+
+            <div class="reviews__navigation">
+                <button class="reviews__navigation-button reviews__navigation-button--prev">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.75 10.59L5.11437 6L9.75 1.41L8.32287 0L2.25 6L8.32287 12L9.75 10.59Z" fill="currentColor" />
+                    </svg>
+
+                </button>
+                <button class="reviews__navigation-button reviews__navigation-button--next">
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.00682e-08 10.59L4.63563 6L9.00682e-08 1.41L1.42713 0L7.5 6L1.42713 12L9.00682e-08 10.59Z" fill="currentColor" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="reviews__slider swiper">
+            <div class="reviews__wrapper swiper-wrapper">
+                {{#reviews__slides}}
+                    <div class="reviews__slide swiper-slide">
+                        <div class="reviews__slide-top">
+                            <img src="{{reviews__slide-image}}" alt="" class="reviews__slide-image">
+
+                            <div class="reviews__slide-text">
+                                <div class="reviews__slide-title">{{reviews__slide-title}}</div>
+
+                                <div class="reviews__slide-contact">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M2.05369 0H13.9465C15.0759 0 16 0.836301 16 2.05358V13.9465C16 15.1639 15.0759 16 13.9465 16H2.05369C0.923867 16 0 15.1639 0 13.9465V2.05358C0 0.836301 0.923867 0 2.05369 0ZM11.6554 1.77777C11.2592 1.77777 10.9353 2.10179 10.9353 2.49813V4.22225C10.9353 4.61848 11.2592 4.94261 11.6554 4.94261H13.4638C13.8599 4.94261 14.1839 4.61848 14.1839 4.22225V2.49813C14.1839 2.10179 13.8599 1.77777 13.4638 1.77777H11.6554ZM14.1916 6.76635H12.7834C12.9165 7.2013 12.9887 7.66206 12.9887 8.13892C12.9887 10.8003 10.7619 12.9576 8.0152 12.9576C5.26877 12.9576 3.04208 10.8003 3.04208 8.13892C3.04208 7.66195 3.11408 7.2013 3.24751 6.76635H1.77798V13.5249C1.77798 13.8746 2.06425 14.161 2.41408 14.161H13.5561C13.9058 14.161 14.1919 13.8749 14.1919 13.5249V6.76635H14.1916ZM8.01509 4.85174C6.24053 4.85174 4.80182 6.24565 4.80182 7.96539C4.80182 9.68503 6.24053 11.079 8.01509 11.079C9.78977 11.079 11.2288 9.68503 11.2288 7.96539C11.2288 6.24565 9.79008 4.85174 8.01509 4.85174Z" fill="#325A76" />
+                                    </svg>
+                                    <div class="reviews__slide-contact--title">{{reviews__slide-contact--title}}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews__slide-content">
+                            <div class="reviews__slide-subtitle">{{{reviews__slide-subtitle}}}</div>
+
+                            <div class="reviews__slide-buttons">
+                                <button class="reviews__slide-button reviews__slide-button--expand">
+                                    {{reviews__slide-button--expand}}
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.06 1.5L4 4.59042L0.94 1.5L1.72722e-07 2.45142L4 6.5L8 2.45142L7.06 1.5Z" fill="currentColor" />
+                                    </svg>
+                                </button>
+
+                                <button class="reviews__slide-button reviews__slide-button--screenshot">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 14V2C20 0.9 19.1 0 18 0H6C4.9 0 4 0.9 4 2V14C4 15.1 4.9 16 6 16H18C19.1 16 20 15.1 20 14ZM9 10L11.03 12.71L14 9L18 14H6L9 10ZM0 4V18C0 19.1 0.9 20 2 20H16V18H2V4H0Z" fill="white" />
+                                    </svg>
+                                    {{reviews__slide-button--screenshot}}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                {{/reviews__slides}}
+            </div>
+        </div>
+    </div>
+</section>
