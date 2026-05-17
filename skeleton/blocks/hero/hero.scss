@@ -6,7 +6,7 @@
 }
 
 .hero__content-title {
-    color: #1F2937;
+    color: #5b2333;
     font-size: 100px;
     line-height: 1.1;
     letter-spacing: -3px;
@@ -16,7 +16,7 @@
 }
 
 .hero__content-subtitle {
-    color: #1F2937;
+    color: #5b2333;
     font-size: 50px;
     line-height: 1.2;
     letter-spacing: -1px;
@@ -34,7 +34,7 @@
     bottom: -20px;
     width: 200px;
     height: 2px;
-    background-color: #1F2937;
+    background-color: #5b2333;
     transform: translateX(-50%) scaleX(0);
     opacity: 0;
     animation: expandLine .8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
