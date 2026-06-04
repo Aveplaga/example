@@ -43,6 +43,22 @@ $mustache = new Mustache_Engine([
     </div>
     <div class="page-inner">
 
-        
+        <header class="header">
+            <div class="container header__container">
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li class="header__item">
+                            <a href="#" class="header__link">Домашняя</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Составить резюме</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Частые вопросы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
         <main class="main <?= $pageConfig['mainClass'] ?>">
