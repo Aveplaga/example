@@ -1,0 +1,27 @@
+<section id="disclosure" class="disclosure">
+    <div class="container disclosure__container">
+        <div class="disclosure__title">{{{disclosure__title}}}</div>
+
+        <div class="disclosure__list">
+            {{#disclosure__items}}
+                <div class="disclosure__item">
+                    <div class="disclosure__item-top">
+                        <div class="disclosure__item-title">{{disclosure__item-title}}</div>
+
+                        <button class="disclosure__item-button">
+                            <svg class="disclosure__button-open disclosure__button-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 10H22V12H12V22H10V12H0V10H10V0H12V10Z" fill="currentColor" />
+                            </svg>
+
+                            <svg class="disclosure__button-close disclosure__button-icon" width="22" height="2" viewBox="0 0 22 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="22" width="2" height="22" transform="rotate(90 22 0)" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="disclosure__item-subtitle">{{{disclosure__item-subtitle}}}</div>
+                </div>
+            {{/disclosure__items}}
+        </div>
+    </div>
+</section>
