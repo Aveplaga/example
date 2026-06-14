@@ -30,15 +30,136 @@ $pageConfig = [
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
 
+
 <?php
-$hero = [
-    'hero__title' => 'Nexus for <br> <span class="hero__span-right">resume</span> <span class="hero__span-center">lab</span>'
+$resume = [
+    'resume__title' => 'Создайте резюме прямо сейчас',
+    'resume__items' => [
+        [
+            'resume__item-number' => '01',
+            'resume__item-title' => 'Основная информация',
+            'accrodion__items' => [
+                [
+                    'faccrodion__label' => 'Фамилия <span>*</span>',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Хмелёв'
+                ],
+                [
+                    'faccrodion__label' => 'Имя <span>*</span>',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Владислав'
+                ],
+                [
+                    'faccrodion__label' => 'Отчество <span>*</span>',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Алексеевич'
+                ],
+                [
+                    'faccrodion__label' => 'Телефон <span>*</span>',
+                    'accrodion__input-type' => 'tel',
+                    'accrodion__input-placeholder' => 'Ваш номер'
+                ],
+                [
+                    'faccrodion__label' => 'E-mail <span>*</span>',
+                    'accrodion__input-type' => 'email',
+                    'accrodion__input-placeholder' => 'example@gmail.com'
+                ],
+                [
+                    'faccrodion__label' => 'Должность',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Программист'
+                ],
+                [
+                    'faccrodion__label' => 'Желаемая зарплата',
+                    'accrodion__input-type' => 'number',
+                    'accrodion__input-placeholder' => 'Сумма'
+                ],
+                [
+                    'faccrodion__label' => 'График работы',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Полный день'
+                ],
+                [
+                    'faccrodion__label' => 'Готовность к командировкам',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Готов'
+                ],
+                [
+                    'faccrodion__label' => 'Занятость',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Стажировка'
+                ],
+            ]
+        ],
+        [
+            'resume__item-number' => '02',
+            'resume__item-title' => 'Образование',
+            'accrodion__items' => [
+                [
+                    'faccrodion__label' => 'Учебное заведение',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Введите название'
+                ],
+                [
+                    'faccrodion__label' => 'Факультет',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Введите название'
+                ],
+                [
+                    'faccrodion__label' => 'Специальность',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Введите название'
+                ],
+                [
+                    'faccrodion__label' => 'Год окончания обучения',
+                    'accrodion__input-type' => 'number',
+                    'accrodion__input-placeholder' => '2023'
+                ],
+                [
+                    'faccrodion__label' => 'Форма обучения',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Введите название'
+                ],
+            ]
+        ],
+        [
+            'resume__item-number' => '03',
+            'resume__item-title' => 'Навыки',
+            'accrodion__items' => [
+                [
+                    'faccrodion__label' => 'Профессиональные навыки',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'JavaScript, PHP, Figma'
+                ],
+                [
+                    'faccrodion__label' => 'Языки программирования',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Python, Java, C++'
+                ],
+                [
+                    'faccrodion__label' => 'Инструменты и технологии',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Git, Docker, Webpack'
+                ],
+                [
+                    'faccrodion__label' => 'Иностранные языки',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Английский — B2'
+                ],
+                [
+                    'faccrodion__label' => 'Дополнительные навыки',
+                    'accrodion__input-type' => 'text',
+                    'accrodion__input-placeholder' => 'Управление командой'
+                ],
+            ]
+        ]
+    ]
 ]
 ?>
 
 <?php
 $disclosure = [
-    'disclosure__title' => 'Часто задаваемые вопросы',
+    'disclosure__title' => 'Задаваемые вопросы',
     'disclosure__items' => [
         [
             'disclosure__item-number' => '01',
@@ -65,7 +186,7 @@ $disclosure = [
 ?>
 
 <div class="wrapper">
-    <?= $mustache->render('hero', $hero); ?>
+    <?= $mustache->render('resume', $resume); ?>
     <?= $mustache->render('disclosure', $disclosure); ?>
 </div>
 

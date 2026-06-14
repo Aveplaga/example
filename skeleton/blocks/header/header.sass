@@ -1,102 +1,92 @@
 .header
     position: sticky
     top: 0
-    bottom: 0
     margin: 40px 0
     padding: 20px 0
     z-index: 9999
 
-.header__container-menu
-    display: flex
-    justify-content: space-between
-    align-items: center
-
-.header__menu
-    max-width: 100%
-    width: 100%
-
-.header__list
-    display: flex
-    justify-content: space-between
-
-.header__link
-    font-size: 14px
-    line-height: 100%
-    letter-spacing: 3%
-    transition: color .4s ease-in-out
-
-.header__link:hover
-    color: #ff0000
+.header.scrolled
+    padding: 40px 0
+    background-color: rgba(255, 255, 255, 0.7)
+    backdrop-filter: blur(10px)
+    -webkit-backdrop-filter: blur(10px)
 
 .header__menu-button
-    display: none
+    position: relative
+    display: block
+    width: 40px
+    height: 40px
+    z-index: 10001
 
-// Планешет - десктоп
+.header__icon
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out
+
+.header__icon-close
+    opacity: 0
+    transform: rotate(-90deg) scale(0.8)
+
+body.menu-open .header__menu-button .header__icon-open
+    opacity: 0
+    transform: rotate(90deg) scale(0.8)
+
+body.menu-open .header__menu-button .header__icon-close
+    opacity: 1
+    transform: rotate(0deg) scale(1)
+
+.header__list
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    height: 100dvh
+    z-index: 10000
+    visibility: hidden
+    opacity: 0
+    background-color: #FFFFFF
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 0 15px
+    gap: 20px
+    transition: opacity .4s ease-in-out, visibility .4s ease-in-out
+    overflow-y: auto
+
+body.menu-open
+    overflow: hidden
+    padding-right: calc(100vw - 100%)
+
+body.menu-open .header__list
+    visibility: visible
+    opacity: 1
+
+.header__item
+    width: 100%
+    max-width: 1000px
+
+.header__link
+    display: block
+    font-size: 72px
+    font-weight: 300
+    line-height: 100%
+    letter-spacing: -3%
+    text-transform: uppercase
+    text-align: left
+    transition: color .5s ease-in-out
+
+.header__link:hover
+    color: #FFA2B9
+
 @media(max-width: 1279px)
-
-    .header__item
-        width: 100%
-        max-width: 1000px
-
-    .header__list
-        position: fixed
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        z-index: 999
-        visibility: hidden
-        opacity: 0
-        background-color: #ffffff
-        flex-direction: column
-        align-items: center
-        justify-content: center
-        padding: 0 24px
-        gap: 30px
-        transition: opacity .4s ease-in-out, visibility .4s ease-in-out
-
-    body.menu-open
-        overflow: hidden
-
-    body.menu-open .header__list
-        z-index: 10000
-        visibility: visible
-        opacity: 1
-
-    .header__menu-button
-        position: relative
-        display: block
-        width: 40px
-        height: 40px
-        z-index: 10001
-
-    .header__icon
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        transition: opacity .4s ease-in-out, transform .4s ease-in-out
-
-    .header__icon-close
-        opacity: 0
-        transform: rotate(-90deg) scale(0.8)
-
-    body.menu-open .header__menu-button .header__icon-open
-        opacity: 0
-        transform: rotate(90deg) scale(0.8)
-
-    body.menu-open .header__menu-button .header__icon-close
-        opacity: 1
-        transform: rotate(0deg) scale(1)
-
     .header__link
-        display: block
-        font-size: 64px
-        text-align: right
+        font-size: 48px
 
-// Мобила - планшет
 @media(max-width: 767px)
-
     .header__link
-        font-size: 36px
+        font-size: 32px

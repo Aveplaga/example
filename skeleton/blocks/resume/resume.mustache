@@ -1,0 +1,48 @@
+<section class="resume" id="resume">
+    <div class="resume__container container">
+        <div class="resume__title">{{resume__title}}</div>
+
+        <div class="resume__main">
+            <div class="resume__form">
+                {{#resume__items}}
+                    <div class="resume__item">
+                        <div class="resume__item-number">{{resume__item-number}}</div>
+                        
+                        <div class="resume__item-top">
+                            <div class="resume__item-title">{{resume__item-title}}</div>
+
+                            <button class="resume__item-button" type="button">
+                                <svg class="resume__button-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12L5.293 6.707a1 1 0 0 1 0-1.414" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="resume__accrodion">
+                            {{#accrodion__items}}
+                                <div class="resume__accrodion-item">
+                                    <label for="" class="accrodion__label">{{{faccrodion__label}}}</label>
+                                    <input type="{{accrodion__input-type}}" placeholder="{{accrodion__input-placeholder}}" class="accrodion__input">
+                                </div>
+                            {{/accrodion__items}}
+                        </div>
+                    </div>
+                {{/resume__items}}
+            </div>
+            
+            <div class="resume__preview"></div>
+        </div>
+
+        <div class="resume__content">
+            <div class="resume__consent">
+                <label class="resume__consent-label">
+                    <input type="checkbox" class="resume__consent-checkbox" required>
+                    <span class="resume__consent-text">{{resume__consent-text}}</span>
+                </label>
+            </div>
+
+            <button type="submit" class="resume__button-submit">{{resume__button-info}}</button>
+        </div>
+
+    </div>
+</section>

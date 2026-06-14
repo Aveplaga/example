@@ -12,7 +12,29 @@ use ZLabs\Frontend\MustacheSingleton;
 ?>
 </main>
 
+<!-- Подвал сайта -->
+<footer class="footer">
+    <div class="footer__container container">
 
+        <a href="#" class="footer__logo">Nexus for <br> resume</a>
+
+        <nav class="footer__menu">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">домашняя</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">создать резюме</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">частые вопросы</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="footer__subtitle">© 2026 Все права защищены</div>
+    </div>
+</footer>
 
 <? // page-inner
 ?>
