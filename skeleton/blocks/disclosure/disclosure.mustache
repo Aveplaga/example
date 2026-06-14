@@ -1,27 +1,27 @@
-<section id="disclosure" class="disclosure">
-    <div class="container disclosure__container">
-        <div class="disclosure__title">{{{disclosure__title}}}</div>
+<section class="disclosure" id="disclosure">
+    <div class="disclosure__container container">
+        <div class="disclosure__main">
+            <div class="disclosure__title">{{disclosure__title}}</div>
 
-        <div class="disclosure__list">
-            {{#disclosure__items}}
-                <div class="disclosure__item">
-                    <div class="disclosure__item-top">
-                        <div class="disclosure__item-title">{{disclosure__item-title}}</div>
+            <div class="disclosure__accordion">
+                {{#disclosure__items}}
+                    <div class="disclosure__item">
+                        <div class="disclosure__item-number">{{disclosure__item-number}}</div>
 
-                        <button class="disclosure__item-button">
-                            <svg class="disclosure__button-open disclosure__button-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 10H22V12H12V22H10V12H0V10H10V0H12V10Z" fill="currentColor" />
-                            </svg>
+                        <div class="disclosure__item-container">
+                            <div class="disclosure__item-title">{{disclosure__item-title}}</div>
 
-                            <svg class="disclosure__button-close disclosure__button-icon" width="22" height="2" viewBox="0 0 22 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="22" width="2" height="22" transform="rotate(90 22 0)" fill="currentColor" />
-                            </svg>
-                        </button>
+                            <button class="disclosure__item-button">
+                                <svg class="disclosure__button-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12L5.293 6.707a1 1 0 0 1 0-1.414" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="disclosure__item-subtitle">{{disclosure__item-subtitle}}</div>
                     </div>
-
-                    <div class="disclosure__item-subtitle">{{{disclosure__item-subtitle}}}</div>
-                </div>
-            {{/disclosure__items}}
+                {{/disclosure__items}}
+            </div>
         </div>
     </div>
 </section>
