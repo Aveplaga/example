@@ -115,7 +115,7 @@
     transition: max-height .5s ease-in-out, opacity .5s ease-in-out, margin-top .5s ease-in-out;
 }
 
-.disclosure__item-subtitle.disclosure__opened {
+.disclosure__opened .disclosure__item-subtitle {
     margin-top: 25px;
     max-height: 200px;
     opacity: 1;

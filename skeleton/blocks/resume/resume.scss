@@ -4,7 +4,7 @@
     gap: 20px;
 }
 
-.resume__title{
+.resume__title {
     font-size: 64px;
     font-weight: 600;
     line-height: 100%;
@@ -119,8 +119,8 @@
 }
 
 .resume__opened .resume__accrodion {
-    max-height: 1000px; 
-    margin-top: 25px; 
+    max-height: 1000px;
+    margin-top: 25px;
     opacity: 1;
 }
 
@@ -168,13 +168,13 @@
     border-bottom-color: #fff;
 }
 
-.resume__preview{
+.resume__preview {
     padding: 30px;
-    border:  1px solid #0000000f;
+    border: 1px solid #0000000f;
     width: 500px;
 }
 
-.resume__preview-title{
+.resume__preview-title {
     font-size: 24px;
     font-weight: 600;
     line-height: 100%;
@@ -236,4 +236,132 @@
 
 .resume__preview-value:empty::before {
     content: '—';
+}
+
+.resume__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 34px;
+}
+
+.resume__consent-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 500px;
+}
+
+.resume__consent-checkbox {
+    width: 15px;
+    height: 15px;
+}
+
+.resume__consent-text {
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+
+.resume__button-submit {
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    border: 1px solid #0000000f;
+    padding: 15px 20px;
+    cursor: not-allowed;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out, transform .5s ease-in-out;
+    border-radius: 5px;
+}
+
+.resume__button-submit.active {
+    background-color: #FFA2B9;
+    color: #fff;
+    cursor: pointer;
+}
+
+.resume__button-submit.active:hover {
+    background-color: #ff8fae;
+}
+
+
+#resume-pdf-template {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    width: 794px;
+    background: #fff;
+    padding: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    z-index: -1;
+}
+
+#resume-pdf-template .pdf-section {
+    margin-bottom: 30px;
+}
+
+#resume-pdf-template .pdf-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #FFA2B9;
+}
+
+#resume-pdf-template .pdf-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#resume-pdf-template .pdf-label {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+#resume-pdf-template .pdf-value {
+    color: #1f2937;
+    font-weight: 600;
+    text-align: right;
+    max-width: 60%;
+}
+
+@media(max-width: 1279px) {
+
+    .resume__main {
+        flex-direction: column;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .resume__item,
+    .resume__preview {
+        width: 100%;
+    }
+}
+
+@media(max-width: 767px) {
+
+    .resume__title{
+        font-size: 48px;
+    }
+
+    .resume__main {
+        max-width: 700px;
+    }
+
+    .resume__content{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .resume__consent-label{
+        width: 300px;
+    }
+
+    .resume__consent-text{
+        font-size: 10px;
+    }
 }

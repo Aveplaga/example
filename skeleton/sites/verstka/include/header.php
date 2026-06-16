@@ -60,13 +60,13 @@ $mustache = new Mustache_Engine([
                     <nav class="header__menu">
                         <ul class="header__list">
                             <li class="header__item">
-                                <a href="#" class="header__link">домашняя</a>
+                                <a href="#hero" class="header__link">домашняя</a>
                             </li>
                             <li class="header__item">
-                                <a href="#" class="header__link">создать резюме</a>
+                                <a href="#resume" class="header__link">создать резюме</a>
                             </li>
                             <li class="header__item">
-                                <a href="#" class="header__link">частые вопросы</a>
+                                <a href="#disclosure" class="header__link">частые вопросы</a>
                             </li>
                         </ul>
                     </nav>

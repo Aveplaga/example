@@ -21,13 +21,13 @@ use ZLabs\Frontend\MustacheSingleton;
         <nav class="footer__menu">
             <ul class="footer__list">
                 <li class="footer__item">
-                    <a href="#" class="footer__link">домашняя</a>
+                    <a href="#hero" class="footer__link">домашняя</a>
                 </li>
                 <li class="footer__item">
-                    <a href="#" class="footer__link">создать резюме</a>
+                    <a href="#resume" class="footer__link">создать резюме</a>
                 </li>
                 <li class="footer__item">
-                    <a href="#" class="footer__link">частые вопросы</a>
+                    <a href="#disclosure" class="footer__link">частые вопросы</a>
                 </li>
             </ul>
         </nav>

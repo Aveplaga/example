@@ -30,6 +30,11 @@ $pageConfig = [
 require_once($_SERVER['DOCUMENT_ROOT'] . '/include/header.php');
 ?>
 
+<?php  
+$hero = [
+    'hero__title' => 'Nexus for <br> <span>resume</span>'
+]
+?>
 
 <?php
 $resume = [
@@ -153,7 +158,10 @@ $resume = [
                 ],
             ]
         ]
-    ]
+    ],
+
+    'resume__consent-text' => ' Я соглашаюсь с <a href="#">политикой конфиденциальности</a> и даю согласие на обработку персональных данных',
+    'resume__button-info' => 'Скачать резюме'
 ]
 ?>
 
@@ -186,6 +194,7 @@ $disclosure = [
 ?>
 
 <div class="wrapper">
+    <?= $mustache->render('hero', $hero); ?>
     <?= $mustache->render('resume', $resume); ?>
     <?= $mustache->render('disclosure', $disclosure); ?>
 </div>
